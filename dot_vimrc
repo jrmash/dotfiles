@@ -12,6 +12,7 @@ set magic
 set number
 set ruler
 
+set background=dark
 set directory=~/tmp,/tmp,/var/tmp,.
 set scrolloff=4
 set updatetime=1000
