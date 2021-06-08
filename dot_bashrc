@@ -1,0 +1,6 @@
+source ~/.xshenv
+source ~/.xshrc
+
+while IFS= read -rd ''; do
+	source ${REPLY}
+done < <( find ~/.bashrc.d -type f -print0 2>/dev/null )

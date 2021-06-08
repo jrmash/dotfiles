@@ -1,0 +1,18 @@
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+source ~/.xshrc
+
+while IFS= read -r -d ''; do
+	source ${REPLY}
+done < <( find ~/.zshrc.d -type f -print0 2>/dev/null )
+
+plugins=(
+    git
+    zsh-syntax-highlighting
+)
+
+source $ZSH/oh-my-zsh.sh
+
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
