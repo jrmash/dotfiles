@@ -13,6 +13,7 @@ set number
 set ruler
 
 set background=dark
+set clipboard=unnamed
 set directory=~/tmp,/tmp,/var/tmp,.
 set scrolloff=4
 set updatetime=1000
@@ -39,11 +40,6 @@ set showmatch
 set smartcase
 
 "" Whitespace Settings
-set list
 set linebreak
 set nowrap
-
-set listchars=tab:→\ ,space:·
-
-hi SpecialKey ctermfg=DarkGrey
 
