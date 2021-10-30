@@ -1,0 +1,19 @@
+if [ `command -v jenv` > /dev/null ]; then
+    eval "$(jenv init -)"
+fi
+if [ `command -v nodenv` > /dev/null ]; then
+    eval "$(nodenv init -)"
+fi
+if [ `command -v plenv` > /dev/null ]; then
+    eval "$(plenv init -)"
+fi
+if [ `command -v pyenv` > /dev/null ]; then
+    eval "$(pyenv init --path)"
+fi
+if [ `command -v rbenv` > /dev/null ]; then
+    eval "$(rbenv init -)"
+fi
+
+while IFS= read -r -d ''; do
+	source ${REPLY}
+done < <( find ~/.xshrc.d -type f -exec printf '%s\0' {} + )
