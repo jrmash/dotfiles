@@ -1,0 +1,38 @@
+[core]
+  excludesFile = {{ .chezmoi.homeDir }}/.gitignore
+  pager = diff-so-fancy | less --tabs=2 -RX
+{{- if eq .machine.type "codespace" }}
+[credential]
+  helper = /.codespaces/bin/gitcredential_github.sh
+[gpg]
+  program = /.codespaces/bin/gh-gpgsign
+{{- end }}
+[init]
+  defaultBranch = main
+[interactive]
+  diffFilter = diff-so-fancy --patch
+[user]
+  name = {{ .git.name }}
+  email = {{ .git.email }}
+{{- if ne .machine.type "codespace" }}
+  signingKey = {{ .gpg.signing_key }}
+{{- end }}
+
+[commit]
+  gpgSign = true
+[diff]
+  colorMoved = zebra
+[diff-so-fancy]
+  markEmptyLines = false
+[fetch]
+  prune = true
+[push]
+  gpgSign = if-asked
+
+## User Aliases
+[alias]
+  gone = !git remote prune origin && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs -r git branch -D
+  yolo = push --force
+
+  ## Silliness
+  dad = !curl https://icanhazdadjoke.com/ && git add
