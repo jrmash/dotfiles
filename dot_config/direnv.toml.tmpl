@@ -1,0 +1,19 @@
+[global]
+  warn_timeout = "10s"
+
+[whitelist]
+  prefix = [
+    '{{ .chezmoi.homeDir }}/dev/github/jrmash',
+    '{{ .chezmoi.homeDir }}/dev/github/mashinations',
+{{- else if eq .machine.type  "work" }}
+    '{{ .chezmoi.homeDir }}/dev/github/kareo',
+    '{{ .chezmoi.homeDir }}/dev/github/kareo-archive',
+    '{{ .chezmoi.homeDir }}/dev/github/kareo-dataops',
+    '{{ .chezmoi.homeDir }}/dev/github/kareo-delivery',
+    '{{ .chezmoi.homeDir }}/dev/github/kareo-engineering',
+    '{{ .chezmoi.homeDir }}/dev/github/kareo-experiments',
+    '{{ .chezmoi.homeDir }}/dev/github/kareo-it',
+    '{{ .chezmoi.homeDir }}/dev/github/kareo-netops',
+    '{{ .chezmoi.homeDir }}/dev/github/kareo-public',
+{{- end }}
+  ]
