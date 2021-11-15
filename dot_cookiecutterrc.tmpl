@@ -1,0 +1,4 @@
+default_context:
+  email: {{ .git.email | quote }}
+  full_name: {{ .git.name | quote }}
+  github_username: {{ .github.username | quote }}
