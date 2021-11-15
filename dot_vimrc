@@ -1,0 +1,44 @@
+set nocompatible
+
+"" General Settings
+filetype on
+filetype indent on
+filetype plugin on
+
+syntax on
+
+set autoread
+set magic
+set number
+set ruler
+
+set background=dark
+set clipboard=unnamed
+set directory=~/tmp,/tmp,/var/tmp,.
+set scrolloff=4
+set updatetime=1000
+
+"" Indentation Settings
+set autoindent
+set copyindent
+set expandtab
+set smartindent
+set smarttab
+
+set backspace=eol,indent,start
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
+
+autocmd FileType yaml setlocal sts=2 sw=2 ts=2 expandtab
+
+"" Search Settings
+set hlsearch
+set ignorecase
+set incsearch
+set showmatch
+set smartcase
+
+"" Whitespace Settings
+set linebreak
+set nowrap
