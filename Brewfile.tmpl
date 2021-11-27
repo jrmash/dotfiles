@@ -34,6 +34,12 @@ brew 'zsh'                                  ## https://github.com/zsh-users/zsh 
 ## ============================================================================================== ##
 ##                                            Software                                            ##
 ## ============================================================================================== ##
+{{- if eq .machine.type "personal" }}
+cask 'plex'                                 ## https://www.plex.tv
+
+{{- if eq .machine.chassis "desktop" }}
 cask 'handbrake'                            ## https://handbrake.fr
 cask 'hyper'                                ## https://hyper.is
 cask 'makemkv'                              ## https://www.makemkv.com
+{{- end }}
+{{- end }}
