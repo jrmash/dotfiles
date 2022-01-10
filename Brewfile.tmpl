@@ -51,6 +51,10 @@ brew 'zsh'                                  ## https://github.com/zsh-users/zsh 
 ## ============================================================================================== ##
 ##                                            Software                                            ##
 ## ============================================================================================== ##
+{{- if eq .chezmoi.os "darwin" }}
+cask '1password'                            ## https://1password.com
+cask '1password-cli'                        ## https://developer.1password.com/docs/cli
+
 {{- if eq .machine.type "personal" }}
 cask 'plex'                                 ## https://www.plex.tv
 
@@ -58,5 +62,6 @@ cask 'plex'                                 ## https://www.plex.tv
 cask 'handbrake'                            ## https://handbrake.fr
 cask 'hyper'                                ## https://hyper.is
 cask 'makemkv'                              ## https://www.makemkv.com
+{{- end }}
 {{- end }}
 {{- end }}
