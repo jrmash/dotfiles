@@ -24,6 +24,10 @@ brew 'pinentry-mac'                         ## https://github.com/GPGTools/pinen
 brew 'wget'                                 ## https://git.savannah.gnu.org/cgit/wget.git
 brew 'yq'                                   ## https://github.com/mikefarah/yq
 
+{{- if eq .machine.type "personal" }}
+brew 'ykman'                                ## https://github.com/Yubico/yubikey-manager
+{{- end }}
+
 ## ============================================================================================== ##
 ##                                          DevOps Tools                                          ##
 ## ============================================================================================== ##
