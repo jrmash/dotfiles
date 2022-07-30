@@ -1,0 +1,17 @@
+data:
+  name: {{ onepasswordRead "op://Development/chezmoi.io/name" }}
+  git:
+    email: {{ onepasswordRead "op://Development/chezmoi.io/gitEmail" }}
+    name: {{ onepasswordRead "op://Development/chezmoi.io/gitName" }}
+  github:
+    username: {{ onepasswordRead "op://Development/chezmoi.io/githubUsername" }}
+  gpg:
+    signingKey: {{ onepasswordRead "op://Development/chezmoi.io/gpgSigningKey" }}
+  machine:
+{{- if env "CODESPACES" }}
+    chassis: "virtual"
+    type: "codespace"
+{{- else }}
+    chassis: {{ promptStringOnce (index . "machine") "chassis" "Machine Chassis (desktop|laptop|server|virtual)" | quote }}
+    type: {{ promptStringOnce (index . "machine") "type" "Machine Type (personal|work)" | quote }}
+{{- end }}

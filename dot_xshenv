@@ -1,3 +1,0 @@
-while IFS= read -r -d ''; do
-	source ${REPLY}
-done < <( find ~/.xshenv.d -type f -exec printf '%s\0' {} + )

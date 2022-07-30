@@ -15,7 +15,7 @@
   name = {{ .git.name }}
   email = {{ .git.email }}
 {{- if ne .machine.type "codespace" }}
-  signingKey = {{ .gpg.signing_key }}
+  signingKey = {{ .gpg.signingKey }}
 {{- end }}
 
 [commit]

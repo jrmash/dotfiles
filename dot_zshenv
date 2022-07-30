@@ -1,0 +1,7 @@
+export ZSH_THEME="powerlevel10k/powerlevel10k"
+
+source ~/.xshenv
+
+while IFS= read -r -d ''; do
+  source ${REPLY}
+done < <( find ~/.zshenv.d -type f -exec printf '%s\0' {} + )

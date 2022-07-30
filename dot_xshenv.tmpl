@@ -1,0 +1,9 @@
+{{- if eq .chezmoi.os "darwin" }}
+{{- if eq .chezmoi.arch "arm64" }}
+export PATH="/opt/homebrew/bin:${PATH}"
+{{- end }}
+{{- end }}
+
+while IFS= read -r -d ''; do
+	source ${REPLY}
+done < <( find ~/.xshenv.d -type f -exec printf '%s\0' {} + )

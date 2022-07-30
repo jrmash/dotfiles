@@ -1,3 +1,5 @@
+tap 'warrensbox/tap'                        ## https://github.com/warrensbox/homebrew-tap
+
 ## ============================================================================================== ##
 ##                                           Dev Tools                                            ##
 ## ============================================================================================== ##
@@ -100,6 +102,7 @@ cask 'google-chrome'                        ## https://www.google.com/chrome
 cask 'google-cloud-sdk'                     ## https://cloud.google.com/sdk
 cask 'google-drive'                         ## https://www.google.com/drive
 cask 'gpg-suite'                            ## https://gpgtools.org
+cask 'hyper'                                ## https://hyper.is
 cask 'jetbrains-toolbox'                    ## https://www.jetbrains.com/toolbox-app
 cask 'microsoft-remote-desktop'             ## https://aka.ms/rdmac
 cask 'rambox'                               ## https://rambox.pro
@@ -117,11 +120,18 @@ cask 'signal'                               ## https://signal.org
 
 {{- if eq .machine.chassis "desktop" }}
 cask 'handbrake'                            ## https://handbrake.fr
-cask 'hyper'                                ## https://hyper.is
 cask 'makemkv'                              ## https://www.makemkv.com
 cask 'steam'                                ## https://store.steampowered.com
 cask 'unity-hub'                            ## https://unity3d.com/get-unity/download
 cask 'yubico-yubikey-manager'               ## https://github.com/Yubico/yubikey-manager-qt
 {{- end }}
 {{- end }}
+{{- end }}
+
+## ============================================================================================== ##
+##                                        Special Fonts                                           ##
+## ============================================================================================== ##
+## https://github.com/ryanoasis/nerd-fonts
+{{- if eq .chezmoi.os "darwin" }}
+cask 'font-caskaydia-cove-nerd-font'
 {{- end }}
