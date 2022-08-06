@@ -4,8 +4,25 @@ fi
 
 plugins=(
 	## Alias Pllugins
+	1password                 ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/1password
+	ansible                   ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/ansible
+	brew                      ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/brew
+	docker                    ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/docker
+	docker-compose            ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/docker-compose
+	git                       ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git
+	gradle                    ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/gradle
+	history                   ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/history
+	kubectl                   ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/kubectl
+	mvn                       ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/mvn
+	rsync                     ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/rsync
+	terraform                 ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/terraform
 	
 	## Functionality Plugins
+	aliases                   ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/aliases
+	direnv                    ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/direnv
+	gcloud                    ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/gcloud
+	helm                      ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/helm
+	httpie                    ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/httpie
 	zsh-autosuggestions       ## https://github.com/zsh-users/zsh-autosuggestions
 	zsh-syntax-highlighting   ## https://github.com/zsh-users/zsh-syntax-highlighting
 )
