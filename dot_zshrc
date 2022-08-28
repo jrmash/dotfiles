@@ -23,6 +23,7 @@ plugins=(
 	gcloud                    ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/gcloud
 	helm                      ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/helm
 	httpie                    ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/httpie
+	vault                     ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/vault
 	zsh-autosuggestions       ## https://github.com/zsh-users/zsh-autosuggestions
 	zsh-syntax-highlighting   ## https://github.com/zsh-users/zsh-syntax-highlighting
 )
