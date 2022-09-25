@@ -70,6 +70,10 @@ brew 'tfswitch'                             ## https://github.com/warrensbox/ter
 brew 'tgswitch'                             ## https://github.com/warrensbox/tgswitch
 brew 'vault'                                ## https://github.com/hashicorp/vault
 
+{{- if eq .machine.type "work" }}
+brew 'jfrog-cli'                            ## https://github.com/jfrog/jfrog-cli
+{{- end }}
+
 ## ============================================================================================== ##
 ##                                       Language Suppport                                        ##
 ## ============================================================================================== ##
