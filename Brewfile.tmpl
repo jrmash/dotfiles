@@ -149,6 +149,10 @@ mas 'AppleRemoteDesktop', id: 409907375     ## https://apps.apple.com/us/app/app
 mas 'BetterSnapTool',     id: 417375580     ## https://apps.apple.com/us/app/bettersnaptool/id417375580?mt=12
 {{- end }}
 {{- end }}
+
+{{- if eq .machine.type "work" }}
+cask 'confluent-cli'                        ## https://docs.confluent.io/confluent-cli/current
+{{- end }}
 {{- end }}
 
 ## ============================================================================================== ##
