@@ -95,7 +95,6 @@ brew 'jfrog-cli'                            ## https://github.com/jfrog/jfrog-cl
 brew 'ant', args:["ignore-dependencies"]    ## https://github.com/apache/ant
 brew 'goenv'                                ## https://github.com/syndbg/goenv
 brew 'jenv'                                 ## https://github.com/jenv/jenv
-cask 'ngrok'                                ## https://ngrok.com
 brew 'node-build'                           ## https://github.com/nodenv/node-build
 brew 'nodenv'                               ## https://github.com/nodenv/nodenv
 brew 'perl-build'                           ## https://github.com/tokuhirom/Perl-Build
@@ -130,6 +129,7 @@ cask 'hyper'                                ## https://hyper.is
 cask 'jetbrains-toolbox'                    ## https://www.jetbrains.com/toolbox-app
 cask 'kube-forwarder'                       ## https://kube-forwarder.pixelpoint.io
 cask 'microsoft-remote-desktop'             ## https://aka.ms/rdmac
+cask 'ngrok'                                ## https://ngrok.com
 cask 'osquery'                              ## https://github.com/osquery/osquery
 cask 'postman'                              ## https://www.postman.com
 cask 'powershell'                           ## https://github.com/PowerShell/PowerShell
@@ -137,11 +137,14 @@ cask 'rambox'                               ## https://rambox.pro
 cask 'sentinel'                             ## https://www.hashicorp.com/sentinel
 cask 'snagit'                               ## https://www.techsmith.com/screen-capture.html
 cask 'temurin'                              ## https://github.com/adoptium
-cask 'temurin8'                             ## https://github.com/adoptium/temurin8-binaries
 cask 'temurin11'                            ## https://github.com/adoptium/temurin11-binaries
 cask 'temurin17'                            ## https://github.com/adoptium/temurin17-binaries
 cask 'visual-studio-code'                   ## https://code.visualstudio.com
 cask 'zoom'                                 ## https://www.zoom.us
+
+{{- if eq .chezmoi.arch "amd64" }}
+cask 'temurin8'                             ## https://github.com/adoptium/temurin8-binaries
+{{- end }}
 
 {{- if eq .machine.type "personal" }}
 cask 'microsoft-excel'                      ## https://products.office.com/en-US/excel
@@ -151,7 +154,6 @@ cask 'microsoft-word'                       ## https://products.office.com/en-US
 cask 'obsidian'                             ## https://github.com/obsidianmd/obsidian-releases
 cask 'perforce'                             ## https://www.perforce.com
 cask 'plex'                                 ## https://www.plex.tv
-cask 'signal'                               ## https://signal.org
 
 mas 'MsftRemoteDesktop',  id: 1295203466    ## https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466?mt=12
 mas 'XCode',              id: 497799835     ## https://apps.apple.com/us/app/xcode/id497799835?mt=12
@@ -163,6 +165,7 @@ cask 'gog-galaxy'                           ## https://www.gog.com/galaxy
 cask 'handbrake'                            ## https://handbrake.fr
 cask 'makemkv'                              ## https://www.makemkv.com
 cask 'raspberry-pi-imager'                  ## https://www.raspberrypi.org/downloads
+cask 'signal'                               ## https://signal.org
 cask 'steam'                                ## https://store.steampowered.com
 cask 'unity-hub'                            ## https://unity3d.com/get-unity/download
 cask 'yubico-yubikey-manager'               ## https://github.com/Yubico/yubikey-manager-qt
