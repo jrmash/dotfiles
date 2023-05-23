@@ -1,0 +1,6 @@
+## Override 'ls' aliases to use 'lsd'
+alias ls='lsd'
+
+## Additional 'brew' aliases
+alias bua='brew update && brew upgrade && brew upgrade --cask --greedy --force'
+alias buabb='brew update && brew upgrade && brew upgrade --cask --greedy --force && brew bundle'
