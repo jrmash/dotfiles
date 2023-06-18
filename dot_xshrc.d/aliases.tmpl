@@ -2,5 +2,10 @@
 alias ls='lsd'
 
 ## Additional 'brew' aliases
+{{ if eq .chezmoi.os "darwin" -}}
 alias bua='brew update && brew upgrade && brew upgrade --cask --greedy --force'
 alias buabb='brew update && brew upgrade && brew upgrade --cask --greedy --force && brew bundle'
+{{- else if eq .chezmoi.os "linux" -}}
+alias bua='brew update && brew upgrade'
+alias buabb='brew update && brew upgrade && brew bundle'
+{{- end }}
