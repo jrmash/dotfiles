@@ -1,2 +1,12 @@
 HISTSIZE=1000000000
 SAVEHIST=${HISTSIZE}
+
+setopt EXTENDED_HISTORY         ## Add timestamp and elapsed time to HISTFILE entries
+setopt HIST_EXPIRE_DUPS_FIRST   ## Delete duplicates first when HISTFILE exceeds HISTSIZE
+setopt HIST_IGNORE_ALL_DUPS     ## Delete old history entry if new entry is a duplicate
+setopt HIST_IGNORE_DUPS         ## Don't add history entry if it duplicates the previous one
+setopt HIST_IGNORE_SPACE        ## Don't add history entry if it starts with a space
+setopt HIST_REDUCE_BLANKS       ## Remove superfluous blanks before recording entry
+setopt HIST_SAVE_NO_DUPS        ## Remove old duplicate history entries on save
+setopt HIST_VERIFY              ## Show expanded command but don't execute it immediately
+setopt SHARE_HISTORY            ## Share history between all sessions
