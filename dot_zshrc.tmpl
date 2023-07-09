@@ -3,33 +3,35 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 plugins=(
-	## Alias Pllugins
-	1password                 ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/1password
-	ansible                   ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/ansible
-	brew                      ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/brew
-	docker                    ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/docker
-	docker-compose            ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/docker-compose
-	git                       ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git
-	gradle                    ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/gradle
-	history                   ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/history
-	kubectl                   ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/kubectl
-	mvn                       ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/mvn
-	rsync                     ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/rsync
-	terraform                 ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/terraform
-	
-	## Functionality Plugins
-	ag                        ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/ag
-	aliases                   ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/aliases
-	direnv                    ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/direnv
-	gcloud                    ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/gcloud
-	helm                      ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/helm
-	httpie                    ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/httpie
-	vault                     ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/vault
-	zsh-autosuggestions       ## https://github.com/zsh-users/zsh-autosuggestions
-	zsh-syntax-highlighting   ## https://github.com/zsh-users/zsh-syntax-highlighting
+  ## Alias Pllugins
+  1password                 ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/1password
+  ansible                   ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/ansible
+  brew                      ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/brew
+  docker                    ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/docker
+  docker-compose            ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/docker-compose
+  git                       ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git
+  gradle                    ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/gradle
+  history                   ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/history
+  kubectl                   ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/kubectl
+  mvn                       ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/mvn
+  rsync                     ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/rsync
+  terraform                 ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/terraform
+  
+  ## Functionality Plugins
+  ag                        ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/ag
+  aliases                   ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/aliases
+  direnv                    ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/direnv
+  fd                        ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/fd
+  helm                      ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/helm
+  httpie                    ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/httpie
+  isodate                   ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/isodate
+  zsh-autosuggestions       ## https://github.com/zsh-users/zsh-autosuggestions
+  zsh-syntax-highlighting   ## https://github.com/zsh-users/zsh-syntax-highlighting
 
 {{- if eq .machine.type "work" }}
+  gcloud                    ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/gcloud
   jfrog                     ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/jfrog
+  vault                     ## https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/vault
 {{- end }}
 )
 
@@ -38,5 +40,5 @@ source "${HOME}/.p10k.zsh"
 source ~/.xshrc
 
 while IFS= read -r -d ''; do
-	source ${REPLY}
+  source ${REPLY}
 done < <( find ~/.zshrc.d -type f -exec printf '%s\0' {} + )
