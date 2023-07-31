@@ -1,6 +1,9 @@
 ## General Files
 .env
 .envrc
+*.bak
+*.log
+*.old
 
 ## System Files (OSX)
 .AppleDB
