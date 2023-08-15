@@ -1,0 +1,32 @@
+.github/
+install.sh
+LICENSE
+README.md
+
+{{ if eq .chezmoi.os "darwin" }}
+{{ end }}
+{{ if eq .chezmoi.os "linux" }}
+private_Library/**
+{{ end }}
+{{ if eq .chezmoi.os "windows" }}
+.bashrc
+.bashrc.d/**
+.vimrc
+.xshenv
+.xshenv.d/**
+.xshrc
+.xshrc.d/**
+.zshenv
+.zshenv.d/**
+.zshrc
+.zshrc.d/**
+Brewfile
+{{ end }}
+
+{{ if ne .chezmoi.os "darwin" }}
+Library/**
+{{ end }}
+{{ if ne .chezmoi.os "linux" }}
+{{ end }}
+{{ if ne .chezmoi.os "windows" }}
+{{ end }}
