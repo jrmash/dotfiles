@@ -18,10 +18,14 @@ alias buabb='brew update && brew upgrade && brew bundle'
 
 ## Create additional 'docker' aliases
 alias deti='docker exec -t -i'
+
+## Create additional 'kubectl' aliases
 alias kd='kubectl describe'
+alias kdcrd='kubectl describe crd'
 alias kdhpa='kubectl describe hpa'
 alias kdvpa='kubectl describe vpa'
 alias kg='kubectl get'
+alias kgcrd='kubectl get crd'
 alias kge='kubectl get events'
 alias kgea='kubectl get events --all-namespaces'
 alias kghpa='kubectl get hpa'
@@ -34,5 +38,6 @@ alias kt='kubectl top'
 alias ktn='kubectl top nodes'
 alias ktna='kubectl top nodes --all-namespaces'
 alias ktp='kubectl top pods'
+
 ## Create helpers for GPG
 alias gpg-learn='gpg-connect-agent "scd serialno" "learn --force" /bye'
