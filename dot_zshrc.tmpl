@@ -37,6 +37,14 @@ plugins=(
 
 source "${HOME}/.oh-my-zsh/oh-my-zsh.sh"
 source "${HOME}/.p10k.zsh"
+## Configure GPG to act as the SSH agent for the host
+export GPG_TTY=$(tty)
+
+if [ -S "${HOME}/.gnupg/S.gpg-agent.ssh" ]; then
+  export SSH_AUTH_SOCK=${HOME}/.gnupg/S.gpg-agent.ssh
+fi
+
+## Load XSH (cross-shell) and ZSH scripts
 source ~/.xshrc
 
 while IFS= read -r -d ''; do
