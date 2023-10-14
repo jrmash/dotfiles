@@ -1,3 +1,11 @@
+tap 'homebrew/bundle'                       ## https://github.com/Homebrew/homebrew-bundle
+tap 'homebrew/services'                     ## https://github.com/Homebrew/homebrew-services
+
+{{- if eq .chezmoi.os "darwin" }}
+tap 'homebrew/cask-fonts'                   ## https://github.com/Homebrew/homebrew-cask-fonts
+tap 'homebrew/cask-versions'                ## https://github.com/Homebrew/homebrew-cask-versions
+{{- end }}
+
 tap 'warrensbox/tap'                        ## https://github.com/warrensbox/homebrew-tap
 
 ## ============================================================================================== ##
@@ -5,7 +13,6 @@ tap 'warrensbox/tap'                        ## https://github.com/warrensbox/hom
 ## ============================================================================================== ##
 brew 'act'                                  ## https://github.com/nektos/act
 brew 'ag'                                   ## https://github.com/ggreer/the_silver_searcher
-brew 'aliases'                              ## https://github.com/sebglazebrook/aliases
 brew 'artillery'                            ## https://github.com/artilleryio/artillery
 brew 'asciinema'                            ## https://github.com/asciinema/asciinema
 brew 'aspell'                               ## https://github.com/GNUAspell/aspell
