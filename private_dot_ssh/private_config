@@ -1,0 +1,11 @@
+Host github.com
+    AddKeysToAgent yes
+
+Host *
+    IgnoreUnknown UseKeychain
+    UseKeychain yes
+
+## OpenSSH disabled SHA-1 signatures in v8.8, but some devices use old versions
+## of SSH, so it may be necessary enable it explicitly for select hosts.
+# Host <HostName>
+#    HostkeyAlgorithms +ssh-rsa

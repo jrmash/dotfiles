@@ -1,0 +1,13 @@
+default-key {{ .gpg.signingKey }}
+trusted-key {{ .gpg.signingKey }}
+
+## Behavior Options
+no-symkey-cache
+require-cross-certification
+throw-keyids
+
+## Output Options
+keyid-format long
+no-emit-version
+no-greeting
+with-fingerprint
