@@ -1,200 +1,200 @@
-tap 'homebrew/bundle'                       ## https://github.com/Homebrew/homebrew-bundle
-tap 'homebrew/services'                     ## https://github.com/Homebrew/homebrew-services
+tap 'homebrew/bundle'                                   ## https://github.com/Homebrew/homebrew-bundle
+tap 'homebrew/services'                                 ## https://github.com/Homebrew/homebrew-services
 
 {{- if eq .chezmoi.os "darwin" }}
-tap 'homebrew/cask-fonts'                   ## https://github.com/Homebrew/homebrew-cask-fonts
-tap 'homebrew/cask-versions'                ## https://github.com/Homebrew/homebrew-cask-versions
+tap 'homebrew/cask-fonts'                               ## https://github.com/Homebrew/homebrew-cask-fonts
+tap 'homebrew/cask-versions'                            ## https://github.com/Homebrew/homebrew-cask-versions
 {{- end }}
 
-tap 'warrensbox/tap'                        ## https://github.com/warrensbox/homebrew-tap
+tap 'warrensbox/tap'                                    ## https://github.com/warrensbox/homebrew-tap
 
-## ============================================================================================== ##
-##                                           Dev Tools                                            ##
-## ============================================================================================== ##
-brew 'act'                                  ## https://github.com/nektos/act
-brew 'ag'                                   ## https://github.com/ggreer/the_silver_searcher
-brew 'artillery'                            ## https://github.com/artilleryio/artillery
-brew 'asciinema'                            ## https://github.com/asciinema/asciinema
-brew 'aspell'                               ## https://github.com/GNUAspell/aspell
-brew 'bat'                                  ## https://github.com/sharkdp/bat
-brew 'bitwise'                              ## https://github.com/mellowcandle/bitwise
-brew 'bmon'                                 ## https://github.com/tgraf/bmon
-brew 'btop'                                 ## https://github.com/aristocratos/btop
-brew 'chezmoi'                              ## https://github.com/twpayne/chezmoi
-brew 'cmake'                                ## https://github.com/Kitware/CMake
-brew 'cloc'                                 ## https://github.com/AlDanial/cloc
-brew 'cookiecutter'                         ## https://github.com/cookiecutter/cookiecutter
-brew 'ctop'                                 ## https://github.com/bcicen/ctop
-brew 'curl'                                 ## https://github.com/curl/curl
-brew 'diff-so-fancy'                        ## https://github.com/so-fancy/diff-so-fancy
-brew 'direnv'                               ## https://github.com/direnv/direnv
-brew 'duf'                                  ## https://github.com/muesli/duf
-brew 'fd'                                   ## https://github.com/sharkdp/fd
-brew 'fselect'                              ## https://github.com/jhspetersson/fselect
-brew 'fx'                                   ## https://github.com/antonmedv/fx
-brew 'fzf'                                  ## https://github.com/junegunn/fzf
-brew 'gawk'                                 ## https://git.savannah.gnu.org/git/gawk.git
-brew 'gh'                                   ## https://github.com/cli/cli
-brew 'git'                                  ## https://github.com/git/git
-brew 'git-delta'                            ## https://github.com/dandavison/delta
-brew 'git-lfs'                              ## https://github.com/git-lfs/git-lfs
-brew 'glances'                              ## https://github.com/nicolargo/glances
-brew 'gnupg'                                ## https://github.com/gpg/gnupg
-brew 'gradle', args:["ignore-dependencies"] ## https://github.com/gradle/gradle
-brew 'has'                                  ## https://github.com/kdabir/has
-brew 'htop'                                 ## https://github.com/htop-dev/htop
-brew 'httpie'                               ## https://github.com/httpie/httpie
-brew 'jo'                                   ## https://github.com/jpmens/jo
-brew 'jq'                                   ## https://github.com/stedolan/jq
-brew 'kcov'                                 ## https://github.com/SimonKagstrom/kcov
-brew 'lazydocker'                           ## https://github.com/jesseduffield/lazydocker
-brew 'lnav'                                 ## https://github.com/tstack/lnav
-brew 'lsd'                                  ## https://github.com/Peltoche/lsd
-brew 'maven', args:["ignore-dependencies"]  ## https://github.com/apache/maven
-brew 'nmap'                                 ## https://github.com/nmap/nmap
-brew 'opa'                                  ## https://github.com/open-policy-agent/opa
-brew 'openssh'                              ## https://github.com/openssh/openssh-portable
-brew 'openssl'                              ## https://github.com/openssl/openssl
-brew 'parallel'                             ## https://git.savannah.gnu.org/git/parallel.git
-brew 'pinentry'                             ## https://github.com/gpg/pinentry
-brew 'pinentry-mac'                         ## https://github.com/GPGTools/pinentry-mac
-brew 'pre-commit'                           ## https://github.com/pre-commit/pre-commit
-brew 'progress'                             ## https://github.com/Xfennec/progress
-brew 'ripgrep'                              ## https://github.com/BurntSushi/ripgrep
-brew 'rsync'                                ## https://github.com/WayneD/rsync
-brew 'shellcheck'                           ## https://github.com/koalaman/shellcheck
-brew 'sslscan'                              ## https://github.com/rbsec/sslscan
-brew 'tree'                                 ## https://github.com/Old-Man-Programmer/tree (MIRROR)
-brew 'watch'                                ## https://gitlab.com/procps-ng/procps
-brew 'wget'                                 ## https://git.savannah.gnu.org/cgit/wget.git
-brew 'yarn'                                 ## https://github.com/yarnpkg/yarn
-brew 'yq'                                   ## https://github.com/mikefarah/yq
-brew 'zenith'                               ## https://github.com/bvaisvil/zenith/
+## ================================================================================================================== ##
+##                                                     Dev Tools                                                      ##
+## ================================================================================================================== ##
+brew 'act'                                              ## https://github.com/nektos/act
+brew 'ag'                                               ## https://github.com/ggreer/the_silver_searcher
+brew 'artillery'                                        ## https://github.com/artilleryio/artillery
+brew 'asciinema'                                        ## https://github.com/asciinema/asciinema
+brew 'aspell'                                           ## https://github.com/GNUAspell/aspell
+brew 'bat'                                              ## https://github.com/sharkdp/bat
+brew 'bitwise'                                          ## https://github.com/mellowcandle/bitwise
+brew 'bmon'                                             ## https://github.com/tgraf/bmon
+brew 'btop'                                             ## https://github.com/aristocratos/btop
+brew 'chezmoi'                                          ## https://github.com/twpayne/chezmoi
+brew 'cmake'                                            ## https://github.com/Kitware/CMake
+brew 'cloc'                                             ## https://github.com/AlDanial/cloc
+brew 'cookiecutter'                                     ## https://github.com/cookiecutter/cookiecutter
+brew 'ctop'                                             ## https://github.com/bcicen/ctop
+brew 'curl'                                             ## https://github.com/curl/curl
+brew 'diff-so-fancy'                                    ## https://github.com/so-fancy/diff-so-fancy
+brew 'direnv'                                           ## https://github.com/direnv/direnv
+brew 'duf'                                              ## https://github.com/muesli/duf
+brew 'fd'                                               ## https://github.com/sharkdp/fd
+brew 'fselect'                                          ## https://github.com/jhspetersson/fselect
+brew 'fx'                                               ## https://github.com/antonmedv/fx
+brew 'fzf'                                              ## https://github.com/junegunn/fzf
+brew 'gawk'                                             ## https://git.savannah.gnu.org/git/gawk.git
+brew 'gh'                                               ## https://github.com/cli/cli
+brew 'git'                                              ## https://github.com/git/git
+brew 'git-delta'                                        ## https://github.com/dandavison/delta
+brew 'git-lfs'                                          ## https://github.com/git-lfs/git-lfs
+brew 'glances'                                          ## https://github.com/nicolargo/glances
+brew 'gnupg'                                            ## https://github.com/gpg/gnupg
+brew 'gradle', args:["ignore-dependencies"]             ## https://github.com/gradle/gradle
+brew 'has'                                              ## https://github.com/kdabir/has
+brew 'htop'                                             ## https://github.com/htop-dev/htop
+brew 'httpie'                                           ## https://github.com/httpie/httpie
+brew 'jo'                                               ## https://github.com/jpmens/jo
+brew 'jq'                                               ## https://github.com/stedolan/jq
+brew 'kcov'                                             ## https://github.com/SimonKagstrom/kcov
+brew 'lazydocker'                                       ## https://github.com/jesseduffield/lazydocker
+brew 'lnav'                                             ## https://github.com/tstack/lnav
+brew 'lsd'                                              ## https://github.com/Peltoche/lsd
+brew 'maven', args:["ignore-dependencies"]              ## https://github.com/apache/maven
+brew 'nmap'                                             ## https://github.com/nmap/nmap
+brew 'opa'                                              ## https://github.com/open-policy-agent/opa
+brew 'openssh'                                          ## https://github.com/openssh/openssh-portable
+brew 'openssl'                                          ## https://github.com/openssl/openssl
+brew 'parallel'                                         ## https://git.savannah.gnu.org/git/parallel.git
+brew 'pinentry'                                         ## https://github.com/gpg/pinentry
+brew 'pinentry-mac'                                     ## https://github.com/GPGTools/pinentry-mac
+brew 'pre-commit'                                       ## https://github.com/pre-commit/pre-commit
+brew 'progress'                                         ## https://github.com/Xfennec/progress
+brew 'ripgrep'                                          ## https://github.com/BurntSushi/ripgrep
+brew 'rsync'                                            ## https://github.com/WayneD/rsync
+brew 'shellcheck'                                       ## https://github.com/koalaman/shellcheck
+brew 'sslscan'                                          ## https://github.com/rbsec/sslscan
+brew 'tree'                                             ## https://github.com/Old-Man-Programmer/tree (MIRROR)
+brew 'watch'                                            ## https://gitlab.com/procps-ng/procps
+brew 'wget'                                             ## https://git.savannah.gnu.org/cgit/wget.git
+brew 'yarn'                                             ## https://github.com/yarnpkg/yarn
+brew 'yq'                                               ## https://github.com/mikefarah/yq
+brew 'zenith'                                           ## https://github.com/bvaisvil/zenith/
 
 {{- if eq .machine.type "personal" }}
-brew 'mas'                                  ## https://github.com/mas-cli/mas
-brew 'ykman'                                ## https://github.com/Yubico/yubikey-manager
-brew 'youtube-dl'                           ## https://github.com/ytdl-org/youtube-dl
+brew 'mas'                                              ## https://github.com/mas-cli/mas
+brew 'ykman'                                            ## https://github.com/Yubico/yubikey-manager
+brew 'youtube-dl'                                       ## https://github.com/ytdl-org/youtube-dl
 {{- end }}
 
-## ============================================================================================== ##
-##                                          DevOps Tools                                          ##
-## ============================================================================================== ##
-brew 'age'                                  ## https://github.com/FiloSottile/age
-brew 'ansible'                              ## https://github.com/ansible/ansible
-brew 'helm'                                 ## https://github.com/helm/helm
-brew 'k9s'                                  ## https://github.com/derailed/k9s
-brew 'kics'                                 ## https://github.com/Checkmarx/kics
-brew 'kubernetes-cli'                       ## https://github.com/kubernetes/kubectl
-brew 'lynis'                                ## https://github.com/CISOfy/lynis
-brew 'neofetch'                             ## https://github.com/dylanaraps/neofetch
-brew 'onefetch'                             ## https://github.com/o2sh/onefetch
-brew 'packer'                               ## https://github.com/hashicorp/packer
-brew 'sops'                                 ## https://github.com/mozilla/sops
-brew 'stern'                                ## https://github.com/stern/stern
-brew 'telnet'                               ## https://github.com/apple-oss-distributions/remote_cmds
-brew 'terraform-docs'                       ## https://github.com/terraform-docs/terraform-docs
-brew 'terraform-rover'                      ## https://github.com/im2nguyen/rover
-brew 'tflint'                               ## https://github.com/terraform-linters/tflint
-brew 'tfswitch'                             ## https://github.com/warrensbox/terraform-switcher
-brew 'tgswitch'                             ## https://github.com/warrensbox/tgswitch
-brew 'vault'                                ## https://github.com/hashicorp/vault
+## ================================================================================================================== ##
+##                                                    DevOps Tools                                                    ##
+## ================================================================================================================== ##
+brew 'age'                                              ## https://github.com/FiloSottile/age
+brew 'ansible'                                          ## https://github.com/ansible/ansible
+brew 'helm'                                             ## https://github.com/helm/helm
+brew 'k9s'                                              ## https://github.com/derailed/k9s
+brew 'kics'                                             ## https://github.com/Checkmarx/kics
+brew 'kubernetes-cli'                                   ## https://github.com/kubernetes/kubectl
+brew 'lynis'                                            ## https://github.com/CISOfy/lynis
+brew 'neofetch'                                         ## https://github.com/dylanaraps/neofetch
+brew 'onefetch'                                         ## https://github.com/o2sh/onefetch
+brew 'packer'                                           ## https://github.com/hashicorp/packer
+brew 'sops'                                             ## https://github.com/mozilla/sops
+brew 'stern'                                            ## https://github.com/stern/stern
+brew 'telnet'                                           ## https://github.com/apple-oss-distributions/remote_cmds
+brew 'terraform-docs', args:["ignore-dependencies"]     ## https://github.com/terraform-docs/terraform-docs
+brew 'terraform-rover', args:["ignore-dependencies"]    ## https://github.com/im2nguyen/rover
+brew 'tflint'                                           ## https://github.com/terraform-linters/tflint
+brew 'tfswitch'                                         ## https://github.com/warrensbox/terraform-switcher
+brew 'tgswitch'                                         ## https://github.com/warrensbox/tgswitch
+brew 'vault'                                            ## https://github.com/hashicorp/vault
 
 {{- if eq .machine.type "work" }}
-brew 'jfrog-cli'                            ## https://github.com/jfrog/jfrog-cli
+brew 'jfrog-cli'                                        ## https://github.com/jfrog/jfrog-cli
 {{- end }}
 
-## ============================================================================================== ##
-##                                       Language Suppport                                        ##
-## ============================================================================================== ##
-brew 'ant', args:["ignore-dependencies"]    ## https://github.com/apache/ant
-brew 'goenv'                                ## https://github.com/syndbg/goenv
-brew 'jenv'                                 ## https://github.com/jenv/jenv
-brew 'node-build'                           ## https://github.com/nodenv/node-build
-brew 'nodenv'                               ## https://github.com/nodenv/nodenv
-brew 'perl-build'                           ## https://github.com/tokuhirom/Perl-Build
-brew 'plenv'                                ## https://github.com/tokuhirom/plenv
-brew 'pyenv'                                ## https://github.com/pyenv/pyenv
-brew 'rbenv-bundler'                        ## https://github.com/carsomyr/rbenv-bundler
-brew 'rbenv'                                ## https://github.com/rbenv/rbenv
-brew 'ruby-build'                           ## https://github.com/rbenv/ruby-build
-brew 'virtualenv'                           ## https://github.com/pypa/virtualenv
+## ================================================================================================================== ##
+##                                                 Language Suppport                                                  ##
+## ================================================================================================================== ##
+brew 'ant', args:["ignore-dependencies"]                ## https://github.com/apache/ant
+brew 'goenv'                                            ## https://github.com/syndbg/goenv
+brew 'jenv'                                             ## https://github.com/jenv/jenv
+brew 'node-build'                                       ## https://github.com/nodenv/node-build
+brew 'nodenv'                                           ## https://github.com/nodenv/nodenv
+brew 'perl-build'                                       ## https://github.com/tokuhirom/Perl-Build
+brew 'plenv'                                            ## https://github.com/tokuhirom/plenv
+brew 'pyenv'                                            ## https://github.com/pyenv/pyenv
+brew 'rbenv-bundler'                                    ## https://github.com/carsomyr/rbenv-bundler
+brew 'rbenv'                                            ## https://github.com/rbenv/rbenv
+brew 'ruby-build'                                       ## https://github.com/rbenv/ruby-build
+brew 'virtualenv'                                       ## https://github.com/pypa/virtualenv
 
-## ============================================================================================== ##
-##                                             Shells                                             ##
-## ============================================================================================== ##
-brew 'bash'                                 ## https://git.savannah.gnu.org/git/bash.git
-brew 'zsh'                                  ## https://github.com/zsh-users/zsh (MIRROR)
+## ================================================================================================================== ##
+##                                                       Shells                                                       ##
+## ================================================================================================================== ##
+brew 'bash'                                             ## https://git.savannah.gnu.org/git/bash.git
+brew 'zsh'                                              ## https://github.com/zsh-users/zsh (MIRROR)
 
-## ============================================================================================== ##
-##                                            Software                                            ##
-## ============================================================================================== ##
+## ================================================================================================================== ##
+##                                                      Software                                                      ##
+## ================================================================================================================== ##
 {{- if eq .chezmoi.os "darwin" }}
-cask '1password'                            ## https://1password.com
-cask '1password-cli'                        ## https://developer.1password.com/docs/cli
-cask 'beyond-compare'                       ## https://www.scootersoftware.com
-cask 'docker'                               ## https://www.docker.com/products/docker-desktop
-cask 'dotnet-sdk'                           ## https://www.microsoft.com/net/core#macos
-cask 'firefox'                              ## https://www.mozilla.org/firefox
-cask 'google-chrome'                        ## https://www.google.com/chrome
-cask 'google-cloud-sdk'                     ## https://cloud.google.com/sdk
-cask 'google-drive'                         ## https://www.google.com/drive
-cask 'gpg-suite'                            ## https://gpgtools.org
-cask 'hyper'                                ## https://hyper.is
-cask 'jetbrains-toolbox'                    ## https://www.jetbrains.com/toolbox-app
-cask 'kube-forwarder'                       ## https://kube-forwarder.pixelpoint.io
-cask 'microsoft-remote-desktop'             ## https://aka.ms/rdmac
-cask 'ngrok'                                ## https://ngrok.com
-cask 'osquery'                              ## https://github.com/osquery/osquery
-cask 'postman'                              ## https://www.postman.com
-cask 'powershell'                           ## https://github.com/PowerShell/PowerShell
-cask 'rambox'                               ## https://rambox.pro
-cask 'snagit'                               ## https://www.techsmith.com/screen-capture.html
-cask 'temurin'                              ## https://github.com/adoptium
-cask 'temurin11'                            ## https://github.com/adoptium/temurin11-binaries
-cask 'temurin17'                            ## https://github.com/adoptium/temurin17-binaries
-cask 'visual-studio-code'                   ## https://code.visualstudio.com
-cask 'zoom'                                 ## https://www.zoom.us
+cask '1password'                                        ## https://1password.com
+cask '1password-cli'                                    ## https://developer.1password.com/docs/cli
+cask 'beyond-compare'                                   ## https://www.scootersoftware.com
+cask 'docker'                                           ## https://www.docker.com/products/docker-desktop
+cask 'dotnet-sdk'                                       ## https://www.microsoft.com/net/core#macos
+cask 'firefox'                                          ## https://www.mozilla.org/firefox
+cask 'google-chrome'                                    ## https://www.google.com/chrome
+cask 'google-cloud-sdk'                                 ## https://cloud.google.com/sdk
+cask 'google-drive'                                     ## https://www.google.com/drive
+cask 'gpg-suite'                                        ## https://gpgtools.org
+cask 'hyper'                                            ## https://hyper.is
+cask 'jetbrains-toolbox'                                ## https://www.jetbrains.com/toolbox-app
+cask 'kube-forwarder'                                   ## https://kube-forwarder.pixelpoint.io
+cask 'microsoft-remote-desktop'                         ## https://aka.ms/rdmac
+cask 'ngrok'                                            ## https://ngrok.com
+cask 'osquery'                                          ## https://github.com/osquery/osquery
+cask 'postman'                                          ## https://www.postman.com
+cask 'powershell'                                       ## https://github.com/PowerShell/PowerShell
+cask 'rambox'                                           ## https://rambox.pro
+cask 'snagit'                                           ## https://www.techsmith.com/screen-capture.html
+cask 'temurin'                                          ## https://github.com/adoptium
+cask 'temurin11'                                        ## https://github.com/adoptium/temurin11-binaries
+cask 'temurin17'                                        ## https://github.com/adoptium/temurin17-binaries
+cask 'visual-studio-code'                               ## https://code.visualstudio.com
+cask 'zoom'                                             ## https://www.zoom.us
 
 {{- if eq .chezmoi.arch "amd64" }}
-cask 'temurin8'                             ## https://github.com/adoptium/temurin8-binaries
+cask 'temurin8'                                         ## https://github.com/adoptium/temurin8-binaries
 {{- end }}
 
 {{- if eq .machine.type "personal" }}
-cask 'microsoft-excel'                      ## https://products.office.com/en-US/excel
-cask 'obsidian'                             ## https://github.com/obsidianmd/obsidian-releases
-cask 'perforce'                             ## https://www.perforce.com
-cask 'plex'                                 ## https://www.plex.tv
+cask 'microsoft-excel'                                  ## https://products.office.com/en-US/excel
+cask 'obsidian'                                         ## https://github.com/obsidianmd/obsidian-releases
+cask 'perforce'                                         ## https://www.perforce.com
+cask 'plex'                                             ## https://www.plex.tv
 
-mas 'MsftRemoteDesktop',  id: 1295203466    ## https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466?mt=12
-mas 'XCode',              id: 497799835     ## https://apps.apple.com/us/app/xcode/id497799835?mt=12
+mas 'MsftRemoteDesktop',  id: 1295203466                ## https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466?mt=12
+mas 'XCode',              id: 497799835                 ## https://apps.apple.com/us/app/xcode/id497799835?mt=12
 
 {{- if eq .machine.chassis "desktop" }}
-cask 'curseforge'                           ## https://curseforge.overwolf.com
-cask 'epic-games'                           ## https://www.epicgames.com
-cask 'gog-galaxy'                           ## https://www.gog.com/galaxy
-cask 'handbrake'                            ## https://handbrake.fr
-cask 'makemkv'                              ## https://www.makemkv.com
-cask 'raspberry-pi-imager'                  ## https://www.raspberrypi.org/downloads
-cask 'signal'                               ## https://signal.org
-cask 'steam'                                ## https://store.steampowered.com
-cask 'unity-hub'                            ## https://unity3d.com/get-unity/download
-cask 'yubico-yubikey-manager'               ## https://github.com/Yubico/yubikey-manager-qt
+cask 'curseforge'                                       ## https://curseforge.overwolf.com
+cask 'epic-games'                                       ## https://www.epicgames.com
+cask 'gog-galaxy'                                       ## https://www.gog.com/galaxy
+cask 'handbrake'                                        ## https://handbrake.fr
+cask 'makemkv'                                          ## https://www.makemkv.com
+cask 'raspberry-pi-imager'                              ## https://www.raspberrypi.org/downloads
+cask 'signal'                                           ## https://signal.org
+cask 'steam'                                            ## https://store.steampowered.com
+cask 'unity-hub'                                        ## https://unity3d.com/get-unity/download
+cask 'yubico-yubikey-manager'                           ## https://github.com/Yubico/yubikey-manager-qt
 
-mas 'AppleRemoteDesktop', id: 409907375     ## https://apps.apple.com/us/app/apple-remote-desktop/id409907375?mt=12
-mas 'BetterSnapTool',     id: 417375580     ## https://apps.apple.com/us/app/bettersnaptool/id417375580?mt=12
-mas 'MacGoBluRayPlayer',  id: 1403952861    ## https://apps.apple.com/us/app/macgo-blu-ray-player/id1403952861?mt=12
+mas 'AppleRemoteDesktop', id: 409907375                 ## https://apps.apple.com/us/app/apple-remote-desktop/id409907375?mt=12
+mas 'BetterSnapTool',     id: 417375580                 ## https://apps.apple.com/us/app/bettersnaptool/id417375580?mt=12
+mas 'MacGoBluRayPlayer',  id: 1403952861                ## https://apps.apple.com/us/app/macgo-blu-ray-player/id1403952861?mt=12
 {{- end }}
 {{- end }}
 
 {{- if eq .machine.type "work" }}
-cask 'confluent-cli'                        ## https://docs.confluent.io/confluent-cli/current
+cask 'confluent-cli'                                    ## https://docs.confluent.io/confluent-cli/current
 {{- end }}
 {{- end }}
 
-## ============================================================================================== ##
-##                                        Special Fonts                                           ##
-## ============================================================================================== ##
+## ================================================================================================================== ##
+##                                                  Special Fonts                                                     ##
+## ================================================================================================================== ##
 ## https://github.com/ryanoasis/nerd-fonts
 {{- if eq .chezmoi.os "darwin" }}
 cask 'font-caskaydia-cove-nerd-font'
