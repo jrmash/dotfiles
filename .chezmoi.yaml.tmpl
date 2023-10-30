@@ -9,9 +9,9 @@ data:
     signingKey: E6902BD2D58302D3B8AB84D2C525F91A1CB0A67F
   machine:
 {{- if env "CODESPACES" }}
-    chassis: "virtual"
-    type: "codespace"
+    chassis: virtual
+    type: codespace
 {{- else }}
-    chassis: {{ promptStringOnce (index . "machine") "chassis" "Machine Chassis (desktop|laptop|server|virtual)" | quote }}
-    type: {{ promptStringOnce (index . "machine") "type" "Machine Type (personal|work)" | quote }}
+    chassis: {{ promptStringOnce (index . "machine") "chassis" "Machine Chassis (desktop|laptop|server|virtual)" }}
+    type: {{ promptStringOnce (index . "machine") "type" "Machine Type (personal|work)" }}
 {{- end }}
