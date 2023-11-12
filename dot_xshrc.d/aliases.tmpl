@@ -42,3 +42,5 @@ alias ktp='kubectl top pods'
 
 ## Create helpers for GPG
 alias gpg-learn='gpg-connect-agent "scd serialno" "learn --force" /bye'
+alias gpg-enc='gpg --encrypt --armor --sign --recipient jr@mash.pub'
+alias gpo-dec='gpg --decrypt --logger-file gpg.log'
