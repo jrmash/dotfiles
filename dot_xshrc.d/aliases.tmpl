@@ -43,10 +43,14 @@ alias ktna='kubectl top nodes --all-namespaces'
 alias ktp='kubectl top pods'
 
 ## Create additional 'terraform' aliases
+alias tfit='terraform init && terraform test'
+alias tfitv='terraform init && terraform test --verbose'
 alias tfs='terraform state'
 alias tfsl='terraform state list'
 alias tfsm='terraform state mv'
 alias tfss='terraform state show'
+alias tft='terraform test'
+alias tftv='terraform test --verbose'
 
 ## Create helpers for GPG
 alias gpg-learn='gpg-connect-agent "scd serialno" "learn --force" /bye'
