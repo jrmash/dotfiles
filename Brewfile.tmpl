@@ -170,6 +170,8 @@ mas 'MsftRemoteDesktop',  id: 1295203466                ## https://apps.apple.co
 mas 'XCode',              id: 497799835                 ## https://apps.apple.com/us/app/xcode/id497799835?mt=12
 
 {{- if eq .machine.chassis "desktop" }}
+brew 'dolt'                                             ## https://github.com/dolthub/dolt
+
 cask 'curseforge'                                       ## https://curseforge.overwolf.com
 cask 'epic-games'                                       ## https://www.epicgames.com
 cask 'gog-galaxy'                                       ## https://www.gog.com/galaxy
