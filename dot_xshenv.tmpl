@@ -1,3 +1,5 @@
+export HOMEBREW_AUTOREMOVE=1
+
 {{- if eq .chezmoi.os "darwin" }}
 {{- if eq .chezmoi.arch "arm64" }}
 export PATH="/opt/homebrew/bin:${PATH}"
