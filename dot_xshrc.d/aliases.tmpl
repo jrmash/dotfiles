@@ -57,3 +57,23 @@ alias tftv='terraform test --verbose'
 alias gpg-learn='gpg-connect-agent "scd serialno" "learn --force" /bye'
 alias gpg-enc='gpg --encrypt --armor --sign --recipient jr@mash.pub'
 alias gpo-dec='gpg --decrypt --logger-file gpg.log'
+
+{{ if eq .machine.type "work" -}}
+## Create aliases for Terragrunt
+## If/when the following PR gets merged, this can be removed
+## - https://github.com/ohmyzsh/ohmyzsh/pull/11164
+alias tg='terragrunt'
+alias tga='terragrunt apply'
+alias tgc='terragrunt console'
+alias tgd='terragrunt destroy'
+alias tgf='terragrunt fmt'
+alias tgi='terragrunt init'
+alias tgiu='terragrunt init -upgrade'
+alias tgo='terragrunt output'
+alias tgp='terragrunt plan'
+alias tgs='terragrunt state'
+alias tgsl='terragrunt state list'
+alias tgsm='terragrunt state mv'
+alias tgss='terragrunt state show'
+alias tgv='terragrunt validate'
+{{- end }}
