@@ -35,8 +35,12 @@ plugins=(
 {{- end }}
 )
 
+## Configure OhMyZsh and P10k
+export DISABLE_AUTO_UPDATE="true"
+
 source "${HOME}/.oh-my-zsh/oh-my-zsh.sh"
 source "${HOME}/.p10k.zsh"
+
 ## Configure GPG to act as the SSH agent for the host
 export GPG_TTY=$(tty)
 
