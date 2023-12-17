@@ -1,4 +1,5 @@
 .github/
+.oh-my-zsh/cache/
 bootstrap.sh
 install.sh
 LICENSE
