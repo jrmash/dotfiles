@@ -4,7 +4,7 @@
 bootstrap.sh
 install.sh
 LICENSE
-README.md
+**/*.md
 
 {{ if eq .chezmoi.os "darwin" }}
 {{ end }}
