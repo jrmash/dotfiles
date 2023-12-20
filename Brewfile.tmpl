@@ -187,6 +187,10 @@ mas 'AppleRemoteDesktop', id: 409907375                 ## https://apps.apple.co
 mas 'BetterSnapTool',     id: 417375580                 ## https://apps.apple.com/us/app/bettersnaptool/id417375580?mt=12
 mas 'MacGoBluRayPlayer',  id: 1403952861                ## https://apps.apple.com/us/app/macgo-blu-ray-player/id1403952861?mt=12
 {{- end }}
+
+{{- if eq .machine.chassis "laptop" }}
+cask 'nordvpn'                                          ## https://nordvpn.com/
+{{- end }}
 {{- end }}
 
 {{- if eq .machine.type "work" }}
