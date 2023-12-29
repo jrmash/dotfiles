@@ -1,3 +1,6 @@
+if [ `command -v goenv` > /dev/null ]; then
+    eval "$(goenv init -)"
+fi
 if [ `command -v jenv` > /dev/null ]; then
     eval "$(jenv init -)"
 fi
