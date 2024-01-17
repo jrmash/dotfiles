@@ -130,8 +130,6 @@ brew 'zsh'                                              ## https://github.com/zs
 ##                                                      Software                                                      ##
 ## ================================================================================================================== ##
 {{- if eq .chezmoi.os "darwin" }}
-cask '1password'                                        ## https://1password.com
-cask '1password-cli'                                    ## https://developer.1password.com/docs/cli
 cask 'beyond-compare'                                   ## https://www.scootersoftware.com
 cask 'docker'                                           ## https://www.docker.com/products/docker-desktop
 cask 'dotnet-sdk'                                       ## https://www.microsoft.com/net/core#macos
@@ -162,6 +160,8 @@ cask 'temurin8'                                         ## https://github.com/ad
 {{- end }}
 
 {{- if eq .machine.type "personal" }}
+cask '1password'                                        ## https://1password.com
+cask '1password-cli'                                    ## https://developer.1password.com/docs/cli
 cask 'microsoft-excel'                                  ## https://products.office.com/en-US/excel
 cask 'obsidian'                                         ## https://github.com/obsidianmd/obsidian-releases
 cask 'perforce'                                         ## https://www.perforce.com
