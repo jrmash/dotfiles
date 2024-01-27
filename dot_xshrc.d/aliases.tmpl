@@ -11,9 +11,11 @@ alias lt='lsd --tree'
 {{ if eq .chezmoi.os "darwin" -}}
 alias bua='brew update && brew upgrade && brew upgrade --cask --greedy --force'
 alias buabb='brew update && brew upgrade && brew upgrade --cask --greedy --force && brew bundle'
+alias buabbc='brew update && brew upgrade && brew upgrade --cask --greedy --force && brew bundle && brew bundle --force cleanup'
 {{- else if eq .chezmoi.os "linux" -}}
 alias bua='brew update && brew upgrade'
 alias buabb='brew update && brew upgrade && brew bundle'
+alias buabbc='brew update && brew upgrade && brew bundle && brew bundle --force cleanup'
 {{- end }}
 
 ## Create additional 'docker' aliases
