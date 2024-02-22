@@ -15,8 +15,6 @@ private_Library/**
 .bashrc
 .bashrc.d/**
 .vimrc
-.xshenv
-.xshenv.d/**
 .xshrc
 .xshrc.d/**
 .zshenv
