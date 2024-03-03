@@ -6,7 +6,8 @@ data:
   github:
     username: jrmash
   gpg:
-    signingKey: E6902BD2D58302D3B8AB84D2C525F91A1CB0A67F
+    signingEmail: {{ promptStringOnce (index . "gpg") "signingEmail" "GPG Signing Email" "jr@mash.pub" }}
+    signingKey: {{ promptStringOnce (index . "gpg") "signingKey" "GPG Signing key" "E6902BD2D58302D3B8AB84D2C525F91A1CB0A67F" }}
   machine:
 {{- if env "CODESPACES" }}
     chassis: virtual

@@ -1,0 +1,7 @@
+gpg-store-secret() {
+    local secret="${1}"
+    local secretPath="${3:-${HOME}/.secrets}/${2}"
+
+    echo "${secret}" | gpg --output "${secretPath}" -aeqs --recipient {{ .gpg.signingEmail }}
+    chmod 0600 "${secretPath}"
+}

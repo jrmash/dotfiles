@@ -65,7 +65,7 @@ alias tftv='terraform test --verbose'
 
 ## Create helpers for GPG
 alias gpg-dec='gpg --decrypt --logger-file gpg.log'
-alias gpg-enc='gpg --encrypt --armor --sign --recipient jr@mash.pub'
+alias gpg-enc='gpg --encrypt --armor --sign --recipient {{ .gpg.signingEmail }}'
 alias gpg-learn='gpg-connect-agent "scd serialno" "learn --force" /bye'
 
 {{ if eq .machine.type "work" -}}
