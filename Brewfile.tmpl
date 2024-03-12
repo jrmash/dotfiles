@@ -150,7 +150,9 @@ cask 'temurin17'                                        ## https://github.com/ad
 cask 'temurin21'                                        ## https://github.com/adoptium/temurin21-binaries
 cask 'visual-studio-code'                               ## https://code.visualstudio.com
 
-{{- if eq .chezmoi.arch "amd64" }}
+{{- if eq .chezmoi.arch "arm64" }}
+cask 'corretto8'                                        ## https://github.com/corretto/corretto-8
+{{- else }}
 cask 'temurin8'                                         ## https://github.com/adoptium/temurin8-binaries
 {{- end }}
 
