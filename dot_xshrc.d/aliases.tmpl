@@ -66,6 +66,9 @@ alias tft='terraform test'
 alias tftv='terraform test --verbose'
 
 {{ if eq .machine.type "work" -}}
+alias readlink='greadlink'
+alias uname='guname'
+
 ## Create 'terragrunt' aliases
 ## If/when the following PR gets merged, this can be removed
 ## - https://github.com/ohmyzsh/ohmyzsh/pull/11164
