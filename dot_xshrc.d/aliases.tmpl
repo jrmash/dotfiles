@@ -65,13 +65,8 @@ alias tfss='terraform state show'
 alias tft='terraform test'
 alias tftv='terraform test --verbose'
 
-## Create helpers for GPG
-alias gpg-dec='gpg --decrypt --logger-file gpg.log'
-alias gpg-enc='gpg --encrypt --armor --sign --recipient {{ .gpg.signingEmail }}'
-alias gpg-learn='gpg-connect-agent "scd serialno" "learn --force" /bye'
-
 {{ if eq .machine.type "work" -}}
-## Create aliases for Terragrunt
+## Create 'terragrunt' aliases
 ## If/when the following PR gets merged, this can be removed
 ## - https://github.com/ohmyzsh/ohmyzsh/pull/11164
 alias tg='terragrunt'
@@ -88,4 +83,17 @@ alias tgsl='terragrunt state list'
 alias tgsm='terragrunt state mv'
 alias tgss='terragrunt state show'
 alias tgv='terragrunt validate'
+
+## Create 'terramate' aliases
+alias tm='terramate'
+alias tmc='terramate create'
+alias tmf='terramate format'
+alias tmg='terramate generate'
+alias tml='terramate list'
+alias tmr='terramate run'
 {{- end }}
+
+## Create helpers for GPG
+alias gpg-dec='gpg --decrypt --logger-file gpg.log'
+alias gpg-enc='gpg --encrypt --armor --sign --recipient {{ .gpg.signingEmail }}'
+alias gpg-learn='gpg-connect-agent "scd serialno" "learn --force" /bye'
