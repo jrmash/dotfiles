@@ -162,30 +162,30 @@ cask 'temurin8'                                         ## https://github.com/ad
 {{- if eq .machine.type "personal" }}
 cask '1password'                                        ## https://1password.com
 cask '1password-cli'                                    ## https://developer.1password.com/docs/cli
+brew 'dolt'                                             ## https://github.com/dolthub/dolt
 cask 'google-chrome'                                    ## https://www.google.com/chrome
 cask 'google-drive'                                     ## https://www.google.com/drive
 cask 'microsoft-excel'                                  ## https://products.office.com/en-US/excel
 cask 'perforce'                                         ## https://www.perforce.com
 cask 'plex'                                             ## https://www.plex.tv
+cask 'signal'                                           ## https://signal.org
 cask 'steam'                                            ## https://store.steampowered.com
 cask 'zoom'                                             ## https://www.zoom.us
 
+mas 'AppleRemoteDesktop', id: 409907375                 ## https://apps.apple.com/us/app/apple-remote-desktop/id409907375?mt=12
+mas 'BetterSnapTool',     id: 417375580                 ## https://apps.apple.com/us/app/bettersnaptool/id417375580?mt=12
 mas 'XCode',              id: 497799835                 ## https://apps.apple.com/us/app/xcode/id497799835?mt=12
 
 {{- if eq .machine.chassis "desktop" }}
-brew 'dolt'                                             ## https://github.com/dolthub/dolt
 
 cask 'curseforge'                                       ## https://curseforge.overwolf.com
 cask 'epic-games'                                       ## https://www.epicgames.com
 cask 'handbrake'                                        ## https://handbrake.fr
 cask 'makemkv'                                          ## https://www.makemkv.com
 cask 'raspberry-pi-imager'                              ## https://www.raspberrypi.org/downloads
-cask 'signal'                                           ## https://signal.org
 cask 'unity-hub'                                        ## https://unity3d.com/get-unity/download
 cask 'yubico-yubikey-manager'                           ## https://github.com/Yubico/yubikey-manager-qt
 
-mas 'AppleRemoteDesktop', id: 409907375                 ## https://apps.apple.com/us/app/apple-remote-desktop/id409907375?mt=12
-mas 'BetterSnapTool',     id: 417375580                 ## https://apps.apple.com/us/app/bettersnaptool/id417375580?mt=12
 mas 'MacGoBluRayPlayer',  id: 1403952861                ## https://apps.apple.com/us/app/macgo-blu-ray-player/id1403952861?mt=12
 {{- end }}
 
