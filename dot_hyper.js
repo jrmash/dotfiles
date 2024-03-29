@@ -149,7 +149,7 @@ module.exports = {
   //   `@company/project`
   //   `project#1.0.1`
   plugins: [
-    'hyper-github-light',
+    'hyper-github-dark',
   ],
 
   // in development, you can create a directory under
