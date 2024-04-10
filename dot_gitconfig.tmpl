@@ -38,6 +38,7 @@
 ## User Aliases
 [alias]
   gone = !git remote prune origin && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs -r git branch -D
+  rexgc = !git reflog expire --expire-unreachable=now --all && git gc --prune=now
   yolo = push --force
 
   ## Silliness
