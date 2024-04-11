@@ -18,6 +18,9 @@ The following command will bootstrap a new system with these `dotfiles`
 When the above is complete, the following commands will help further prepare the system for use.
 
 ```
+## Settup Rosetta for M* Macs
+softwareupdate --install-rosetta --agree-to-license
+
 brew bundle
 
 ## Setup Tools
