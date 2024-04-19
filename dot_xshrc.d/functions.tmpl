@@ -5,3 +5,7 @@ gpg-store-secret() {
     echo "${secret}" | gpg --output "${secretPath}" -aeqs --recipient {{ .gpg.signingEmail }}
     chmod 0600 "${secretPath}"
 }
+
+kgsec-decrypt() {
+    kgsec "${@}" -o json | jq '.data | map_values(@base64d)'
+}
