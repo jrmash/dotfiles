@@ -23,6 +23,18 @@ alias deti='docker exec -t -i'
 alias dsp='docker system prune'
 alias dspa='docker system prune --all'
 
+## Create additional 'git' aliases
+alias ggc='git gc'
+alias ggcp='git gc --prune'
+alias ggcpn='git gc --prune=now'
+alias gfsck='git fsck'
+alias gfscku='git fsck --unreachable'
+alias gfsckunr='git fsck --unreachable --no-reflogs'
+alias grexp='git reflog expire'
+alias grexpu='git reflog expire --expire-unreachable'
+alias grexpun='git reflog expire --expire-unreachable now'
+alias grexpuna='git reflog expire --expire-unreachable now --all'
+
 ## Create additional 'kubectl' aliases
 alias kd='kubectl describe'
 alias kdc='kubectl describe certificate'
