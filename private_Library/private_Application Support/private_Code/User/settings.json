@@ -1,0 +1,175 @@
+{
+	// Language Specific Settings
+	"[bats][shellscript]": {
+		"editor.detectIndentation": false,
+		"editor.insertSpaces": false,
+		"editor.tabSize": 4
+	},
+	"[go]": {},
+	"[hcl]": {
+		"editor.tabSize": 2
+	},
+	"[javascript]": {
+		"editor.tabSize": 2
+	},
+	"[json]": {
+		"editor.quickSuggestions": {
+			"strings": true
+		},
+		"editor.suggest.insertMode": "replace",
+		"gitlens.codeLens.scopes": [
+			"document"
+		]
+	},
+	"[packer]": {
+		"editor.tabSize": 2
+	},
+	"[terraform]": {
+		"editor.defaultFormatter": "hashicorp.terraform",
+		"editor.tabSize": 2
+	},
+	"[terragrunt]": {
+		"editor.defaultFormatter": "hashicorp.terraform",
+		"editor.tabSize": 2
+	},
+	"[terramate]": {
+		"editor.tabSize": 2
+	},
+	"[yaml]": {
+		"editor.tabSize": 2
+	},
+	"codeQL.telemetry.enableTelemetry": true,
+	"debug.console.wordWrap": false,
+	"diffEditor.wordWrap": "off",
+	"editor.codeLens": false,
+	"editor.comments.ignoreEmptyLines": false,
+	"editor.fontFamily": "'CaskaydiaCove Nerd Font Mono', Menlo, Monaco, 'Courier New', monospace",
+	"editor.fontLigatures": true,
+	"editor.indentSize": "tabSize",
+	"editor.inlineSuggest.enabled": true,
+	"editor.language.colorizedBracketPairs": [],
+	"editor.renderWhitespace": "all",
+	"editor.rulers": [
+		80,
+		120
+	],
+	"editor.suggestSelection": "first",
+	"editor.trimAutoWhitespace": false,
+	"explorer.confirmDelete": false,
+	"explorer.confirmDragAndDrop": false,
+	"files.associations": {
+		// "*.hcl": "terraform",
+		"*.tf": "terraform",
+		"*.tm.hcl": "hcl",
+		"*.xshenv": "shellscript",
+		"*.xshrc": "shellscript",
+		"Brewfile": "ruby"
+	},
+	"files.exclude": {
+		"**/.classpath": true,
+		"**/.factorypath": true,
+		"**/.project": true,
+		"**/.settings": true
+	},
+	"git.confirmSync": false,
+	"git.terminalAuthentication": false,
+	"github.copilot.enable": {
+		"*": true,
+		"plaintext": true,
+		"markdown": true,
+		"scminput": false,
+		"shellscript": true,
+		"yaml": true
+	},
+	"github.gitAuthentication": false,
+	"githubPullRequests.pullBranch": "never",
+	"gitlens.advanced.messages": {
+		"suppressIntegrationDisconnectedTooManyFailedRequestsWarning": true
+	},
+	"gitlens.codeLens.enabled": false,
+	"gitlens.graph.minimap.dataType": "lines",
+	"json.schemas": [],
+	"terminal.integrated.defaultProfile.linux": "zsh",
+	"terminal.integrated.defaultProfile.osx": "zsh",
+	"terminal.integrated.inheritEnv": false,
+	"terminal.integrated.scrollback": 1000000,
+	"terminal.integrated.shellIntegration.enabled": false,
+	"vs-kubernetes": {
+		"vs-kubernetes.crd-code-completion": "disabled",
+		"vscode-kubernetes.minikube-path.linux": "/home/codespace/.local/state/vs-kubernetes/tools/minikube/linux-amd64/minikube"
+	},
+	"workbench.editor.wrapTabs": true,
+	"yaml.schemas": {},
+	"sarif-viewer.connectToGithubCodeScanning": "off",
+	"sarif-viewer.explorer.openWhenNoResults": false,
+	"workbench.editor.enablePreview": true,
+	"terraform.codelens.referenceCount": true,
+	"terraform.languageServer.ignoreSingleFileWarning": true,
+	"editor.formatOnSave": true,
+	"hclformat.levant_support": false,
+	"cSpell.enabledLanguageIds": [
+		"asciidoc",
+		"c",
+		"cpp",
+		"csharp",
+		"css",
+		"elixir",
+		"erlang",
+		"git-commit",
+		"go",
+		"graphql",
+		"handlebars",
+		"haskell",
+		"html",
+		"jade",
+		"java",
+		"javascript",
+		"javascriptreact",
+		"json",
+		"jsonc",
+		"jupyter",
+		"latex",
+		"less",
+		"markdown",
+		"php",
+		"plaintext",
+		"python",
+		"pug",
+		"restructuredtext",
+		"rust",
+		"scala",
+		"scss",
+		"scminput",
+		"swift",
+		"text",
+		"typescript",
+		"typescriptreact",
+		"vue",
+		"yaml",
+		"yml",
+		"hcl"
+	],
+	"cSpell.userWords": [
+		"bypassers",
+		"cicd",
+		"CODEOWNERS",
+		"devel",
+		"Galvatron",
+		"gameplay",
+		"kareo",
+		"mashinations",
+		"postcondition",
+		"rulesets",
+		"secops",
+		"Springboot",
+		"Tebra",
+		"templatefile",
+		"Terraforming",
+		"terragrunt",
+		"terramate",
+		"tftest",
+		"triagers",
+		"yamldecode"
+	],
+	"workbench.colorTheme": "Default Dark+"
+}
