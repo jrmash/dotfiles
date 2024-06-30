@@ -161,9 +161,11 @@ cask 'temurin8'                                         ## https://github.com/ad
 {{- end }}
 
 {{- if eq .machine.type "personal" }}
+brew 'dolt'                                             ## https://github.com/dolthub/dolt
+
 cask '1password'                                        ## https://1password.com
 cask '1password-cli'                                    ## https://developer.1password.com/docs/cli
-brew 'dolt'                                             ## https://github.com/dolthub/dolt
+cask 'chatgpt'                                          ## https://chatgpt.com/
 cask 'google-drive'                                     ## https://www.google.com/drive
 cask 'handbrake'                                        ## https://handbrake.fr
 cask 'makemkv'                                          ## https://www.makemkv.com
