@@ -277,7 +277,7 @@
         <attribute name="model" type="int32">1986622068</attribute>
         <attribute name="maindisplay" type="int32">1</attribute>
         <attribute name="displayuuid" type="string">8FF9025C-D52E-4935-81FF-931131A5B1E4</attribute>
-        <attribute name="displayid" type="int32">7</attribute>
+        <attribute name="displayid" type="int32">29</attribute>
         <attribute name="builtin" type="bool">0</attribute>
         <attribute name="uniqueidentifier" type="string">3CADA2B3-5306-4260-892E-CA31DE40F09D</attribute>
         <relationship name="displayeddragpoints" type="0/0" destination="BSTDRAGPOINT"></relationship>
@@ -288,10 +288,10 @@
         <attribute name="vendor" type="int32">1552</attribute>
         <attribute name="serialnumber" type="string">4251086178</attribute>
         <attribute name="screensize" type="string">{344.70230505411382, 222.81583823780025}</attribute>
-        <attribute name="screenframe" type="string">{{-2056, 831}, {2056, 1329}}</attribute>
+        <attribute name="screenframe" type="string">{{0, 0}, {2056, 1329}}</attribute>
         <attribute name="resolution" type="string">{2056, 1329}</attribute>
         <attribute name="model" type="int32">41040</attribute>
-        <attribute name="maindisplay" type="int32">0</attribute>
+        <attribute name="maindisplay" type="int32">1</attribute>
         <attribute name="displayuuid" type="string">37D8832A-2D66-02CA-B9F7-8F30A301B230</attribute>
         <attribute name="displayid" type="int32">1</attribute>
         <attribute name="builtin" type="bool">1</attribute>
