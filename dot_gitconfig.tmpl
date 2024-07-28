@@ -18,6 +18,8 @@
   signingKey = {{ .gpg.signingKey }}
 {{- end }}
 
+[branch]
+  sort = -commimtterdate
 [commit]
   gpgSign = true
 [diff]
@@ -28,12 +30,16 @@
   prune = true
 [push]
   gpgSign = if-asked
+[rerere]
+  enabled = true
 
 [filter "lfs"]
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
   required = true
+[remote "origin"]
+   fetch = +refs/pull/*:refs/remotes/origin/pull/*
 
 ## User Aliases
 [alias]
