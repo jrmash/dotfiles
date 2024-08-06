@@ -8,7 +8,7 @@
 *.tfstate.*
 *.tfvars
 *.tfvars.*
-tfplan
+*tfplan*
 
 ## System Files (OSX)
 .AppleDB
