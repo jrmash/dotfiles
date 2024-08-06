@@ -4,6 +4,11 @@
 *.bak
 *.log
 *.old
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.*
+tfplan
 
 ## System Files (OSX)
 .AppleDB
