@@ -1,4 +1,3 @@
-export HOMEBREW_AUTOREMOVE=1
 export ZSH_THEME="powerlevel10k/powerlevel10k"
 
 while IFS= read -r -d ''; do
