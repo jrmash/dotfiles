@@ -1,0 +1,13 @@
+Host github.com
+    AddKeysToAgent yes
+
+Host *
+{{- if eq .machine.type "work" }}
+    ## SHA-1 signatures were disabled in v8.8, but some devices still require it
+    ## to be enabled. This line is added on any host that must interact with the
+    ## hosts that have this requirement.
+    HostkeyAlgorithms +ssh-rsa
+{{- end }}
+    IgnoreUnknown UseKeychain
+    UseKeychain yes
+
