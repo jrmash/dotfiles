@@ -92,6 +92,9 @@
 	"terminal.integrated.defaultProfile.linux": "zsh",
 	"terminal.integrated.defaultProfile.osx": "zsh",
 	"terminal.integrated.inheritEnv": false,
+	"terminal.integrated.env.osx": {
+		"PATH": ""
+	},
 	"terminal.integrated.scrollback": 1000000,
 	"terminal.integrated.shellIntegration.enabled": false,
 	"vs-kubernetes": {
@@ -161,6 +164,7 @@
 		"Galvatron",
 		"gameplay",
 		"kareo",
+		"lockfiles",
 		"mashinations",
 		"postcondition",
 		"reflog",
@@ -174,7 +178,7 @@
 		"terramate",
 		"tftest",
 		"triagers",
-		"yamldecode",
+		"yamldecode"
 	],
 	"workbench.colorTheme": "Default Dark+"
 }
