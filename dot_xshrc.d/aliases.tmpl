@@ -140,6 +140,14 @@ alias tmf='terramate format'
 alias tmg='terramate generate'
 alias tml='terramate list'
 alias tmr='terramate run'
+alias tmrci='terramate run --changed -- terraform init'
+alias tmrcit='terramate run --changed -- terraform init -no-color 2>&1 | tee "init_$(gdate --iso-8601=m).log"'
+alias tmrcp='terramate run --changed -- terraform plan'
+alias tmrcpt='terramate run --changed -- terraform plan -no-color 2>&1 | tee "plan_$(gdate --iso-8601=m).log"'
+alias tmri='terramate run -- terraform init'
+alias tmrit='terramate run -- terraform init -no-color 2>&1 | tee "init_$(gdate --iso-8601=m).log"'
+alias tmrp='terramate run -- terraform plan'
+alias tmrpt='terramate run -- terraform plan -no-color 2>&1 | tee "plan_$(gdate --iso-8601=m).log"'
 {{- end }}
 
 ## Create helpers for GPG
