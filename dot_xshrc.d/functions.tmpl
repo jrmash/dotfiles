@@ -23,3 +23,35 @@ hl-connect-iot() {
 }
 {{- end }}
 {{- end }}
+
+tmri() {
+	terramate run "${@}" -- terraform init
+}
+tmrit() {
+	if [[ ! "$(find . -type f -maxdepth 1 -name "*.tm.hcl" | wc -l )" -gt 0 ]]; then
+		echo "Terramate configuration not ddetected, no action taken."
+		return 1
+	fi
+	
+	local -r branch="$(git rev-parse --abbrev-ref HEAD)"
+	local -r branchLogdir="${HOME}/.terramate/logs/${branch}"
+	
+	mkdir -p "${branchLogdir}"
+	terramate run "${@}" -- terraform init -no-color 2>&1 | tee "${branchLogdir}/init_$(gdate --iso-8601=m).log"
+}
+
+tmrp() {
+	terramate run "${@}" -- terraform plan
+}
+tmrpt() {
+	if [[ ! "$(find . -type f -maxdepth 1 -name "*.tm.hcl" | wc -l )" -gt 0 ]]; then
+		echo "Terramate configuration not ddetected, no action taken."
+		return 1
+	fi
+	
+	local -r branch="$(git rev-parse --abbrev-ref HEAD)"
+	local -r branchLogdir="${HOME}/.terramate/logs/${branch}"
+	
+	mkdir -p "${branchLogdir}"
+	terramate run "${@}" -- terraform plan -no-color 2>&1 | tee "${branchLogdir}/plan_$(gdate --iso-8601=m).log"
+}
