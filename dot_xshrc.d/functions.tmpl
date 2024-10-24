@@ -35,9 +35,11 @@ tmrit() {
 	
 	local -r branch="$(git rev-parse --abbrev-ref HEAD)"
 	local -r branchLogdir="${HOME}/.terramate/logs/${branch}"
+	local -r branchLogFile="${branchLogdir}/init_$(gdate "+%Y-%m-%d_%H-%M-%S").log"
 	
 	mkdir -p "${branchLogdir}"
-	terramate run "${@}" -- terraform init -no-color 2>&1 | tee "${branchLogdir}/init_$(gdate --iso-8601=m).log"
+	terramate run "${@}" -- terraform init -no-color 2>&1 | tee "${branchLogFile}"
+	echo ">>> Terramate run log saved: "${branchLogFile}""
 }
 
 tmrp() {
@@ -51,7 +53,10 @@ tmrpt() {
 	
 	local -r branch="$(git rev-parse --abbrev-ref HEAD)"
 	local -r branchLogdir="${HOME}/.terramate/logs/${branch}"
+	local -r branchLogFile="${branchLogdir}/plan_$(gdate "+%Y-%m-%d_%H-%M-%S").log"
+	
 	
 	mkdir -p "${branchLogdir}"
-	terramate run "${@}" -- terraform plan -no-color 2>&1 | tee "${branchLogdir}/plan_$(gdate --iso-8601=m).log"
+	terramate run "${@}" -- terraform plan -no-color 2>&1 | tee "${branchLogFile}"
+	echo ">>> Terramate run log saved: "${branchLogFile}""
 }
