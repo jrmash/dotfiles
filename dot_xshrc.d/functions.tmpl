@@ -30,7 +30,9 @@ tmri() {
 tmric() {
 	tmri --changed "${@}"
 }
-
+tmrict() {
+	tmrit --changed "${@}"
+}
 tmrit() {
 	if [[ ! "$(find . -type f -maxdepth 1 -name "*.tm.hcl" | wc -l )" -gt 0 ]]; then
 		echo "Terramate configuration not detected, no action taken."
@@ -45,9 +47,6 @@ tmrit() {
 	terramate run "${@}" -- terraform init -no-color 2>&1 | tee "${branchLogFile}"
 	echo ">>> Terramate run log saved: "${branchLogFile}""
 }
-tmritc() {
-	tmrit --changed "${@}"
-}
 
 tmrp() {
 	terramate run "${@}" -- terraform plan
@@ -55,7 +54,9 @@ tmrp() {
 tmrpc() {
 	tmrp --changed "${@}"
 }
-
+tmrpct() {
+	tmrpt --changed "${@}"
+}
 tmrpt() {
 	if [[ ! "$(find . -type f -maxdepth 1 -name "*.tm.hcl" | wc -l )" -gt 0 ]]; then
 		echo "Terramate configuration not detected, no action taken."
@@ -70,7 +71,4 @@ tmrpt() {
 	mkdir -p "${branchLogdir}"
 	terramate run "${@}" -- terraform plan -no-color 2>&1 | tee "${branchLogFile}"
 	echo ">>> Terramate run log saved: "${branchLogFile}""
-}
-tmrptc() {
-	tmrpt --changed "${@}"
 }
