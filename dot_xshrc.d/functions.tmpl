@@ -24,16 +24,11 @@ hl-connect-iot() {
 {{- end }}
 {{- end }}
 
-tmri() {
-	terramate run "${@}" -- terraform init
+
+_tmr() {
+	terramate run "${@:2}" -- terraform ${1}
 }
-tmric() {
-	tmri --changed "${@}"
-}
-tmrict() {
-	tmrit --changed "${@}"
-}
-tmrit() {
+_tmrt() {
 	if [[ ! "$(find . -type f -maxdepth 1 -name "*.tm.hcl" | wc -l )" -gt 0 ]]; then
 		echo "Terramate configuration not detected, no action taken."
 		return 1
@@ -41,34 +36,24 @@ tmrit() {
 	
 	local -r branch="$(git rev-parse --abbrev-ref HEAD)"
 	local -r branchLogdir="${HOME}/.terramate/logs/${branch}"
-	local -r branchLogFile="${branchLogdir}/init_$(gdate "+%Y-%m-%d_%H-%M-%S").log"
+	local -r branchLogFile="${branchLogdir}/${1}_$(gdate "+%Y-%m-%d_%H-%M-%S").log"
 	
 	mkdir -p "${branchLogdir}"
-	terramate run "${@}" -- terraform init -no-color 2>&1 | tee "${branchLogFile}"
+	terramate run "${@:2}" -- terraform ${1} -no-color 2>&1 | tee "${branchLogFile}"
 	echo ">>> Terramate run log saved: "${branchLogFile}""
 }
 
-tmrp() {
-	terramate run "${@}" -- terraform plan
-}
-tmrpc() {
-	tmrp --changed "${@}"
-}
-tmrpct() {
-	tmrpt --changed "${@}"
-}
-tmrpt() {
-	if [[ ! "$(find . -type f -maxdepth 1 -name "*.tm.hcl" | wc -l )" -gt 0 ]]; then
-		echo "Terramate configuration not detected, no action taken."
-		return 1
-	fi
-	
-	local -r branch="$(git rev-parse --abbrev-ref HEAD)"
-	local -r branchLogdir="${HOME}/.terramate/logs/${branch}"
-	local -r branchLogFile="${branchLogdir}/plan_$(gdate "+%Y-%m-%d_%H-%M-%S").log"
-	
-	
-	mkdir -p "${branchLogdir}"
-	terramate run "${@}" -- terraform plan -no-color 2>&1 | tee "${branchLogFile}"
-	echo ">>> Terramate run log saved: "${branchLogFile}""
-}
+tmra()		{ _tmr "apply" "${@}" }
+tmrac() 	{ _tmr "apply" "--changed" "${@}" }
+tmract() 	{ _tmrt "apply" "--changed" "${@}" }
+tmrat() 	{ _tmrt "apply" "${@}" }
+
+tmri()		{ _tmr "init" "${@}" }
+tmric() 	{ _tmr "init" "--changed" "${@}" }
+tmrict() 	{ _tmrt "init" "--changed" "${@}" }
+tmrit() 	{ _tmrt "init" "${@}" }
+
+tmrp()		{ _tmr "plan" "${@}" }
+tmrpc() 	{ _tmr "plan" "--changed" "${@}" }
+tmrpct() 	{ _tmrt "plan" "--changed" "${@}" }
+tmrpt() 	{ _tmrt "plan" "${@}" }
