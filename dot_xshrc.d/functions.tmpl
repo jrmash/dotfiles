@@ -1,17 +1,8 @@
-gpg-store-secret() {
-    local secret="${1}"
-    local secretPath="${3:-${HOME}/.secrets}/${2}"
-
-    echo "${secret}" | gpg --output "${secretPath}" -aeqs --recipient {{ .gpg.signingEmail }}
-    chmod 0600 "${secretPath}"
-}
-
-kgsec-decrypt() {
-    kgsec "${@}" -o json | jq '.data | map_values(@base64d)'
-}
-
 {{- if eq .machine.type "personal" }}
 {{- if eq .chezmoi.os "darwin" }}
+## ============================================================================================== ##
+##                                        HomeLab Functions                                       ##
+## ============================================================================================== ##
 hl-connect-dmz() {
     networksetup -setairportnetwork en0 "$(gpg -qd ~/.secrets/DMZ_SSID 2>/dev/null)" "$(gpg -qd ~/.secrets/DMZ_WNP 2>/dev/null)"
 }
@@ -24,6 +15,41 @@ hl-connect-iot() {
 {{- end }}
 {{- end }}
 
+## ============================================================================================== ##
+##                                          GPG Functions                                         ##
+## ============================================================================================== ##
+gpg-store-secret() {
+    local secret="${1}"
+    local secretPath="${3:-${HOME}/.secrets}/${2}"
+
+    echo "${secret}" | gpg --output "${secretPath}" -aeqs --recipient {{ .gpg.signingEmail }}
+    chmod 0600 "${secretPath}"
+}
+
+## ============================================================================================== ##
+##                                        Kubectl Functions                                       ##
+## ============================================================================================== ##
+kgsec-decrypt() {
+    kgsec "${@}" -o json | jq '.data | map_values(@base64d)'
+}
+
+## ============================================================================================== ##
+##                                       Terramate Functions                                      ##
+## ============================================================================================== ##
+tmra()		{ _tmr "apply" "${@}" }
+tmrac() 	{ _tmr "apply" "--changed" "${@}" }
+tmract() 	{ _tmrt "apply" "--changed" "${@}" }
+tmrat() 	{ _tmrt "apply" "${@}" }
+
+tmri()		{ _tmr "init" "${@}" }
+tmric() 	{ _tmr "init" "--changed" "${@}" }
+tmrict() 	{ _tmrt "init" "--changed" "${@}" }
+tmrit() 	{ _tmrt "init" "${@}" }
+
+tmrp()		{ _tmr "plan" "${@}" }
+tmrpc() 	{ _tmr "plan" "--changed" "${@}" }
+tmrpct() 	{ _tmrt "plan" "--changed" "${@}" }
+tmrpt() 	{ _tmrt "plan" "${@}" }
 
 _tmr() {
 	terramate run "${@:2}" -- terraform ${1}
@@ -42,18 +68,3 @@ _tmrt() {
 	terramate run "${@:2}" -- terraform ${1} -no-color 2>&1 | tee "${branchLogFile}"
 	echo ">>> Terramate run log saved: "${branchLogFile}""
 }
-
-tmra()		{ _tmr "apply" "${@}" }
-tmrac() 	{ _tmr "apply" "--changed" "${@}" }
-tmract() 	{ _tmrt "apply" "--changed" "${@}" }
-tmrat() 	{ _tmrt "apply" "${@}" }
-
-tmri()		{ _tmr "init" "${@}" }
-tmric() 	{ _tmr "init" "--changed" "${@}" }
-tmrict() 	{ _tmrt "init" "--changed" "${@}" }
-tmrit() 	{ _tmrt "init" "${@}" }
-
-tmrp()		{ _tmr "plan" "${@}" }
-tmrpc() 	{ _tmr "plan" "--changed" "${@}" }
-tmrpct() 	{ _tmrt "plan" "--changed" "${@}" }
-tmrpt() 	{ _tmrt "plan" "${@}" }
