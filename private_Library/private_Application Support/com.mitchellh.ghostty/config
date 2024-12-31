@@ -1,0 +1,5 @@
+theme = Dracula+
+font-family = "CaskaydiaCove Nerd Font Mono"
+
+## 
+window-save-state = "always"
