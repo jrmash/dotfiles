@@ -61,8 +61,8 @@ _tmrt() {
 	fi
 	
 	local -r branch="$(git rev-parse --abbrev-ref HEAD)"
-	local -r branchLogdir="${HOME}/.terramate/logs/${branch}"
-	local -r branchLogFile="${branchLogdir}/${1}_$(gdate "+%Y-%m-%d_%H-%M-%S").log"
+	local -r branchLogdir="${HOME}/.terramate/logs/v2/${branch}"
+	local -r branchLogFile="${branchLogdir}/$(gdate "+%Y-%m-%d_%H-%M-%S")_${1}.log"
 	
 	mkdir -p "${branchLogdir}"
 	terramate run "${@:2}" -- terraform ${1} -no-color 2>&1 | tee "${branchLogFile}"
