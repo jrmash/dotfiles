@@ -10,6 +10,17 @@
 *.tfvars.*
 *tfplan*
 
+## IDE and Toolchain Files
+.idea
+.vscode
+
+## Miscellaneous Files
+.bak
+.history
+dev/
+devel/
+TODO*
+
 ## System Files (OSX)
 .AppleDB
 .AppleDesktop
