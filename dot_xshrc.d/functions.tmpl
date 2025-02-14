@@ -36,35 +36,52 @@ kgsec-decrypt() {
 ## ============================================================================================== ##
 ##                                       Terramate Functions                                      ##
 ## ============================================================================================== ##
-tmra()		{ _tmr "apply" "${@}" }
-tmrac() 	{ _tmr "apply" "--changed" "${@}" }
-tmract() 	{ _tmrt "apply" "--changed" "${@}" }
-tmrat() 	{ _tmrt "apply" "${@}" }
+tmra()      { _tmr false "apply" "${@}" }
+tmrac()     { _tmr false "apply" "--changed" "${@}" }
+tmract()    { _tmr true "apply" "--changed" "${@}" }
+tmrat()     { _tmr true "apply" "${@}" }
 
-tmri()		{ _tmr "init" "${@}" }
-tmric() 	{ _tmr "init" "--changed" "${@}" }
-tmrict() 	{ _tmrt "init" "--changed" "${@}" }
-tmrit() 	{ _tmrt "init" "${@}" }
+tmri()      { _tmr false "init" "${@}" }
+tmric()     { _tmr false "init" "--changed" "${@}" }
+tmrict()    { _tmr true "init" "--changed" "${@}" }
+tmrit()     { _tmr true "init" "${@}" }
 
-tmrp()		{ _tmr "plan" "${@}" }
-tmrpc() 	{ _tmr "plan" "--changed" "${@}" }
-tmrpct() 	{ _tmrt "plan" "--changed" "${@}" }
-tmrpt() 	{ _tmrt "plan" "${@}" }
+tmrp()      { _tmr false "plan" "${@}" }
+tmrpc()     { _tmr false "plan" "--changed" "${@}" }
+tmrpct()    { _tmr true "plan" "--changed" "${@}" }
+tmrpt()     { _tmr true "plan" "${@}" }
 
 _tmr() {
-	terramate run "${@:2}" -- terraform ${1}
-}
-_tmrt() {
-	if [[ ! "$(find . -type f -maxdepth 1 -name "*.tm.hcl" | wc -l )" -gt 0 ]]; then
-		echo "Terramate configuration not detected, no action taken."
-		return 1
-	fi
-	
-	local -r branch="$(git rev-parse --abbrev-ref HEAD)"
-	local -r branchLogdir="${HOME}/.terramate/logs/v2/${branch}"
-	local -r branchLogFile="${branchLogdir}/$(gdate "+%Y-%m-%d_%H-%M-%S")_${1}.log"
-	
-	mkdir -p "${branchLogdir}"
-	terramate run "${@:2}" -- terraform ${1} -no-color 2>&1 | tee "${branchLogFile}"
-	echo ">>> Terramate run log saved: "${branchLogFile}""
+    if [[ ! "$(find . -type f -maxdepth 1 -name "*.tm.hcl" | wc -l )" -gt 0 ]]; then
+        echo "$(tput setaf 3)Warning: Terramate configuration not detected, no action taken.$(tput sgr0)"
+        return 1
+    fi
+    
+    local enableLogfile="${1:?}" && shift
+    local -a terraformArgs=("${1:?}") && shift
+    local -a terramateArgs=()
+
+    while [ "${1}" != "" ]; do
+        case "${1}" in
+            -c | -concise )
+                terraformArgs+=("${1}") && shift;;
+            -u | -upgrade )
+                terraformArgs+=("${1}") && shift;;
+                
+            * )
+                terramateArgs+=("${1}") && shift;;
+        esac
+    done
+
+    if [[ "${enableLogfile}" == false ]]; then
+        terramate run "${terramateArgs[@]}" -- terraaform "${terraformArgs[@]}"
+    else
+        local -r branch="$(git rev-parse --abbrev-ref HEAD)"
+        local -r branchLogdir="${HOME}/.terramate/logs/v2/${branch}"
+        local -r branchLogFile="${branchLogdir}/$(gdate "+%Y-%m-%d_%H-%M-%S")_${1}.log"
+            
+        mkdir -p "${branchLogdir}"
+        terramate run "${terramateArgs[@]}" -- terraform ${terraformArgs[@]} -no-color 2>&1 | tee "${branchLogFile}"
+        echo ">>> Terramate run log saved: "${branchLogFile}""
+    fi
 }
