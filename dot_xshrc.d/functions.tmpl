@@ -63,9 +63,11 @@ _tmr() {
 
     while [ "${1}" != "" ]; do
         case "${1}" in
-            -c | -concise )
+            -concise )
                 terraformArgs+=("${1}") && shift;;
-            -u | -upgrade )
+            -refresh-only )
+                terraformArgs+=("${1}") && shift;;
+            -upgrade )
                 terraformArgs+=("${1}") && shift;;
                 
             * )
