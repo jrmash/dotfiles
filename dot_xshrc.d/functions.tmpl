@@ -19,10 +19,10 @@ hl-connect-iot() {
 ##                                          GPG Functions                                         ##
 ## ============================================================================================== ##
 gpg-store-secret() {
-    local secret="${1}"
-    local secretPath="${3:-${HOME}/.secrets}/${2}"
-
-    echo "${secret}" | gpg --output "${secretPath}" -aeqs --recipient {{ .gpg.signingEmail }}
+    local secretPath="${1}"
+    local secretValue="${2}"
+    
+    echo "${secretValue}" | gpg --output "${secretPath}" -aeqs --recipient {{ .gpg.signingEmail }}
     chmod 0600 "${secretPath}"
 }
 
@@ -59,7 +59,7 @@ _tmr() {
     
     local enableLogfile="${1:?}" && shift
     local -a terraformArgs=("${1:?}") && shift
-    local -a terramateArgs=()
+    local -a terramateArgs=("--continue-on-error")
 
     while [ "${1}" != "" ]; do
         case "${1}" in

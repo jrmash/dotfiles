@@ -39,6 +39,7 @@
 		"editor.tabSize": 2
 	},
 	"codeQL.telemetry.enableTelemetry": true,
+	"css.format.newlineBetweenRules": false,
 	"debug.console.wordWrap": false,
 	"diffEditor.wordWrap": "off",
 	"editor.codeLens": false,

@@ -243,6 +243,7 @@ terminal:
       - '#8959a8'
       - '#3e999f'
       - '#ffffff'
+  scrollbackLines: 1000000000000
 ssh: {}
 clickableLinks:
   modifier: metaKey
