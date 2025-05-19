@@ -23,12 +23,15 @@ brew 'chezmoi'                                          ## https://github.com/tw
 brew 'cloc'                                             ## https://github.com/AlDanial/cloc
 brew 'cmake'                                            ## https://github.com/Kitware/CMake
 brew 'cmctl'                                            ## https://github.com/cert-manager/cmctl
+brew 'colima'                                           ## https://github.com/abiosoft/colima
 brew 'cookiecutter'                                     ## https://github.com/cookiecutter/cookiecutter
 brew 'coreutils'                                        ## https://github.com/Homebrew/homebrew-core
 brew 'ctop'                                             ## https://github.com/bcicen/ctop
 brew 'curl'                                             ## https://github.com/curl/curl
 brew 'diff-so-fancy'                                    ## https://github.com/so-fancy/diff-so-fancy
 brew 'direnv'                                           ## https://github.com/direnv/direnv
+brew 'docker'                                           ## https://github.com/docker/cli
+brew 'docker-credential-helper'                         ## https://github.com/docker/docker-credential-helpers
 brew 'duf'                                              ## https://github.com/muesli/duf
 brew 'fd'                                               ## https://github.com/sharkdp/fd
 brew 'fselect'                                          ## https://github.com/jhspetersson/fselect
@@ -134,7 +137,6 @@ brew 'zsh'                                              ## https://github.com/zs
 ## ================================================================================================================== ##
 {{- if eq .chezmoi.os "darwin" }}
 cask 'beyond-compare'                                   ## https://www.scootersoftware.com
-cask 'docker'                                           ## https://www.docker.com/products/docker-desktop
 cask 'dotnet-sdk'                                       ## https://www.microsoft.com/net/core#macos
 cask 'firefox'                                          ## https://www.mozilla.org/firefox
 cask 'ghostty'                                          ## https://github.com/ghostty-org/ghostty
