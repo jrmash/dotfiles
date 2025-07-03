@@ -168,6 +168,10 @@ hotkeys:
   command-selector:
     - ⌘-Shift-P
   group-selectors: {}
+  scroll-page-up:
+    - ⌥-PageUp
+  scroll-page-down:
+    - ⌥-PageDown
 terminal:
   searchOptions: {}
   colorScheme:
@@ -259,3 +263,4 @@ enableAnalytics: false
 enableWelcomeTab: false
 pluginBlacklist: []
 profileBlacklist: []
+enableAutomaticUpdates: false
