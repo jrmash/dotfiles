@@ -19,7 +19,6 @@ brew 'chezmoi'                                          ## https://github.com/tw
 brew 'cloc'                                             ## https://github.com/AlDanial/cloc
 brew 'cmake'                                            ## https://github.com/Kitware/CMake
 brew 'cmctl'                                            ## https://github.com/cert-manager/cmctl
-brew 'colima'                                           ## https://github.com/abiosoft/colima
 brew 'cookiecutter'                                     ## https://github.com/cookiecutter/cookiecutter
 brew 'coreutils'                                        ## https://github.com/Homebrew/homebrew-core
 brew 'ctop'                                             ## https://github.com/bcicen/ctop
@@ -27,10 +26,6 @@ brew 'curl'                                             ## https://github.com/cu
 brew 'diff-so-fancy'                                    ## https://github.com/so-fancy/diff-so-fancy
 brew 'direnv'                                           ## https://github.com/direnv/direnv
 brew 'dive'                                             ## https://github.com/wagoodman/dive
-brew 'docker'                                           ## https://github.com/docker/cli
-brew 'docker-buildx'                                    ## https://github.com/docker/buildx
-brew 'docker-compose'                                   ## https://github.com/docker/compose
-brew 'docker-credential-helper'                         ## https://github.com/docker/docker-credential-helpers
 brew 'duf'                                              ## https://github.com/muesli/duf
 brew 'fd'                                               ## https://github.com/sharkdp/fd
 brew 'fselect'                                          ## https://github.com/jhspetersson/fselect
@@ -104,6 +99,13 @@ brew 'tflint'                                           ## https://github.com/te
 brew 'tfswitch'                                         ## https://github.com/warrensbox/terraform-switcher
 brew 'tgswitch'                                         ## https://github.com/warrensbox/tgswitch
 brew 'vault'                                            ## https://github.com/hashicorp/vault
+
+brew 'colima'                                           ## https://github.com/abiosoft/colima
+brew 'docker'                                           ## https://github.com/docker/cli
+brew 'docker-buildx'                                    ## https://github.com/docker/buildx
+brew 'docker-compose'                                   ## https://github.com/docker/compose
+brew 'docker-credential-helper'                         ## https://github.com/docker/docker-credential-helpers
+brew 'lima-additional-guestagents'                      ## https://github.com/lima-vm/lima
 
 {{- if eq .machine.type "work" }}
 brew 'jfrog-cli'                                        ## https://github.com/jfrog/jfrog-cli
