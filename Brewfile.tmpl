@@ -38,8 +38,8 @@ brew 'fx'                                               ## https://github.com/an
 brew 'fzf'                                              ## https://github.com/junegunn/fzf
 brew 'gawk'                                             ## https://git.savannah.gnu.org/git/gawk.git
 brew 'gh'                                               ## https://github.com/cli/cli
-brew 'git-delta'                                        ## https://github.com/dandavison/delta
 brew 'git'                                              ## https://github.com/git/git
+brew 'git-delta'                                        ## https://github.com/dandavison/delta
 brew 'git-lfs'                                          ## https://github.com/git-lfs/git-lfs
 brew 'gnu-getopt'                                       ## https://github.com/util-linux/util-linux
 brew 'gnupg'                                            ## https://github.com/gpg/gnupg
@@ -170,11 +170,13 @@ brew 'dolt'                                             ## https://github.com/do
 cask '1password'                                        ## https://1password.com
 cask '1password-cli'                                    ## https://developer.1password.com/docs/cli
 cask 'chatgpt'                                          ## https://chatgpt.com/
-cask 'google-drive'                                     ## https://www.google.com/drive
 cask 'handbrake'                                        ## https://handbrake.fr
 cask 'makemkv'                                          ## https://www.makemkv.com
 cask 'perforce'                                         ## https://www.perforce.com
 cask 'plex'                                             ## https://www.plex.tv
+cask 'proton-mail'                                      ## https://proton.me/mail
+cask 'proton-pass'                                      ## https://proton.me/pass
+cask 'protonvpn'                                        ## https://proton.me/vpn
 cask 'signal'                                           ## https://signal.org
 cask 'steam'                                            ## https://store.steampowered.com
 cask 'unity-hub'                                        ## https://unity3d.com/get-unity/download
@@ -190,10 +192,6 @@ cask 'curseforge'                                       ## https://curseforge.ov
 cask 'epic-games'                                       ## https://www.epicgames.com
 cask 'raspberry-pi-imager'                              ## https://www.raspberrypi.org/downloads
 cask 'yubico-yubikey-manager'                           ## https://github.com/Yubico/yubikey-manager-qt
-{{- end }}
-
-{{- if eq .machine.chassis "laptop" }}
-cask 'nordvpn'                                          ## https://nordvpn.com/
 {{- end }}
 {{- end }}
 {{- end }}
