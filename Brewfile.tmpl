@@ -72,6 +72,7 @@ brew 'yq'                                               ## https://github.com/mi
 brew 'zenith'                                           ## https://github.com/bvaisvil/zenith/
 
 {{- if eq .machine.type "personal" }}
+brew 'dolt'                                             ## https://github.com/dolthub/dolt
 brew 'mas'                                              ## https://github.com/mas-cli/mas
 brew 'ykman'                                            ## https://github.com/Yubico/yubikey-manager
 {{- end }}
@@ -100,7 +101,7 @@ brew 'docker-compose'                                   ## https://github.com/do
 brew 'docker-credential-helper'                         ## https://github.com/docker/docker-credential-helpers
 brew 'lima-additional-guestagents'                      ## https://github.com/lima-vm/lima
 
-{{- if eq .machine.type "work" }}
+{{ if eq .machine.type "work" -}}
 brew 'ansible'                                          ## https://github.com/ansible/ansible
 brew 'helm'                                             ## https://github.com/helm/helm
 brew 'jfrog-cli'                                        ## https://github.com/jfrog/jfrog-cli
@@ -143,7 +144,6 @@ cask 'firefox'                                          ## https://www.mozilla.o
 cask 'google-cloud-sdk'                                 ## https://cloud.google.com/sdk
 cask 'gpg-suite'                                        ## https://gpgtools.org
 cask 'jetbrains-toolbox'                                ## https://www.jetbrains.com/toolbox-app
-cask 'kube-forwarder'                                   ## https://kube-forwarder.pixelpoint.io
 cask 'libreoffice'                                      ## https://www.libreoffice.org/
 cask 'microsoft-remote-desktop'                         ## https://aka.ms/rdmac
 cask 'ngrok'                                            ## https://ngrok.com
@@ -152,7 +152,6 @@ cask 'osquery'                                          ## https://github.com/os
 cask 'postman'                                          ## https://www.postman.com
 cask 'powershell'                                       ## https://github.com/PowerShell/PowerShell
 cask 'rambox'                                           ## https://rambox.pro
-cask 'snagit'                                           ## https://www.techsmith.com/screen-capture.html
 cask 'tabby'                                            ## https://github.com/Eugeny/tabby
 cask 'temurin'                                          ## https://github.com/adoptium
 cask 'temurin11'                                        ## https://github.com/adoptium/temurin11-binaries
@@ -167,12 +166,8 @@ cask 'temurin8'                                         ## https://github.com/ad
 {{- end }}
 
 {{- if eq .machine.type "personal" }}
-brew 'dolt'                                             ## https://github.com/dolthub/dolt
-
 cask '1password'                                        ## https://1password.com
 cask '1password-cli'                                    ## https://developer.1password.com/docs/cli
-cask 'chatgpt'                                          ## https://chatgpt.com/
-cask 'handbrake'                                        ## https://handbrake.fr
 cask 'makemkv'                                          ## https://www.makemkv.com
 cask 'perforce'                                         ## https://www.perforce.com
 cask 'plex'                                             ## https://www.plex.tv
@@ -180,28 +175,28 @@ cask 'proton-mail'                                      ## https://proton.me/mai
 cask 'proton-pass'                                      ## https://proton.me/pass
 cask 'protonvpn'                                        ## https://proton.me/vpn
 cask 'signal'                                           ## https://signal.org
+cask 'snagit'                                           ## https://www.techsmith.com/screen-capture.html
 cask 'steam'                                            ## https://store.steampowered.com
 cask 'unity-hub'                                        ## https://unity3d.com/get-unity/download
 
-mas 'AppleRemoteDesktop', id: 409907375                 ## https://apps.apple.com/us/app/apple-remote-desktop/id409907375?mt=12
-mas 'BetterSnapTool',     id: 417375580                 ## https://apps.apple.com/us/app/bettersnaptool/id417375580?mt=12
-mas 'MacGoBluRayPlayer',  id: 1403952861                ## https://apps.apple.com/us/app/macgo-blu-ray-player/id1403952861?mt=12
-mas 'Wireguard',          id: 1451685025                ## https://apps.apple.com/us/app/wireguard/id1451685025?ls=1&mt=12
-mas 'XCode',              id: 497799835                 ## https://apps.apple.com/us/app/xcode/id497799835?mt=12
-
 {{- if eq .machine.chassis "desktop" }}
-cask 'curseforge'                                       ## https://curseforge.overwolf.com
-cask 'epic-games'                                       ## https://www.epicgames.com
 cask 'raspberry-pi-imager'                              ## https://www.raspberrypi.org/downloads
 cask 'yubico-yubikey-manager'                           ## https://github.com/Yubico/yubikey-manager-qt
 {{- end }}
+
+mas 'BetterSnapTool',     id: 417375580                 ## https://apps.apple.com/us/app/bettersnaptool/id417375580?mt=12
+mas 'MacGoBluRayPlayer',  id: 1403952861                ## https://apps.apple.com/us/app/macgo-blu-ray-player/id1403952861?mt=12
+mas 'XCode',              id: 497799835                 ## https://apps.apple.com/us/app/xcode/id497799835?mt=12
+{{- end }}
+
+{{ if eq .machine.type "work" -}}
+cask 'kube-forwarder'                                   ## https://kube-forwarder.pixelpoint.io
 {{- end }}
 {{- end }}
 
 ## ================================================================================================================== ##
 ##                                                  Special Fonts                                                     ##
 ## ================================================================================================================== ##
-## https://github.com/ryanoasis/nerd-fonts
 {{- if eq .chezmoi.os "darwin" }}
-cask 'font-caskaydia-cove-nerd-font'
+cask 'font-caskaydia-cove-nerd-font'                    ## https://github.com/ryanoasis/nerd-fonts
 {{- end }}
