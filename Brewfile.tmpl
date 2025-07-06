@@ -80,13 +80,8 @@ brew 'ykman'                                            ## https://github.com/Yu
 ##                                                    DevOps Tools                                                    ##
 ## ================================================================================================================== ##
 brew 'age'                                              ## https://github.com/FiloSottile/age
-brew 'ansible'                                          ## https://github.com/ansible/ansible
 brew 'copier'                                           ## https://github.com/copier-org/copier
-brew 'helm'                                             ## https://github.com/helm/helm
-brew 'k9s'                                              ## https://github.com/derailed/k9s
 brew 'kics'                                             ## https://github.com/Checkmarx/kics
-brew 'kubent'                                           ## https://github.com/doitintl/kube-no-trouble
-brew 'kubernetes-cli'                                   ## https://github.com/kubernetes/kubectl
 brew 'lynis'                                            ## https://github.com/CISOfy/lynis
 brew 'onefetch'                                         ## https://github.com/o2sh/onefetch
 brew 'packer'                                           ## https://github.com/hashicorp/packer
@@ -97,8 +92,6 @@ brew 'terraform-docs', args:["ignore-dependencies"]     ## https://github.com/te
 brew 'terramate', args:["ignore-dependencies"]          ## https://github.com/terramate-io/terramate
 brew 'tflint'                                           ## https://github.com/terraform-linters/tflint
 brew 'tfswitch'                                         ## https://github.com/warrensbox/terraform-switcher
-brew 'tgswitch'                                         ## https://github.com/warrensbox/tgswitch
-brew 'vault'                                            ## https://github.com/hashicorp/vault
 
 brew 'colima'                                           ## https://github.com/abiosoft/colima
 brew 'docker'                                           ## https://github.com/docker/cli
@@ -108,7 +101,14 @@ brew 'docker-credential-helper'                         ## https://github.com/do
 brew 'lima-additional-guestagents'                      ## https://github.com/lima-vm/lima
 
 {{- if eq .machine.type "work" }}
+brew 'ansible'                                          ## https://github.com/ansible/ansible
+brew 'helm'                                             ## https://github.com/helm/helm
 brew 'jfrog-cli'                                        ## https://github.com/jfrog/jfrog-cli
+brew 'k9s'                                              ## https://github.com/derailed/k9s
+brew 'kubent'                                           ## https://github.com/doitintl/kube-no-trouble
+brew 'kubernetes-cli'                                   ## https://github.com/kubernetes/kubectl
+brew 'tgswitch'                                         ## https://github.com/warrensbox/tgswitch
+brew 'vault'                                            ## https://github.com/hashicorp/vault
 {{- end }}
 
 ## ================================================================================================================== ##
