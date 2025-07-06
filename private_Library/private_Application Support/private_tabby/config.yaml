@@ -248,6 +248,7 @@ terminal:
       - '#3e999f'
       - '#ffffff'
   scrollbackLines: 1000000000000
+  frontend: xterm
 ssh: {}
 clickableLinks:
   modifier: metaKey
