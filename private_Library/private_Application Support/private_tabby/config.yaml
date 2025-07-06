@@ -199,7 +199,6 @@ terminal:
     selection: '#9575cd'
     selectionForeground: '#4527a0'
   font: CaskaydiaCove Nerd Font Mono
-  ligatures: true
   cursor: beam
   customColorSchemes:
     - name: Dracula+
@@ -248,7 +247,6 @@ terminal:
       - '#3e999f'
       - '#ffffff'
   scrollbackLines: 1000000000000
-  frontend: xterm
 ssh: {}
 clickableLinks:
   modifier: metaKey
