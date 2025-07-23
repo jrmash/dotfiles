@@ -74,6 +74,7 @@ brew 'zenith'                                           ## https://github.com/bv
 {{- if eq .machine.type "personal" }}
 brew 'dolt'                                             ## https://github.com/dolthub/dolt
 brew 'mas'                                              ## https://github.com/mas-cli/mas
+brew 'ollama'                                           ## https://github.com/ollama/ollama
 brew 'ykman'                                            ## https://github.com/Yubico/yubikey-manager
 {{- end }}
 
@@ -168,7 +169,9 @@ cask 'temurin8'                                         ## https://github.com/ad
 {{- if eq .machine.type "personal" }}
 cask '1password'                                        ## https://1password.com
 cask '1password-cli'                                    ## https://developer.1password.com/docs/cli
+cask 'lm-studio'                                        ## https://lmstudio.ai
 cask 'makemkv'                                          ## https://www.makemkv.com
+cask 'ollama-app'                                       ## https://ollama.com
 cask 'perforce'                                         ## https://www.perforce.com
 cask 'plex'                                             ## https://www.plex.tv
 cask 'proton-mail'                                      ## https://proton.me/mail
