@@ -46,9 +46,9 @@ tmric()     { _tmr false "init" "--changed" "${@}" }
 tmrict()    { _tmr true "init" "--changed" "${@}" }
 tmrit()     { _tmr true "init" "${@}" }
 
-tmrp()      { _tmr false "plan" "${@}" }
-tmrpc()     { _tmr false "plan" "--changed" "${@}" }
-tmrpct()    { _tmr true "plan" "--changed" "${@}" }
+tmrp()      { _tmr false "plan" "-concise" "${@}" }
+tmrpc()     { _tmr false "plan" "-concise" "--changed" "${@}" }
+tmrpct()    { _tmr true "plan" "-concise" "--changed" "${@}" }
 tmrpt()     { _tmr true "plan" "${@}" }
 
 _tmr() {
