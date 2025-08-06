@@ -49,7 +49,7 @@ tmrit()     { _tmr true "init" "${@}" }
 tmrp()      { _tmr false "plan" "-concise" "${@}" }
 tmrpc()     { _tmr false "plan" "-concise" "--changed" "${@}" }
 tmrpct()    { _tmr true "plan" "-concise" "--changed" "${@}" }
-tmrpt()     { _tmr true "plan" "${@}" }
+tmrpt()     { _tmr true "plan" "-concise" "${@}" }
 
 _tmr() {
     if [[ ! "$(find . -type f -maxdepth 1 -name "*.tm.hcl" | wc -l )" -gt 0 ]]; then
