@@ -9,10 +9,10 @@ alias lt='lsd --tree'
 
 {{ if eq .chezmoi.os "linux" -}}
 ## Additional application aliases
-{{ if eq .chezmoi.osRelease.id "bazzite" -}}
+{{- if eq .chezmoi.osRelease.id "bazzite" }}
 alias code='flatpak run com.visualstudio.code'
-{{- end }}
-{{- end }}
+{{ end }}
+{{ end -}}
 
 ## Additional 'brew' aliases
 {{ if eq .chezmoi.os "darwin" -}}
@@ -139,7 +139,7 @@ alias tgss='terragrunt state show'
 alias tgsswd='terragrunt state show --working-dir'
 alias tgv='terragrunt validate'
 alias tgvwd='terragrunt validate --working-dir'
-{{- end }}
+{{ end -}}
 
 ## Create 'terramate' aliases
 alias tm='terramate'
