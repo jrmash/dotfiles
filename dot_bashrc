@@ -1,5 +1,0 @@
-source ~/.xshrc
-
-while IFS= read -r -d ''; do
-	source ${REPLY}
-done < <( find ~/.bashrc.d -type f -exec printf '%s\0' {} + )

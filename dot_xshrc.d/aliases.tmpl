@@ -7,6 +7,13 @@ alias lah='lsd -lAh'
 alias lh='lsd -lh'
 alias lt='lsd --tree'
 
+{{ if eq .chezmoi.os "linux" -}}
+## Additional application aliases
+{{ if eq .chezmoi.osRelease.id "bazzite" -}}
+alias code='flatpak run com.visualstudio.code'
+{{- end }}
+{{- end }}
+
 ## Additional 'brew' aliases
 {{ if eq .chezmoi.os "darwin" -}}
 alias bua='brew update && brew upgrade && brew upgrade --cask --greedy --force'

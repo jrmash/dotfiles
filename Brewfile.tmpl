@@ -1,13 +1,15 @@
-tap 'homebrew/bundle'                                   ## https://github.com/Homebrew/homebrew-bundle
-tap 'homebrew/services'                                 ## https://github.com/Homebrew/homebrew-services
-
 tap 'warrensbox/tap'                                    ## https://github.com/warrensbox/homebrew-tap
 
 ## ================================================================================================================== ##
-##                                                     Dev Tools                                                      ##
+##                                                       Tools                                                        ##
 ## ================================================================================================================== ##
+brew 'bash'                                             ## https://git.savannah.gnu.org/git/bash.git
+brew 'zsh'                                              ## https://github.com/zsh-users/zsh (MIRROR)
+
 brew 'act'                                              ## https://github.com/nektos/act
 brew 'ag'                                               ## https://github.com/ggreer/the_silver_searcher
+brew 'age'                                              ## https://github.com/FiloSottile/age
+brew 'ant', args:["ignore-dependencies"]                ## https://github.com/apache/ant
 brew 'artillery'                                        ## https://github.com/artilleryio/artillery
 brew 'asciinema'                                        ## https://github.com/asciinema/asciinema
 brew 'aspell'                                           ## https://github.com/GNUAspell/aspell
@@ -19,13 +21,19 @@ brew 'chezmoi'                                          ## https://github.com/tw
 brew 'cloc'                                             ## https://github.com/AlDanial/cloc
 brew 'cmake'                                            ## https://github.com/Kitware/CMake
 brew 'cmctl'                                            ## https://github.com/cert-manager/cmctl
+brew 'colima'                                           ## https://github.com/abiosoft/colima
 brew 'cookiecutter'                                     ## https://github.com/cookiecutter/cookiecutter
+brew 'copier'                                           ## https://github.com/copier-org/copier
 brew 'coreutils'                                        ## https://github.com/Homebrew/homebrew-core
 brew 'ctop'                                             ## https://github.com/bcicen/ctop
 brew 'curl'                                             ## https://github.com/curl/curl
 brew 'diff-so-fancy'                                    ## https://github.com/so-fancy/diff-so-fancy
 brew 'direnv'                                           ## https://github.com/direnv/direnv
 brew 'dive'                                             ## https://github.com/wagoodman/dive
+brew 'docker'                                           ## https://github.com/docker/cli
+brew 'docker-buildx'                                    ## https://github.com/docker/buildx
+brew 'docker-compose'                                   ## https://github.com/docker/compose
+brew 'docker-credential-helper'                         ## https://github.com/docker/docker-credential-helpers
 brew 'duf'                                              ## https://github.com/muesli/duf
 brew 'fd'                                               ## https://github.com/sharkdp/fd
 brew 'fselect'                                          ## https://github.com/jhspetersson/fselect
@@ -38,32 +46,50 @@ brew 'git-delta'                                        ## https://github.com/da
 brew 'git-lfs'                                          ## https://github.com/git-lfs/git-lfs
 brew 'gnu-getopt'                                       ## https://github.com/util-linux/util-linux
 brew 'gnupg'                                            ## https://github.com/gpg/gnupg
+brew 'goenv'                                            ## https://github.com/syndbg/goenv
 brew 'gradle', args:["ignore-dependencies"]             ## https://github.com/gradle/gradle
 brew 'hadolint'                                         ## https://github.com/hadolint/hadolint
 brew 'has'                                              ## https://github.com/kdabir/has
 brew 'htop'                                             ## https://github.com/htop-dev/htop
 brew 'httpie'                                           ## https://github.com/httpie/httpie
+brew 'jenv'                                             ## https://github.com/jenv/jenv
 brew 'jo'                                               ## https://github.com/jpmens/jo
 brew 'jq'                                               ## https://github.com/stedolan/jq
 brew 'kcov'                                             ## https://github.com/SimonKagstrom/kcov
+brew 'kics'                                             ## https://github.com/Checkmarx/kics
 brew 'lazydocker'                                       ## https://github.com/jesseduffield/lazydocker
+brew 'lima-additional-guestagents'                      ## https://github.com/lima-vm/lima
 brew 'lnav'                                             ## https://github.com/tstack/lnav
 brew 'lsd'                                              ## https://github.com/Peltoche/lsd
-brew 'mactop'                                           ## https://github.com/context-labs/mactop
+brew 'lynis'                                            ## https://github.com/CISOfy/lynis
 brew 'maven', args:["ignore-dependencies"]              ## https://github.com/apache/maven
 brew 'moreutils'                                        ## https://git.joeyh.name/git/moreutils.git/
 brew 'nmap'                                             ## https://github.com/nmap/nmap
+brew 'node-build'                                       ## https://github.com/nodenv/node-build
+brew 'nodenv'                                           ## https://github.com/nodenv/nodenv
+brew 'onefetch'                                         ## https://github.com/o2sh/onefetch
 brew 'opa'                                              ## https://github.com/open-policy-agent/opa
 brew 'openssh'                                          ## https://github.com/openssh/openssh-portable
 brew 'openssl'                                          ## https://github.com/openssl/openssl
+brew 'perl-build'                                       ## https://github.com/tokuhirom/Perl-Build
 brew 'pinentry'                                         ## https://github.com/gpg/pinentry
-brew 'pinentry-mac'                                     ## https://github.com/GPGTools/pinentry-mac
+brew 'plenv'                                            ## https://github.com/tokuhirom/plenv
 brew 'pre-commit'                                       ## https://github.com/pre-commit/pre-commit
 brew 'progress'                                         ## https://github.com/Xfennec/progress
+brew 'pyenv'                                            ## https://github.com/pyenv/pyenv
+brew 'rbenv-bundler'                                    ## https://github.com/carsomyr/rbenv-bundler
+brew 'rbenv'                                            ## https://github.com/rbenv/rbenv
 brew 'ripgrep'                                          ## https://github.com/BurntSushi/ripgrep
 brew 'rsync'                                            ## https://github.com/WayneD/rsync
+brew 'ruby-build'                                       ## https://github.com/rbenv/ruby-build
 brew 'shellcheck'                                       ## https://github.com/koalaman/shellcheck
+brew 'sops'                                             ## https://github.com/mozilla/sops
 brew 'sslscan'                                          ## https://github.com/rbsec/sslscan
+brew 'stern'                                            ## https://github.com/stern/stern
+brew 'terraform-docs', args:["ignore-dependencies"]     ## https://github.com/terraform-docs/terraform-docs
+brew 'terramate', args:["ignore-dependencies"]          ## https://github.com/terramate-io/terramate
+brew 'tflint'                                           ## https://github.com/terraform-linters/tflint
+brew 'tfswitch'                                         ## https://github.com/warrensbox/terraform-switcher
 brew 'tree'                                             ## https://github.com/Old-Man-Programmer/tree (MIRROR)
 brew 'watch'                                            ## https://gitlab.com/procps-ng/procps
 brew 'wget'                                             ## https://git.savannah.gnu.org/cgit/wget.git
@@ -74,35 +100,14 @@ brew 'zenith'                                           ## https://github.com/bv
 
 {{- if eq .machine.type "personal" }}
 brew 'dolt'                                             ## https://github.com/dolthub/dolt
+{{- if eq .chezmoi.os "darwin" }}
+brew 'mactop'                                           ## https://github.com/context-labs/mactop
 brew 'mas'                                              ## https://github.com/mas-cli/mas
+brew 'pinentry-mac'                                     ## https://github.com/GPGTools/pinentry-mac
+brew 'telnet'                                           ## https://github.com/apple-oss-distributions/remote_cmds
 brew 'ykman'                                            ## https://github.com/Yubico/yubikey-manager
 {{- end }}
-
-## ================================================================================================================== ##
-##                                                    DevOps Tools                                                    ##
-## ================================================================================================================== ##
-brew 'age'                                              ## https://github.com/FiloSottile/age
-brew 'copier'                                           ## https://github.com/copier-org/copier
-brew 'kics'                                             ## https://github.com/Checkmarx/kics
-brew 'lynis'                                            ## https://github.com/CISOfy/lynis
-brew 'onefetch'                                         ## https://github.com/o2sh/onefetch
-brew 'packer'                                           ## https://github.com/hashicorp/packer
-brew 'sops'                                             ## https://github.com/mozilla/sops
-brew 'stern'                                            ## https://github.com/stern/stern
-brew 'telnet'                                           ## https://github.com/apple-oss-distributions/remote_cmds
-brew 'terraform-docs', args:["ignore-dependencies"]     ## https://github.com/terraform-docs/terraform-docs
-brew 'terramate', args:["ignore-dependencies"]          ## https://github.com/terramate-io/terramate
-brew 'tflint'                                           ## https://github.com/terraform-linters/tflint
-brew 'tfswitch'                                         ## https://github.com/warrensbox/terraform-switcher
-
-brew 'colima'                                           ## https://github.com/abiosoft/colima
-brew 'docker'                                           ## https://github.com/docker/cli
-brew 'docker-buildx'                                    ## https://github.com/docker/buildx
-brew 'docker-compose'                                   ## https://github.com/docker/compose
-brew 'docker-credential-helper'                         ## https://github.com/docker/docker-credential-helpers
-brew 'lima-additional-guestagents'                      ## https://github.com/lima-vm/lima
-
-{{ if eq .machine.type "work" -}}
+{{- else if eq .machine.type "work" -}}
 brew 'ansible'                                          ## https://github.com/ansible/ansible
 brew 'helm'                                             ## https://github.com/helm/helm
 brew 'jfrog-cli'                                        ## https://github.com/jfrog/jfrog-cli
@@ -114,30 +119,10 @@ brew 'vault'                                            ## https://github.com/ha
 {{- end }}
 
 ## ================================================================================================================== ##
-##                                                 Language Suppport                                                  ##
-## ================================================================================================================== ##
-brew 'ant', args:["ignore-dependencies"]                ## https://github.com/apache/ant
-brew 'goenv'                                            ## https://github.com/syndbg/goenv
-brew 'jenv'                                             ## https://github.com/jenv/jenv
-brew 'node-build'                                       ## https://github.com/nodenv/node-build
-brew 'nodenv'                                           ## https://github.com/nodenv/nodenv
-brew 'perl-build'                                       ## https://github.com/tokuhirom/Perl-Build
-brew 'plenv'                                            ## https://github.com/tokuhirom/plenv
-brew 'pyenv'                                            ## https://github.com/pyenv/pyenv
-brew 'rbenv-bundler'                                    ## https://github.com/carsomyr/rbenv-bundler
-brew 'rbenv'                                            ## https://github.com/rbenv/rbenv
-brew 'ruby-build'                                       ## https://github.com/rbenv/ruby-build
-brew 'virtualenv'                                       ## https://github.com/pypa/virtualenv
-
-## ================================================================================================================== ##
-##                                                       Shells                                                       ##
-## ================================================================================================================== ##
-brew 'bash'                                             ## https://git.savannah.gnu.org/git/bash.git
-brew 'zsh'                                              ## https://github.com/zsh-users/zsh (MIRROR)
-
-## ================================================================================================================== ##
 ##                                                      Software                                                      ##
 ## ================================================================================================================== ##
+cask 'font-caskaydia-cove-nerd-font'                    ## https://github.com/ryanoasis/nerd-fonts
+
 {{- if eq .chezmoi.os "darwin" }}
 cask 'beyond-compare'                                   ## https://www.scootersoftware.com
 cask 'dotnet-sdk'                                       ## https://www.microsoft.com/net/core#macos
@@ -191,15 +176,6 @@ mas 'BetterSnapTool',     id: 417375580                 ## https://apps.apple.co
 mas 'MacGoBluRayPlayer',  id: 1403952861                ## https://apps.apple.com/us/app/macgo-blu-ray-player/id1403952861?mt=12
 mas 'XCode',              id: 497799835                 ## https://apps.apple.com/us/app/xcode/id497799835?mt=12
 {{- end }}
-
-{{ if eq .machine.type "work" -}}
+{{- else if eq .machine.type "work" }}
 cask 'kube-forwarder'                                   ## https://kube-forwarder.pixelpoint.io
-{{- end }}
-{{- end }}
-
-## ================================================================================================================== ##
-##                                                  Special Fonts                                                     ##
-## ================================================================================================================== ##
-{{- if eq .chezmoi.os "darwin" }}
-cask 'font-caskaydia-cove-nerd-font'                    ## https://github.com/ryanoasis/nerd-fonts
 {{- end }}
