@@ -1,11 +1,14 @@
 tap 'warrensbox/tap'                                    ## https://github.com/warrensbox/homebrew-tap
 
 ## ================================================================================================================== ##
-##                                                       Tools                                                        ##
+##                                                       Shells                                                       ##
 ## ================================================================================================================== ##
 brew 'bash'                                             ## https://git.savannah.gnu.org/git/bash.git
 brew 'zsh'                                              ## https://github.com/zsh-users/zsh (MIRROR)
 
+## ================================================================================================================== ##
+##                                                       Tools                                                        ##
+## ================================================================================================================== ##
 brew 'act'                                              ## https://github.com/nektos/act
 brew 'ag'                                               ## https://github.com/ggreer/the_silver_searcher
 brew 'age'                                              ## https://github.com/FiloSottile/age
@@ -98,17 +101,17 @@ brew 'yarn'                                             ## https://github.com/ya
 brew 'yq'                                               ## https://github.com/mikefarah/yq
 brew 'zenith'                                           ## https://github.com/bvaisvil/zenith/
 
-{{- if eq .machine.type "personal" }}
-brew 'dolt'                                             ## https://github.com/dolthub/dolt
-{{- if eq .chezmoi.os "darwin" }}
+{{ if eq .chezmoi.os "darwin" -}}
 brew 'mactop'                                           ## https://github.com/context-labs/mactop
-brew 'mas'                                              ## https://github.com/mas-cli/mas
 brew 'pinentry-mac'                                     ## https://github.com/GPGTools/pinentry-mac
 brew 'telnet'                                           ## https://github.com/apple-oss-distributions/remote_cmds
+{{ if eq .machine.type "personal" -}}
+brew 'dolt'                                             ## https://github.com/dolthub/dolt
+brew 'mas'                                              ## https://github.com/mas-cli/mas
 brew 'ykman'                                            ## https://github.com/Yubico/yubikey-manager
-{{- end }}
-{{- else if eq .machine.type "work" -}}
+{{ else if eq .machine.type "work" -}}
 brew 'ansible'                                          ## https://github.com/ansible/ansible
+brew 'gemini-cli'                                       ## https://github.com/google-gemini/gemini-cli
 brew 'helm'                                             ## https://github.com/helm/helm
 brew 'jfrog-cli'                                        ## https://github.com/jfrog/jfrog-cli
 brew 'k9s'                                              ## https://github.com/derailed/k9s
@@ -116,14 +119,15 @@ brew 'kubent'                                           ## https://github.com/do
 brew 'kubernetes-cli'                                   ## https://github.com/kubernetes/kubectl
 brew 'tgswitch'                                         ## https://github.com/warrensbox/tgswitch
 brew 'vault'                                            ## https://github.com/hashicorp/vault
-{{- end }}
+{{ end }}
+{{ end -}}
 
 ## ================================================================================================================== ##
 ##                                                      Software                                                      ##
 ## ================================================================================================================== ##
 cask 'font-caskaydia-cove-nerd-font'                    ## https://github.com/ryanoasis/nerd-fonts
 
-{{- if eq .chezmoi.os "darwin" }}
+{{ if eq .chezmoi.os "darwin" -}}
 cask 'beyond-compare'                                   ## https://www.scootersoftware.com
 cask 'dotnet-sdk'                                       ## https://www.microsoft.com/net/core#macos
 cask 'firefox'                                          ## https://www.mozilla.org/firefox
