@@ -26,3 +26,6 @@ done < <( find ~/.xshrc.d -type f -exec printf '%s\0' {} + )
 ## Configure GPG to act as the SSH agent for the host
 export GPG_TTY=$(tty)
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+{{ if eq .chezmoi.os "linux" -}}
+gpg-connect-agent updatestartuptty /bye > /dev/null
+{{ end -}}
