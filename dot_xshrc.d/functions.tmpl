@@ -36,23 +36,23 @@ kgsec-decrypt() {
 ## ============================================================================================== ##
 ##                                       Terramate Functions                                      ##
 ## ============================================================================================== ##
-tmra()      { _tmr false "apply" "${@}" }
-tmrac()     { _tmr false "apply" "--changed" "${@}" }
-tmract()    { _tmr true "apply" "--changed" "${@}" }
-tmrat()     { _tmr true "apply" "${@}" }
+tmra()      { _tmr false "apply" "${@}"; }
+tmrac()     { _tmr false "apply" "--changed" "${@}"; }
+tmract()    { _tmr true "apply" "--changed" "${@}"; }
+tmrat()     { _tmr true "apply" "${@}"; }
 
-tmri()      { _tmr false "init" "${@}" }
-tmric()     { _tmr false "init" "--changed" "${@}" }
-tmrict()    { _tmr true "init" "--changed" "${@}" }
-tmrit()     { _tmr true "init" "${@}" }
+tmri()      { _tmr false "init" "${@}"; }
+tmric()     { _tmr false "init" "--changed" "${@}"; }
+tmrict()    { _tmr true "init" "--changed" "${@}"; }
+tmrit()     { _tmr true "init" "${@}"; }
 
-tmrp()      { _tmr false "plan" "-concise" "${@}" }
-tmrpc()     { _tmr false "plan" "-concise" "--changed" "${@}" }
-tmrpct()    { _tmr true "plan" "-concise" "--changed" "${@}" }
-tmrpt()     { _tmr true "plan" "-concise" "${@}" }
+tmrp()      { _tmr false "plan" "-concise" "${@}"; }
+tmrpc()     { _tmr false "plan" "-concise" "--changed" "${@}"; }
+tmrpct()    { _tmr true "plan" "-concise" "--changed" "${@}"; }
+tmrpt()     { _tmr true "plan" "-concise" "${@}"; }
 
 _tmr() {
-    if [[ ! "$(find . -type f -maxdepth 1 -name "*.tm.hcl" | wc -l )" -gt 0 ]]; then
+    if [[ ! "$(find . -maxdepth 1 -type f -name "*.tm.hcl" | wc -l )" -gt 0 ]]; then
         echo "$(tput setaf 3)Warning: Terramate configuration not detected, no action taken.$(tput sgr0)"
         return 1
     fi
