@@ -1,4 +1,9 @@
 tap 'warrensbox/tap'                                    ## https://github.com/warrensbox/homebrew-tap
+{{ if eq .chezmoi.os "darwin" -}}
+{{ if eq .machine.type "work" -}}
+tap 'hashicorp/tap'                                     ## https://github.com/hashicorp/homebrew-tap
+{{ end }}
+{{ end -}}
 
 ## ================================================================================================================== ##
 ##                                                       Shells                                                       ##
@@ -118,7 +123,7 @@ brew 'k9s'                                              ## https://github.com/de
 brew 'kubent'                                           ## https://github.com/doitintl/kube-no-trouble
 brew 'kubernetes-cli'                                   ## https://github.com/kubernetes/kubectl
 brew 'tgswitch'                                         ## https://github.com/warrensbox/tgswitch
-brew 'vault'                                            ## https://github.com/hashicorp/vault
+brew 'hashicorp/tap/vault-enterprise'                   ## https://github.com/hashicorp/vault
 {{ end }}
 {{ end -}}
 
