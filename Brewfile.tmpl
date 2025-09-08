@@ -116,7 +116,6 @@ brew 'mas'                                              ## https://github.com/ma
 brew 'ykman'                                            ## https://github.com/Yubico/yubikey-manager
 {{ else if eq .machine.type "work" -}}
 brew 'ansible'                                          ## https://github.com/ansible/ansible
-brew 'codeql'                                           ## https://github.com/github/codeql
 brew 'gemini-cli'                                       ## https://github.com/google-gemini/gemini-cli
 brew 'helm'                                             ## https://github.com/helm/helm
 brew 'jfrog-cli'                                        ## https://github.com/jfrog/jfrog-cli
@@ -135,6 +134,7 @@ cask 'font-caskaydia-cove-nerd-font'                    ## https://github.com/ry
 
 {{ if eq .chezmoi.os "darwin" -}}
 cask 'beyond-compare'                                   ## https://www.scootersoftware.com
+cask 'codeql'                                           ## https://github.com/github/codeql
 cask 'dotnet-sdk'                                       ## https://www.microsoft.com/net/core#macos
 cask 'firefox'                                          ## https://www.mozilla.org/firefox
 cask 'google-cloud-sdk'                                 ## https://cloud.google.com/sdk
