@@ -149,17 +149,9 @@ cask 'powershell'                                       ## https://github.com/Po
 cask 'rambox'                                           ## https://rambox.pro
 cask 'tabby'                                            ## https://github.com/Eugeny/tabby
 cask 'temurin'                                          ## https://github.com/adoptium
-cask 'temurin11'                                        ## https://github.com/adoptium/temurin11-binaries
-cask 'temurin17'                                        ## https://github.com/adoptium/temurin17-binaries
 cask 'temurin21'                                        ## https://github.com/adoptium/temurin21-binaries
 cask 'visual-studio-code'                               ## https://code.visualstudio.com
 cask 'windows-app'                                      ## https://aka.ms/WindowsApp
-
-{{- if eq .chezmoi.arch "arm64" }}
-cask 'corretto8'                                        ## https://github.com/corretto/corretto-8
-{{- else }}
-cask 'temurin8'                                         ## https://github.com/adoptium/temurin8-binaries
-{{- end }}
 
 {{- if eq .machine.type "personal" }}
 cask '1password'                                        ## https://1password.com
@@ -189,4 +181,12 @@ mas 'XCode',              id: 497799835                 ## https://apps.apple.co
 {{- else if eq .machine.type "work" }}
 cask 'google-cloud-sdk'                                 ## https://cloud.google.com/sdk
 cask 'kube-forwarder'                                   ## https://kube-forwarder.pixelpoint.io
+cask 'temurin11'                                        ## https://github.com/adoptium/temurin11-binaries
+cask 'temurin17'                                        ## https://github.com/adoptium/temurin17-binaries
+
+{{- if eq .chezmoi.arch "arm64" }}
+cask 'corretto8'                                        ## https://github.com/corretto/corretto-8
+{{- else }}
+cask 'temurin8'                                         ## https://github.com/adoptium/temurin8-binaries
+{{- end }}
 {{- end }}
