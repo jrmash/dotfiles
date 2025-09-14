@@ -138,7 +138,6 @@ cask 'beyond-compare'                                   ## https://www.scooterso
 cask 'codeql'                                           ## https://github.com/github/codeql
 cask 'dotnet-sdk'                                       ## https://www.microsoft.com/net/core#macos
 cask 'firefox'                                          ## https://www.mozilla.org/firefox
-cask 'google-cloud-sdk'                                 ## https://cloud.google.com/sdk
 cask 'gpg-suite'                                        ## https://gpgtools.org
 cask 'jetbrains-toolbox'                                ## https://www.jetbrains.com/toolbox-app
 cask 'libreoffice'                                      ## https://www.libreoffice.org/
@@ -188,5 +187,6 @@ mas 'MacGoBluRayPlayer',  id: 1403952861                ## https://apps.apple.co
 mas 'XCode',              id: 497799835                 ## https://apps.apple.com/us/app/xcode/id497799835?mt=12
 {{- end }}
 {{- else if eq .machine.type "work" }}
+cask 'google-cloud-sdk'                                 ## https://cloud.google.com/sdk
 cask 'kube-forwarder'                                   ## https://kube-forwarder.pixelpoint.io
 {{- end }}
