@@ -179,7 +179,7 @@ mas 'MacGoBluRayPlayer',  id: 1403952861                ## https://apps.apple.co
 mas 'XCode',              id: 497799835                 ## https://apps.apple.com/us/app/xcode/id497799835?mt=12
 {{- end }}
 {{- else if eq .machine.type "work" }}
-cask 'google-cloud-sdk'                                 ## https://cloud.google.com/sdk
+cask 'gcloud-cli'                                       ## https://cloud.google.com/sdk
 cask 'kube-forwarder'                                   ## https://kube-forwarder.pixelpoint.io
 cask 'temurin11'                                        ## https://github.com/adoptium/temurin11-binaries
 cask 'temurin17'                                        ## https://github.com/adoptium/temurin17-binaries
