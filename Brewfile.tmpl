@@ -134,13 +134,13 @@ brew 'hashicorp/tap/vault-enterprise'                   ## https://github.com/ha
 cask 'font-caskaydia-cove-nerd-font'                    ## https://github.com/ryanoasis/nerd-fonts
 
 {{ if eq .chezmoi.os "darwin" -}}
-cask 'beyond-compare'                                   ## https://www.scootersoftware.com
 cask 'codeql'                                           ## https://github.com/github/codeql
 cask 'dotnet-sdk'                                       ## https://www.microsoft.com/net/core#macos
 cask 'firefox'                                          ## https://www.mozilla.org/firefox
 cask 'gpg-suite'                                        ## https://gpgtools.org
 cask 'jetbrains-toolbox'                                ## https://www.jetbrains.com/toolbox-app
 cask 'libreoffice'                                      ## https://www.libreoffice.org/
+cask 'meld'                                             ## https://gitlab.gnome.org/GNOME/meld
 cask 'ngrok'                                            ## https://ngrok.com
 cask 'obsidian'                                         ## https://github.com/obsidianmd/obsidian-releases
 cask 'osquery'                                          ## https://github.com/osquery/osquery
@@ -156,6 +156,7 @@ cask 'windows-app'                                      ## https://aka.ms/Window
 {{- if eq .machine.type "personal" }}
 cask '1password'                                        ## https://1password.com
 cask '1password-cli'                                    ## https://developer.1password.com/docs/cli
+cask 'beyond-compare'                                   ## https://www.scootersoftware.com
 cask 'lm-studio'                                        ## https://lmstudio.ai
 cask 'makemkv'                                          ## https://www.makemkv.com
 cask 'ollama-app'                                       ## https://ollama.com
