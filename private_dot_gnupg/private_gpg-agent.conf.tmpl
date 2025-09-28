@@ -6,6 +6,8 @@ pinentry-program /opt/homebrew/bin/pinentry-mac
 {{- else }}
 pinentry-program /usr/local/bin/pinentry-mac
 {{- end }}
+{{- else if eq .chezmoi.os "linux" }}
+pinentry-program /usr/sbin/pinentry-gnome3
 {{- end }}
 
 ## Cache Settings
