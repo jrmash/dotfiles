@@ -152,7 +152,7 @@ cask 'rambox'                                           ## https://rambox.pro
 cask 'rectangle-pro'                                    ## https://github.com/rxhanson/Rectangle
 cask 'tabby'                                            ## https://github.com/Eugeny/tabby
 cask 'temurin'                                          ## https://github.com/adoptium
-cask 'temurin21'                                        ## https://github.com/adoptium/temurin21-binaries
+cask 'temurin@21'                                        ## https://github.com/adoptium/temurin21-binaries
 cask 'visual-studio-code'                               ## https://code.visualstudio.com
 cask 'windows-app'                                      ## https://aka.ms/WindowsApp
 
@@ -178,16 +178,15 @@ cask 'yubico-yubikey-manager'                           ## https://github.com/Yu
 
 mas 'MacGoBluRayPlayer',  id: 1403952861                ## https://apps.apple.com/us/app/macgo-blu-ray-player/id1403952861?mt=12
 mas 'XCode',              id: 497799835                 ## https://apps.apple.com/us/app/xcode/id497799835?mt=12
-{{- end }}
 {{- else if eq .machine.type "work" }}
 cask 'gcloud-cli'                                       ## https://cloud.google.com/sdk
 cask 'kube-forwarder'                                   ## https://kube-forwarder.pixelpoint.io
-cask 'temurin11'                                        ## https://github.com/adoptium/temurin11-binaries
-cask 'temurin17'                                        ## https://github.com/adoptium/temurin17-binaries
+cask 'temurin@17'                                        ## https://github.com/adoptium/temurin17-binaries
 
 {{- if eq .chezmoi.arch "arm64" }}
-cask 'corretto8'                                        ## https://github.com/corretto/corretto-8
+cask 'corretto@8'                                        ## https://github.com/corretto/corretto-8
 {{- else }}
-cask 'temurin8'                                         ## https://github.com/adoptium/temurin8-binaries
+cask 'temurin@8'                                         ## https://github.com/adoptium/temurin8-binaries
+{{- end }}
 {{- end }}
 {{- end }}
