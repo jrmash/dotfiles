@@ -152,7 +152,7 @@ cask 'rambox'                                           ## https://rambox.pro
 cask 'rectangle-pro'                                    ## https://github.com/rxhanson/Rectangle
 cask 'tabby'                                            ## https://github.com/Eugeny/tabby
 cask 'temurin'                                          ## https://github.com/adoptium
-cask 'temurin@21'                                        ## https://github.com/adoptium/temurin21-binaries
+cask 'temurin@21'                                       ## https://github.com/adoptium/temurin21-binaries
 cask 'visual-studio-code'                               ## https://code.visualstudio.com
 cask 'windows-app'                                      ## https://aka.ms/WindowsApp
 
@@ -163,6 +163,7 @@ cask 'makemkv'                                          ## https://www.makemkv.c
 cask 'ollama-app'                                       ## https://ollama.com
 cask 'perforce'                                         ## https://www.perforce.com
 cask 'plex'                                             ## https://www.plex.tv
+cask 'proton-drive'                                     ## https://proton.me/drive
 cask 'proton-mail'                                      ## https://proton.me/mail
 cask 'proton-pass'                                      ## https://proton.me/pass
 cask 'protonvpn'                                        ## https://proton.me/vpn
@@ -181,12 +182,12 @@ mas 'XCode',              id: 497799835                 ## https://apps.apple.co
 {{- else if eq .machine.type "work" }}
 cask 'gcloud-cli'                                       ## https://cloud.google.com/sdk
 cask 'kube-forwarder'                                   ## https://kube-forwarder.pixelpoint.io
-cask 'temurin@17'                                        ## https://github.com/adoptium/temurin17-binaries
+cask 'temurin@17'                                       ## https://github.com/adoptium/temurin17-binaries
 
 {{- if eq .chezmoi.arch "arm64" }}
-cask 'corretto@8'                                        ## https://github.com/corretto/corretto-8
+cask 'corretto@8'                                       ## https://github.com/corretto/corretto-8
 {{- else }}
-cask 'temurin@8'                                         ## https://github.com/adoptium/temurin8-binaries
+cask 'temurin@8'                                        ## https://github.com/adoptium/temurin8-binaries
 {{- end }}
 {{- end }}
 {{- end }}
