@@ -113,7 +113,8 @@ brew 'pinentry-mac'                                     ## https://github.com/GP
 brew 'telnet'                                           ## https://github.com/apple-oss-distributions/remote_cmds
 {{ if eq .machine.type "personal" -}}
 brew 'dolt'                                             ## https://github.com/dolthub/dolt
-brew 'mas'                                              ## https://github.com/mas-cli/mas
+brew 'mas'                                              ## https://github.com/mas-cli/masbrew 'opencode'                                         ## https://github.com/sst/opencode
+brew 'opencode'                                         ## https://github.com/sst/opencode
 brew 'ykman'                                            ## https://github.com/Yubico/yubikey-manager
 {{ else if eq .machine.type "work" -}}
 brew 'ansible'                                          ## https://github.com/ansible/ansible
