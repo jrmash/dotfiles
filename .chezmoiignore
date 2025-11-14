@@ -29,6 +29,7 @@ Brewfile
 Library/**
 {{ end }}
 {{ if ne .chezmoi.os "linux" }}
+.config/Code/User/settings.json
 {{ end }}
 {{ if ne .chezmoi.os "windows" }}
 {{ end }}
