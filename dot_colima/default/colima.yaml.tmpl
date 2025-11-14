@@ -63,7 +63,11 @@ network:
   # Assign reachable IP address to the virtual machine.
   # NOTE: this is currently macOS only and ignored on Linux.
   # Default: false
+{{- if eq .chezmoi.os "darwin" }}
+  address: true
+{{- else }}
   address: false
+{{- end }}
   
   # Network mode for the virtual machine (shared, bridged).
   # NOTE: this is currently macOS only and ignored on Linux.
@@ -141,7 +145,11 @@ docker: {}
 #
 # NOTE: value cannot be changed after virtual machine is created.
 # Default: qemu
+{{- if eq .chezmoi.os "darwin" }}
+vmType: vz
+{{- else }}
 vmType: qemu
+{{- end }}
 
 # Port forwarder for the virtual machine (ssh, grpc).
 # ssh is more stable but supports only TCP.
