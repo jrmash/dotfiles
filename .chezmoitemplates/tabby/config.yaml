@@ -1,0 +1,266 @@
+version: 7
+profiles: []
+groups: []
+configSync:
+  parts: {}
+hotkeys:
+  toggle-window:
+    - Ctrl-Space
+  copy-current-path: []
+  ctrl-c:
+    - Ctrl-C
+  copy:
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-C
+  paste:
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-V
+    - Shift-Insert
+  select-all:
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-A
+  clear:
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-K
+  zoom-in:
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-=
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-Shift-=
+  zoom-out:
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}--
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-Shift--
+  reset-zoom:
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-0
+  home:
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-Left
+    - Home
+  end:
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-Right
+    - End
+  previous-word:
+    - {{ if eq .chezmoi.os "darwin" }}⌥{{ else }}Super{{ end }}-Left
+  next-word:
+    - {{ if eq .chezmoi.os "darwin" }}⌥{{ else }}Super{{ end }}-Right
+  delete-previous-word:
+    - {{ if eq .chezmoi.os "darwin" }}⌥{{ else }}Super{{ end }}-Backspace
+  delete-line:
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-Backspace
+  delete-next-word:
+    - {{ if eq .chezmoi.os "darwin" }}⌥{{ else }}Super{{ end }}-Delete
+  search:
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-F
+  pane-focus-all:
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-Shift-I
+  focus-all-tabs:
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-{{ if eq .chezmoi.os "darwin" }}⌥{{ else }}Super{{ end }}-Shift-I
+  scroll-to-top:
+    - Shift-PageUp
+  scroll-page-up:
+    - {{ if eq .chezmoi.os "darwin" }}⌥{{ else }}Super{{ end }}-PageUp
+  scroll-up:
+    - {{ if eq .chezmoi.os "darwin" }}⌥{{ else }}Super{{ end }}-PageUp
+  scroll-down:
+    - {{ if eq .chezmoi.os "darwin" }}⌥{{ else }}Super{{ end }}-PageDown
+  scroll-page-down:
+    - {{ if eq .chezmoi.os "darwin" }}⌥{{ else }}Super{{ end }}-PageDown
+  scroll-to-bottom:
+    - Shift-PageDown
+  restart-telnet-session: []
+  restart-ssh-session: []
+  launch-winscp: []
+  settings-tab: {}
+  settings:
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-,
+  serial:
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Super{{ end }}-K
+  restart-serial-session: []
+  new-tab:
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-T
+  new-window:
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-N
+  profile: {}
+  profile-selectors: {}
+  group-selectors: {}
+  toggle-fullscreen:
+    - Ctrl+{{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}+F
+  close-tab:
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-W
+  reopen-tab:
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-Shift-T
+  toggle-last-tab: []
+  rename-tab:
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-R
+  next-tab:
+    - Ctrl-Tab
+  previous-tab:
+    - Ctrl-Shift-Tab
+  move-tab-left:
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-Shift-Left
+  move-tab-right:
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-Shift-Right
+  rearrange-panes:
+    - Ctrl-Shift
+  duplicate-tab: []
+  restart-tab: []
+  reconnect-tab: []
+  disconnect-tab: []
+  explode-tab:
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-Shift-.
+  combine-tabs:
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-Shift-,
+  tab-1:
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-1
+  tab-2:
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-2
+  tab-3:
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-3
+  tab-4:
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-4
+  tab-5:
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-5
+  tab-6:
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-6
+  tab-7:
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-7
+  tab-8:
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-8
+  tab-9:
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-9
+  tab-10: []
+  tab-11: []
+  tab-12: []
+  tab-13: []
+  tab-14: []
+  tab-15: []
+  tab-16: []
+  tab-17: []
+  tab-18: []
+  tab-19: []
+  tab-20: []
+  split-right:
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-Shift-D
+  split-bottom:
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-D
+  split-left: []
+  split-top: []
+  pane-nav-right:
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-{{ if eq .chezmoi.os "darwin" }}⌥{{ else }}Super{{ end }}-Right
+  pane-nav-down:
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-{{ if eq .chezmoi.os "darwin" }}⌥{{ else }}Super{{ end }}-Down
+  pane-nav-up:
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-{{ if eq .chezmoi.os "darwin" }}⌥{{ else }}Super{{ end }}-Up
+  pane-nav-left:
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-{{ if eq .chezmoi.os "darwin" }}⌥{{ else }}Super{{ end }}-Left
+  pane-nav-previous:
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-{{ if eq .chezmoi.os "darwin" }}⌥{{ else }}Super{{ end }}-[
+  pane-nav-next:
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-{{ if eq .chezmoi.os "darwin" }}⌥{{ else }}Super{{ end }}-]
+  pane-nav-1: []
+  pane-nav-2: []
+  pane-nav-3: []
+  pane-nav-4: []
+  pane-nav-5: []
+  pane-nav-6: []
+  pane-nav-7: []
+  pane-nav-8: []
+  pane-nav-9: []
+  pane-maximize:
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-{{ if eq .chezmoi.os "darwin" }}⌥{{ else }}Super{{ end }}-Enter
+  pane-increase-vertical: []
+  pane-decrease-vertical: []
+  pane-increase-horizontal: []
+  pane-decrease-horizontal: []
+  close-pane:
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-Shift-W
+  switch-profile:
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-Shift-E
+  profile-selector:
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-E
+  command-selector:
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-Shift-P
+terminal:
+  searchOptions: {}
+  colorScheme:
+    name: Dracula+
+    foreground: '#f8f8f2'
+    background: '#1e1f29'
+    cursor: '#bbbbbb'
+    colors:
+      - '#000000'
+      - '#ff5555'
+      - '#50fa7b'
+      - '#f1fa8c'
+      - '#bd93f9'
+      - '#ff79c6'
+      - '#8be9fd'
+      - '#b39ddb'
+      - '#555555'
+      - '#ff5555'
+      - '#50fa7b'
+      - '#f1fa8c'
+      - '#bd93f9'
+      - '#ff79c6'
+      - '#8be9fd'
+      - '#ffffff'
+    selection: '#9575cd'
+    selectionForeground: '#4527a0'
+  font: CaskaydiaCove Nerd Font Mono
+  cursor: beam
+  customColorSchemes:
+    - name: Dracula+
+      foreground: '#f8f8f2'
+      background: '#1e1f29'
+      cursor: '#bbbbbb'
+      colors:
+        - '#000000'
+        - '#ff5555'
+        - '#50fa7b'
+        - '#f1fa8c'
+        - '#bd93f9'
+        - '#ff79c6'
+        - '#8be9fd'
+        - '#b39ddb'
+        - '#555555'
+        - '#ff5555'
+        - '#50fa7b'
+        - '#f1fa8c'
+        - '#bd93f9'
+        - '#ff79c6'
+        - '#8be9fd'
+        - '#ffffff'
+      selection: '#9575cd'
+      selectionForeground: '#4527a0'
+  lightColorScheme:
+    name: Tabby Default Light
+    foreground: '#4d4d4c'
+    background: '#ffffff'
+    cursor: '#4d4d4c'
+    colors:
+      - '#000000'
+      - '#c82829'
+      - '#718c00'
+      - '#eab700'
+      - '#4271ae'
+      - '#8959a8'
+      - '#3e999f'
+      - '#ffffff'
+      - '#000000'
+      - '#c82829'
+      - '#718c00'
+      - '#eab700'
+      - '#4271ae'
+      - '#8959a8'
+      - '#3e999f'
+      - '#ffffff'
+  scrollbackLines: 1000000000000
+ssh: {}
+clickableLinks:
+  modifier: metaKey
+accessibility: {}
+appearance: {}
+hacks: {}
+pluginBlacklist: []
+providerBlacklist: []
+commandBlacklist: []
+profileDefaults:
+  ssh:
+    disableDynamicTitle: true
+enableAnalytics: false
+enableWelcomeTab: false
+profileBlacklist: []
+enableAutomaticUpdates: false
