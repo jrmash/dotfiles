@@ -13,7 +13,6 @@ hotkeys:
     - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-C
   paste:
     - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-V
-    - Shift-Insert
   select-all:
     - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-A
   clear:
@@ -53,9 +52,9 @@ hotkeys:
   scroll-page-up:
     - {{ if eq .chezmoi.os "darwin" }}⌥{{ else }}Super{{ end }}-PageUp
   scroll-up:
-    - {{ if eq .chezmoi.os "darwin" }}⌥{{ else }}Super{{ end }}-PageUp
+    - Ctrl-Shift-Up
   scroll-down:
-    - {{ if eq .chezmoi.os "darwin" }}⌥{{ else }}Super{{ end }}-PageDown
+    - Ctrl-Shift-Down
   scroll-page-down:
     - {{ if eq .chezmoi.os "darwin" }}⌥{{ else }}Super{{ end }}-PageDown
   scroll-to-bottom:
@@ -67,7 +66,7 @@ hotkeys:
   settings:
     - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-,
   serial:
-    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Super{{ end }}-K
+    - {{ if eq .chezmoi.os "darwin" }}Alt{{ else }}Super{{ end }}-K
   restart-serial-session: []
   new-tab:
     - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-T
