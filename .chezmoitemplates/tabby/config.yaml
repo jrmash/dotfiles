@@ -10,26 +10,26 @@ hotkeys:
   ctrl-c:
     - Ctrl-C
   copy:
-    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-C
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}-C
   paste:
-    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-V
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}-V
   select-all:
-    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-A
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}-A
   clear:
-    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-K
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Super{{ end }}-K
   zoom-in:
-    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-=
-    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-Shift-=
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}-=
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}-Shift-=
   zoom-out:
-    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}--
-    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-Shift--
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}--
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}-Shift--
   reset-zoom:
-    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-0
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}-0
   home:
-    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-Left
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}-Left
     - Home
   end:
-    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-Right
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}-Right
     - End
   previous-word:
     - {{ if eq .chezmoi.os "darwin" }}⌥{{ else }}Super{{ end }}-Left
@@ -38,15 +38,15 @@ hotkeys:
   delete-previous-word:
     - {{ if eq .chezmoi.os "darwin" }}⌥{{ else }}Super{{ end }}-Backspace
   delete-line:
-    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-Backspace
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}-Backspace
   delete-next-word:
     - {{ if eq .chezmoi.os "darwin" }}⌥{{ else }}Super{{ end }}-Delete
   search:
-    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-F
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}-F
   pane-focus-all:
-    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-Shift-I
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}-Shift-I
   focus-all-tabs:
-    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-{{ if eq .chezmoi.os "darwin" }}⌥{{ else }}Super{{ end }}-Shift-I
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}-{{ if eq .chezmoi.os "darwin" }}⌥{{ else }}Super{{ end }}-Shift-I
   scroll-to-top:
     - Shift-PageUp
   scroll-page-up:
@@ -64,34 +64,34 @@ hotkeys:
   launch-winscp: []
   settings-tab: {}
   settings:
-    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-,
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}-,
   serial:
     - {{ if eq .chezmoi.os "darwin" }}Alt{{ else }}Super{{ end }}-K
   restart-serial-session: []
   new-tab:
-    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-T
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}-T
   new-window:
-    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-N
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}-N
   profile: {}
   profile-selectors: {}
   group-selectors: {}
   toggle-fullscreen:
-    - Ctrl+{{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}+F
+    - Ctrl+{{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}+F
   close-tab:
-    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-W
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}-W
   reopen-tab:
-    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-Shift-T
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}-Shift-T
   toggle-last-tab: []
   rename-tab:
-    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-R
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}-R
   next-tab:
     - Ctrl-Tab
   previous-tab:
     - Ctrl-Shift-Tab
   move-tab-left:
-    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-Shift-Left
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}-Shift-Left
   move-tab-right:
-    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-Shift-Right
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}-Shift-Right
   rearrange-panes:
     - Ctrl-Shift
   duplicate-tab: []
@@ -99,27 +99,27 @@ hotkeys:
   reconnect-tab: []
   disconnect-tab: []
   explode-tab:
-    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-Shift-.
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}-Shift-.
   combine-tabs:
-    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-Shift-,
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}-Shift-,
   tab-1:
-    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-1
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}-1
   tab-2:
-    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-2
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}-2
   tab-3:
-    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-3
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}-3
   tab-4:
-    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-4
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}-4
   tab-5:
-    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-5
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}-5
   tab-6:
-    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-6
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}-6
   tab-7:
-    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-7
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}-7
   tab-8:
-    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-8
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}-8
   tab-9:
-    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-9
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}-9
   tab-10: []
   tab-11: []
   tab-12: []
@@ -132,23 +132,23 @@ hotkeys:
   tab-19: []
   tab-20: []
   split-right:
-    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-Shift-D
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}-Shift-D
   split-bottom:
-    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-D
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}-D
   split-left: []
   split-top: []
   pane-nav-right:
-    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-{{ if eq .chezmoi.os "darwin" }}⌥{{ else }}Super{{ end }}-Right
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}-{{ if eq .chezmoi.os "darwin" }}⌥{{ else }}Super{{ end }}-Right
   pane-nav-down:
-    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-{{ if eq .chezmoi.os "darwin" }}⌥{{ else }}Super{{ end }}-Down
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}-{{ if eq .chezmoi.os "darwin" }}⌥{{ else }}Super{{ end }}-Down
   pane-nav-up:
-    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-{{ if eq .chezmoi.os "darwin" }}⌥{{ else }}Super{{ end }}-Up
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}-{{ if eq .chezmoi.os "darwin" }}⌥{{ else }}Super{{ end }}-Up
   pane-nav-left:
-    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-{{ if eq .chezmoi.os "darwin" }}⌥{{ else }}Super{{ end }}-Left
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}-{{ if eq .chezmoi.os "darwin" }}⌥{{ else }}Super{{ end }}-Left
   pane-nav-previous:
-    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-{{ if eq .chezmoi.os "darwin" }}⌥{{ else }}Super{{ end }}-[
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}-{{ if eq .chezmoi.os "darwin" }}⌥{{ else }}Super{{ end }}-[
   pane-nav-next:
-    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-{{ if eq .chezmoi.os "darwin" }}⌥{{ else }}Super{{ end }}-]
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}-{{ if eq .chezmoi.os "darwin" }}⌥{{ else }}Super{{ end }}-]
   pane-nav-1: []
   pane-nav-2: []
   pane-nav-3: []
@@ -159,19 +159,19 @@ hotkeys:
   pane-nav-8: []
   pane-nav-9: []
   pane-maximize:
-    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-{{ if eq .chezmoi.os "darwin" }}⌥{{ else }}Super{{ end }}-Enter
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}-{{ if eq .chezmoi.os "darwin" }}⌥{{ else }}Super{{ end }}-Enter
   pane-increase-vertical: []
   pane-decrease-vertical: []
   pane-increase-horizontal: []
   pane-decrease-horizontal: []
   close-pane:
-    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-Shift-W
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}-Shift-W
   switch-profile:
-    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-Shift-E
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}-Shift-E
   profile-selector:
-    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-E
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}-E
   command-selector:
-    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Alt{{ end }}-Shift-P
+    - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}-Shift-P
 terminal:
   searchOptions: {}
   colorScheme:
