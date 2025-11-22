@@ -1,18 +1,16 @@
-{{- if eq .machine.type "personal" -}}
-Include /Users/jrmash/.colima/ssh_config
-{{- else if eq .machine.type "work" -}}
-Include /Users/jrmash/.colima/ssh_config
-{{- end }}
+Include {{ .chezmoi.homeDir }}/.colima/ssh_config
 
 Host github.com
     AddKeysToAgent yes
 
 Host *
+{{- if eq .chezmoi.os "darwin" }}
 {{- if eq .machine.type "work" }}
     ## SHA-1 signatures were disabled in v8.8, but some devices still require it
     ## to be enabled. This line is added on any host that must interact with the
     ## hosts that have this requirement.
     HostkeyAlgorithms +ssh-rsa
+{{- end }}
 {{- end }}
     IgnoreUnknown UseKeychain
     UseKeychain yes

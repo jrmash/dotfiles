@@ -29,6 +29,8 @@ Brewfile
 Library/**
 {{ end }}
 {{ if ne .chezmoi.os "linux" }}
+.config/Code/User/settings.json
+.config/tabby/config.yaml
 {{ end }}
 {{ if ne .chezmoi.os "windows" }}
 {{ end }}
