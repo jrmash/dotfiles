@@ -191,4 +191,6 @@ cask 'corretto@8'                                       ## https://github.com/co
 cask 'temurin@8'                                        ## https://github.com/adoptium/temurin8-binaries
 {{- end }}
 {{- end }}
+{{- else if eq .chezmoi.os "linux" -}}
+flatpak 'it.mijorus.gearlever'
 {{- end }}
