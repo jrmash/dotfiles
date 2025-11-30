@@ -15,7 +15,7 @@ if [ ! "$(command -v brew)" > /dev/null ]; then
     fi
   elif [[ "${platform}" =~ ^Linux ]]; then
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-  fi  
+  fi
 fi
 
 brew install chezmoi
