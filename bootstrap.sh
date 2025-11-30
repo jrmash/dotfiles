@@ -13,7 +13,7 @@ if [ ! "$(command -v brew)" > /dev/null ]; then
     elif [[ "${arch}" == "x86_64" ]]; then
       eval "$(/usr/local/bin/brew shellenv)"
     fi
-  elif [[ "${platform}" =~ ^Linux ]]; then
+  elif [[ "${platform}" == "Linux" ]]; then
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
   fi
 fi
