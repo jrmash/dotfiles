@@ -7,7 +7,7 @@ platform="$(uname -s)"
 if [ ! "$(command -v brew)" > /dev/null ]; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
-  if [[ "${platform}" =~ ^Darwin ]]; then
+  if [[ "${platform}" == "Darwin" ]]; then
     if [[ "${arch}" == "arm64" ]]; then
       eval "$(/opt/homebrew/bin/brew shellenv)"
     elif [[ "${arch}" == "x86_64" ]]; then
