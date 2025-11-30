@@ -1,5 +1,11 @@
 export TF_PLUGIN_CACHE_DIR="${HOME}/.terraform.d/plugin-cache"
 
+{{- if eq .chezmoi.os "linux" }}
+{{ if eq .chezmoi.osRelease.id "fedora" }}
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+{{- end }}
+{{- end }}
+
 if [ `command -v goenv` > /dev/null ]; then
     eval "$(goenv init -)"
 fi
