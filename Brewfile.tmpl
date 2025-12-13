@@ -138,8 +138,6 @@ brew 'tgswitch'                                         ## https://github.com/wa
 cask 'font-caskaydia-cove-nerd-font'                    ## https://github.com/ryanoasis/nerd-fonts
 
 {{ if eq .chezmoi.os "darwin" -}}
-cask 'codeql'                                           ## https://github.com/github/codeql
-cask 'dotnet-sdk'                                       ## https://www.microsoft.com/net/core#macos
 cask 'firefox'                                          ## https://www.mozilla.org/firefox
 cask 'gpg-suite'                                        ## https://gpgtools.org
 cask 'headlamp'                                         ## https://github.com/kubernetes-sigs/headlamp
@@ -182,6 +180,8 @@ cask 'yubico-yubikey-manager'                           ## https://github.com/Yu
 mas 'MacGoBluRayPlayer',  id: 1403952861                ## https://apps.apple.com/us/app/macgo-blu-ray-player/id1403952861?mt=12
 mas 'XCode',              id: 497799835                 ## https://apps.apple.com/us/app/xcode/id497799835?mt=12
 {{- else if eq .machine.type "work" }}
+cask 'codeql'                                           ## https://github.com/github/codeql
+cask 'dotnet-sdk'                                       ## https://www.microsoft.com/net/core#macos
 cask 'gcloud-cli'                                       ## https://cloud.google.com/sdk
 cask 'temurin@17'                                       ## https://github.com/adoptium/temurin17-binaries
 
