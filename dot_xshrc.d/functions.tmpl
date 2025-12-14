@@ -1,20 +1,3 @@
-{{- if eq .machine.type "personal" }}
-{{- if eq .chezmoi.os "darwin" }}
-## ============================================================================================== ##
-##                                        HomeLab Functions                                       ##
-## ============================================================================================== ##
-hl-connect-dmz() {
-    networksetup -setairportnetwork en0 "$(gpg -qd ~/.secrets/DMZ_SSID 2>/dev/null)" "$(gpg -qd ~/.secrets/DMZ_WNP 2>/dev/null)"
-}
-hl-connect-family() {
-    networksetup -setairportnetwork en0 "$(gpg -qd ~/.secrets/FAMILY_SSID 2>/dev/null)" "$(gpg -qd ~/.secrets/FAMILY_WNP 2>/dev/null)"
-}
-hl-connect-iot() {
-    networksetup -setairportnetwork en0 "$(gpg -qd ~/.secrets/IOT_SSID 2>/dev/null)" "$(gpg -qd ~/.secrets/IOT_WNP 2>/dev/null)"
-}
-{{- end }}
-{{- end }}
-
 ## ============================================================================================== ##
 ##                                          GPG Functions                                         ##
 ## ============================================================================================== ##
