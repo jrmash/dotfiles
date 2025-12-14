@@ -150,6 +150,19 @@ alias tml='terramate list'
 alias tmlc='terramate list --changed'
 alias tmr='terramate run'
 
+## Create `terramate-catalyst` aliases' (temporary)
+#alias tmcbl='terramate-catalyst bundle list'
+#alias tmccc='terramate-catalyst component create'
+#alias tmccl='terramate-catalyst component list'
+#alias tmcp='terramate-catalyst purge'
+alias tmcc='terramate-catalyst create'
+alias tmcf='terramate-catalyst format'
+alias tmcg='terramate-catalyst generate'
+alias tmcl='terramate-catalyst list'
+alias tmclc='terramate-catalyst list --changed'
+alias tmcr='terramate-catalyst run'
+alias tmcs='terramate-catalyst scaffold'
+
 ## Create helpers for GPG
 alias gpg-dec='gpg --decrypt --logger-file gpg.log'
 alias gpg-enc='gpg --encrypt --armor --sign --recipient {{ .gpg.signingEmail }}'
