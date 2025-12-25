@@ -192,6 +192,7 @@ cask 'temurin@8'                                        ## https://github.com/ad
 {{- end }}
 {{- end }}
 {{- else if eq .chezmoi.os "linux" -}}
+flatpak 'com.collaboraoffice.Office'
 flatpak 'io.github.Faugus.faugus-launcher'
 flatpak 'it.mijorus.gearlever'
 flatpak 'md.obsidian.Obsidian'
