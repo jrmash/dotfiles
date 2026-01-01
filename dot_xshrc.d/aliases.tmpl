@@ -9,9 +9,7 @@ alias lt='lsd --tree'
 
 {{ if eq .chezmoi.os "linux" -}}
 ## Additional application aliases
-{{- if eq .chezmoi.osRelease.id "bazzite" }}
 alias code='flatpak run com.visualstudio.code'
-{{ end }}
 {{ end -}}
 
 ## Additional 'brew' aliases
