@@ -22,13 +22,10 @@ brew 'asciinema'                                        ## https://github.com/as
 brew 'aspell'                                           ## https://github.com/GNUAspell/aspell
 brew 'bitwise'                                          ## https://github.com/mellowcandle/bitwise
 brew 'bmon'                                             ## https://github.com/tgraf/bmon
-brew 'btop'                                             ## https://github.com/aristocratos/btop
 brew 'chezmoi'                                          ## https://github.com/twpayne/chezmoi
 brew 'cloc'                                             ## https://github.com/AlDanial/cloc
-brew 'cmake'                                            ## https://github.com/Kitware/CMake
 brew 'cmctl'                                            ## https://github.com/cert-manager/cmctl
 brew 'colima'                                           ## https://github.com/abiosoft/colima
-brew 'cookiecutter'                                     ## https://github.com/cookiecutter/cookiecutter
 brew 'copier'                                           ## https://github.com/copier-org/copier
 brew 'ctop'                                             ## https://github.com/bcicen/ctop
 brew 'curl'                                             ## https://github.com/curl/curl
@@ -41,9 +38,7 @@ brew 'docker-compose'                                   ## https://github.com/do
 brew 'docker-credential-helper'                         ## https://github.com/docker/docker-credential-helpers
 brew 'duf'                                              ## https://github.com/muesli/duf
 brew 'fd'                                               ## https://github.com/sharkdp/fd
-brew 'fx'                                               ## https://github.com/antonmedv/fx
 brew 'fzf'                                              ## https://github.com/junegunn/fzf
-brew 'gawk'                                             ## https://git.savannah.gnu.org/git/gawk.git
 brew 'gh'                                               ## https://github.com/cli/cli
 brew 'git'                                              ## https://github.com/git/git
 brew 'git-delta'                                        ## https://github.com/dandavison/delta
@@ -53,7 +48,6 @@ brew 'goenv'                                            ## https://github.com/sy
 brew 'gradle', args:["ignore-dependencies"]             ## https://github.com/gradle/gradle
 brew 'hadolint'                                         ## https://github.com/hadolint/hadolint
 brew 'has'                                              ## https://github.com/kdabir/has
-brew 'htop'                                             ## https://github.com/htop-dev/htop
 brew 'httpie'                                           ## https://github.com/httpie/httpie
 brew 'jenv'                                             ## https://github.com/jenv/jenv
 brew 'jo'                                               ## https://github.com/jpmens/jo
@@ -144,7 +138,6 @@ cask 'meld'                                             ## https://gitlab.gnome.
 cask 'ngrok'                                            ## https://ngrok.com
 cask 'obsidian'                                         ## https://github.com/obsidianmd/obsidian-releases
 cask 'osquery'                                          ## https://github.com/osquery/osquery
-cask 'powershell'                                       ## https://github.com/PowerShell/PowerShell
 cask 'rambox'                                           ## https://rambox.pro
 cask 'rectangle-pro'                                    ## https://github.com/rxhanson/Rectangle
 cask 'tabby'                                            ## https://github.com/Eugeny/tabby
@@ -154,9 +147,6 @@ cask 'visual-studio-code'                               ## https://code.visualst
 cask 'windows-app'                                      ## https://aka.ms/WindowsApp
 
 {{- if eq .machine.type "personal" }}
-cask 'lm-studio'                                        ## https://lmstudio.ai
-cask 'makemkv'                                          ## https://www.makemkv.com
-cask 'ollama-app'                                       ## https://ollama.com
 cask 'plex'                                             ## https://www.plex.tv
 cask 'proton-drive'                                     ## https://proton.me/drive
 cask 'proton-mail'                                      ## https://proton.me/mail
@@ -167,7 +157,6 @@ cask 'steam'                                            ## https://store.steampo
 cask 'unity-hub'                                        ## https://unity3d.com/get-unity/download
 
 {{- if eq .machine.chassis "desktop" }}
-cask 'raspberry-pi-imager'                              ## https://www.raspberrypi.org/downloads
 cask 'yubico-yubikey-manager'                           ## https://github.com/Yubico/yubikey-manager-qt
 {{- end }}
 
@@ -187,14 +176,14 @@ cask 'temurin@8'                                        ## https://github.com/ad
 {{- end }}
 {{- else if eq .chezmoi.os "linux" -}}
 flatpak 'com.collaboraoffice.Office'
-flatpak 'com.makemkv.MakeMKV'
 flatpak 'com.visualstudio.code'
-flatpak 'fr.handbrake.ghb'
-flatpak 'io.github.Faugus.faugus-launcher'
 flatpak 'io.kinvolk.Headlamp'
-flatpak 'it.mijorus.gearlever'
 flatpak 'md.obsidian.Obsidian'
 flatpak 'org.gnome.Meld'
-flatpak 'org.tigervnc.vncviewer'
 flatpak 'tv.plex.PlexDesktop'
+
+## Packages with no Mac equivalents
+flatpak 'io.github.Faugus.faugus-launcher'
+flatpak 'it.mijorus.gearlever'
+flatpak 'org.tigervnc.vncviewer'
 {{- end }}
