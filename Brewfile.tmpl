@@ -160,8 +160,9 @@ cask 'unity-hub'                                        ## https://unity3d.com/g
 cask 'yubico-yubikey-manager'                           ## https://github.com/Yubico/yubikey-manager-qt
 {{- end }}
 
-mas 'MacGoBluRayPlayer',  id: 1403952861                ## https://apps.apple.com/us/app/macgo-blu-ray-player/id1403952861?mt=12
-mas 'XCode',              id: 497799835                 ## https://apps.apple.com/us/app/xcode/id497799835?mt=12
+mas 'Collabora Office Desktop', id: 6754639856          ## https://apps.apple.com/us/app/collabora-office-desktop/id6754639856
+mas 'MacGoBluRayPlayer',        id: 1403952861          ## https://apps.apple.com/us/app/macgo-blu-ray-player/id1403952861?mt=12
+mas 'XCode',                    id: 497799835           ## https://apps.apple.com/us/app/xcode/id497799835?mt=12
 {{- else if eq .machine.type "work" }}
 cask 'codeql'                                           ## https://github.com/github/codeql
 cask 'dotnet-sdk'                                       ## https://www.microsoft.com/net/core#macos
