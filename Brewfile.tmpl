@@ -97,7 +97,6 @@ brew 'yq'                                               ## https://github.com/mi
 brew 'zenith'                                           ## https://github.com/bvaisvil/zenith/
 
 {{ if eq .chezmoi.os "darwin" -}}
-brew 'codex'                                            ## https://github.com/openai/codex
 brew 'coreutils'                                        ## https://github.com/Homebrew/homebrew-core
 brew 'gnu-getopt'                                       ## https://github.com/util-linux/util-linux
 brew 'mactop'                                           ## https://github.com/context-labs/mactop
@@ -160,6 +159,8 @@ mas 'Collabora Office Desktop', id: 6754639856          ## https://apps.apple.co
 mas 'MacGoBluRayPlayer',        id: 1403952861          ## https://apps.apple.com/us/app/macgo-blu-ray-player/id1403952861?mt=12
 mas 'XCode',                    id: 497799835           ## https://apps.apple.com/us/app/xcode/id497799835?mt=12
 {{- else if eq .machine.type "work" }}
+cask 'codex'                                            ## https://github.com/openai/codex
+cask 'codex-app'                                        ## https://github.com/openai/codex
 cask 'codeql'                                           ## https://github.com/github/codeql
 cask 'dotnet-sdk'                                       ## https://www.microsoft.com/net/core#macos
 cask 'gcloud-cli'                                       ## https://cloud.google.com/sdk
