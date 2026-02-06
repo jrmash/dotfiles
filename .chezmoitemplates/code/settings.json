@@ -38,6 +38,7 @@
 	"[yaml]": {
 		"editor.tabSize": 2
 	},
+	"chatgpt.commentCodeLensEnabled": false,
 	"css.format.newlineBetweenRules": false,
 	"debug.console.wordWrap": false,
 	"diffEditor.wordWrap": "off",
@@ -62,6 +63,7 @@
 	"files.associations": {
 		// "*.hcl": "terraform",
 		"*.tf": "terraform",
+		"*.tf.tmgen": "hcl",
 		"*.tm.hcl": "hcl",
 		"*.xshenv": "shellscript",
 		"*.xshrc": "shellscript",
