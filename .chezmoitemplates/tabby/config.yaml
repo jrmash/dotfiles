@@ -1,4 +1,4 @@
-version: 7
+version: 8
 profiles: []
 groups: []
 configSync:
@@ -247,6 +247,7 @@ terminal:
       - '#3e999f'
       - '#ffffff'
   scrollbackLines: 1000000000000
+  warnOnMultilinePaste: false
 ssh: {}
 clickableLinks:
   modifier: metaKey

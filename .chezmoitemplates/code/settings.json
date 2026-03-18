@@ -152,6 +152,7 @@
 		"alltrue",
 		"anytrue",
 		"approle",
+		"autoclass",
 		"bypassers",
 		"checkmarx",
 		"chezmoi",
@@ -181,6 +182,7 @@
 		"postcondition",
 		"prdint",
 		"reflog",
+		"riskops",
 		"rrdatas",
 		"rulesets",
 		"sarif",
@@ -203,4 +205,9 @@
 		"tstint",
 		"yamldecode"
 	],
+	"vs-kubernetes": {
+		"vs-kubernetes.crd-code-completion": "disabled"
+	},
+	"editor.suggest.showReferences": false,
+	"chat.viewSessions.orientation": "stacked",
 }
