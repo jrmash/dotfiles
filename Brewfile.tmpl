@@ -100,12 +100,12 @@ brew 'zenith'                                           ## https://github.com/bv
 {{ if eq .chezmoi.os "darwin" -}}
 brew 'coreutils'                                        ## https://github.com/Homebrew/homebrew-core
 brew 'gnu-getopt'                                       ## https://github.com/util-linux/util-linux
-brew 'mactop'                                           ## https://github.com/context-labs/mactop
+brew 'mactop'                                           ## https://github.com/metaspartan/mactop
 brew 'pinentry-mac'                                     ## https://github.com/GPGTools/pinentry-mac
 brew 'telnet'                                           ## https://github.com/apple-oss-distributions/remote_cmds
 {{ if eq .machine.type "personal" -}}
 brew 'dolt'                                             ## https://github.com/dolthub/dolt
-brew 'mas'                                              ## https://github.com/mas-cli/masbrew 'opencode'                                         ## https://github.com/sst/opencode
+brew 'mas'                                              ## https://github.com/mas-cli/mas
 brew 'opencode'                                         ## https://github.com/sst/opencode
 brew 'ykman'                                            ## https://github.com/Yubico/yubikey-manager
 {{ else if eq .machine.type "work" -}}
@@ -153,7 +153,6 @@ cask 'proton-drive'                                     ## https://proton.me/dri
 cask 'proton-mail'                                      ## https://proton.me/mail
 cask 'proton-pass'                                      ## https://proton.me/pass
 cask 'protonvpn'                                        ## https://proton.me/vpn
-cask 'signal'                                           ## https://signal.org
 cask 'steam'                                            ## https://store.steampowered.com
 cask 'unity-hub'                                        ## https://unity3d.com/get-unity/download
 

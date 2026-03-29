@@ -1,5 +1,4 @@
 {
-	// Language Specific Settings
 	"[bats][shellscript]": {
 		"editor.detectIndentation": false,
 		"editor.insertSpaces": false,
@@ -99,11 +98,10 @@
 	},
 	"terminal.integrated.scrollback": 1000000,
 	"terminal.integrated.shellIntegration.enabled": false,
-	"terraform.codelens.referenceCount": true,
 	"terraform.languageServer.ignoreSingleFileWarning": true,
 	"workbench.editor.wrapTabs": true,
 	"workbench.editor.enablePreview": true,
-	"workbench.colorTheme": "Default Dark+",
+	"workbench.colorTheme": "Dark+",
 	"yaml.schemas": {},
 	"cSpell.enabledLanguageIds": [
 		"asciidoc",
