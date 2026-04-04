@@ -24,7 +24,6 @@ brew 'bitwise'                                          ## https://github.com/me
 brew 'bmon'                                             ## https://github.com/tgraf/bmon
 brew 'chezmoi'                                          ## https://github.com/twpayne/chezmoi
 brew 'cloc'                                             ## https://github.com/AlDanial/cloc
-brew 'cmctl'                                            ## https://github.com/cert-manager/cmctl
 brew 'colima'                                           ## https://github.com/abiosoft/colima
 brew 'copier'                                           ## https://github.com/copier-org/copier
 brew 'ctop'                                             ## https://github.com/bcicen/ctop
@@ -60,7 +59,6 @@ brew 'lima-additional-guestagents'                      ## https://github.com/li
 brew 'lnav'                                             ## https://github.com/tstack/lnav
 brew 'lsd'                                              ## https://github.com/Peltoche/lsd
 brew 'lynis'                                            ## https://github.com/CISOfy/lynis
-brew 'maven', args:["ignore-dependencies"]              ## https://github.com/apache/maven
 brew 'moreutils'                                        ## https://git.joeyh.name/git/moreutils.git/
 brew 'nmap'                                             ## https://github.com/nmap/nmap
 brew 'node-build'                                       ## https://github.com/nodenv/node-build
@@ -82,7 +80,6 @@ brew 'rsync'                                            ## https://github.com/Wa
 brew 'ruby-build'                                       ## https://github.com/rbenv/ruby-build
 brew 'rustup'                                           ## https://github.com/rust-lang/rustup
 brew 'shellcheck'                                       ## https://github.com/koalaman/shellcheck
-brew 'sops'                                             ## https://github.com/mozilla/sops
 brew 'sslscan'                                          ## https://github.com/rbsec/sslscan
 brew 'stern'                                            ## https://github.com/stern/stern
 brew 'terraform-docs', args:["ignore-dependencies"]     ## https://github.com/terraform-docs/terraform-docs
@@ -110,6 +107,7 @@ brew 'opencode'                                         ## https://github.com/ss
 brew 'ykman'                                            ## https://github.com/Yubico/yubikey-manager
 {{ else if eq .machine.type "work" -}}
 brew 'ansible'                                          ## https://github.com/ansible/ansible
+brew 'cmctl'                                            ## https://github.com/cert-manager/cmctl
 brew 'gemini-cli'                                       ## https://github.com/google-gemini/gemini-cli
 brew 'hashicorp/tap/vault-enterprise'                   ## https://github.com/hashicorp/vault
 brew 'helm'                                             ## https://github.com/helm/helm
@@ -118,7 +116,9 @@ brew 'jfrog-cli'                                        ## https://github.com/jf
 brew 'k9s'                                              ## https://github.com/derailed/k9s
 brew 'kubent'                                           ## https://github.com/doitintl/kube-no-trouble
 brew 'kubernetes-cli'                                   ## https://github.com/kubernetes/kubectl
+brew 'maven', args:["ignore-dependencies"]              ## https://github.com/apache/maven
 brew 'postgresql@17'                                    ## https://git.postgresql.org/git/postgresql
+brew 'sops'                                             ## https://github.com/mozilla/sops
 brew 'tgswitch'                                         ## https://github.com/warrensbox/tgswitch
 {{ end }}
 {{ end -}}
