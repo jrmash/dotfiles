@@ -37,6 +37,8 @@
 	"[yaml]": {
 		"editor.tabSize": 2
 	},
+	"chat.disableAIFeatures": true,
+	"chat.viewSessions.orientation": "stacked",
 	"chatgpt.commentCodeLensEnabled": false,
 	"css.format.newlineBetweenRules": false,
 	"debug.console.wordWrap": false,
@@ -55,6 +57,7 @@
 		120,
 		160
 	],
+	"editor.suggest.showReferences": false,
 	"editor.suggestSelection": "first",
 	"editor.trimAutoWhitespace": false,
 	"explorer.confirmDelete": false,
@@ -147,6 +150,7 @@
 	],
 	"cSpell.userWords": [
 		"abspath",
+		"aisre",
 		"alltrue",
 		"anytrue",
 		"approle",
@@ -172,12 +176,16 @@
 		"insightcloudsec",
 		"jrmash",
 		"kareo",
+		"kareocloudcom",
 		"kics",
 		"lockfiles",
 		"mashinations",
+		"memorystore",
 		"mgmt",
+		"modulith",
 		"netops",
 		"postcondition",
+		"practiceops",
 		"prdint",
 		"reflog",
 		"riskops",
@@ -191,9 +199,11 @@
 		"strcontains",
 		"tebra",
 		"templatefile",
+		"templatestring",
 		"terraforming",
 		"terragrunt",
 		"terramate",
+		"tflint",
 		"tftest",
 		"tobool",
 		"tolist",
@@ -206,6 +216,4 @@
 	"vs-kubernetes": {
 		"vs-kubernetes.crd-code-completion": "disabled"
 	},
-	"editor.suggest.showReferences": false,
-	"chat.viewSessions.orientation": "stacked",
 }
