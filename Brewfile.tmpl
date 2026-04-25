@@ -1,19 +1,20 @@
 tap 'warrensbox/tap'                                    ## https://github.com/warrensbox/homebrew-tap
-{{ if eq .chezmoi.os "darwin" -}}
-{{ if eq .machine.type "work" -}}
+
+{{- if eq .machine.type "work" }}
 tap 'hashicorp/tap'                                     ## https://github.com/hashicorp/homebrew-tap
 {{ end }}
-{{ end -}}
 
 ## ================================================================================================================== ##
-##                                                       Shells                                                       ##
+##                                                                     _                                              ##
+##                                             ___ ___ ___ ___ ___ ___| |                                             ##
+##                                            | . | -_|   | -_|  _| .'| |                                             ##
+##                                            |_  |___|_|_|___|_| |__,|_|                                             ##
+##                                            |___|                                                                   ##
+##                                                                                                                    ##
 ## ================================================================================================================== ##
 brew 'bash'                                             ## https://git.savannah.gnu.org/git/bash.git
 brew 'zsh'                                              ## https://github.com/zsh-users/zsh (MIRROR)
 
-## ================================================================================================================== ##
-##                                                       Tools                                                        ##
-## ================================================================================================================== ##
 brew 'act'                                              ## https://github.com/nektos/act
 brew 'ag'                                               ## https://github.com/ggreer/the_silver_searcher
 brew 'age'                                              ## https://github.com/FiloSottile/age
@@ -94,18 +95,35 @@ brew 'yarn'                                             ## https://github.com/ya
 brew 'yq'                                               ## https://github.com/mikefarah/yq
 brew 'zenith'                                           ## https://github.com/bvaisvil/zenith/
 
+cask 'font-caskaydia-cove-nerd-font'                    ## https://github.com/ryanoasis/nerd-fonts
+
+{{ if eq .machine.type "personal" -}}                   ## Personal Profile Installs
+cask 'copilot-cli'                                      ## https://github.com/github/copilot-cli
+{{ else if eq .machine.type "work" -}}                 ## Work Profile Installs
+{{- end }}
+
+
+
 {{ if eq .chezmoi.os "darwin" -}}
+## ================================================================================================================== ##
+##                                                _               _                                                   ##
+##                                              _| |___ ___ _ _ _|_|___                                               ##
+##                                             | . | .'|  _| | | | |   |                                              ##
+##                                             |___|__,|_| |_____|_|_|_|                                              ##
+##                                                                                                                    ##
+## ================================================================================================================== ##
 brew 'coreutils'                                        ## https://github.com/Homebrew/homebrew-core
 brew 'gnu-getopt'                                       ## https://github.com/util-linux/util-linux
 brew 'mactop'                                           ## https://github.com/metaspartan/mactop
 brew 'pinentry-mac'                                     ## https://github.com/GPGTools/pinentry-mac
 brew 'telnet'                                           ## https://github.com/apple-oss-distributions/remote_cmds
-{{ if eq .machine.type "personal" -}}
+
+{{ if eq .machine.type "personal" -}}                   ## Personal Profile Bottle Installs
 brew 'dolt'                                             ## https://github.com/dolthub/dolt
 brew 'mas'                                              ## https://github.com/mas-cli/mas
 brew 'opencode'                                         ## https://github.com/sst/opencode
 brew 'ykman'                                            ## https://github.com/Yubico/yubikey-manager
-{{ else if eq .machine.type "work" -}}
+{{ else if eq .machine.type "work" -}}                  ## Work Profile Bottle Installs
 brew 'ansible'                                          ## https://github.com/ansible/ansible
 brew 'cmctl'                                            ## https://github.com/cert-manager/cmctl
 brew 'gemini-cli'                                       ## https://github.com/google-gemini/gemini-cli
@@ -120,15 +138,8 @@ brew 'maven', args:["ignore-dependencies"]              ## https://github.com/ap
 brew 'postgresql@17'                                    ## https://git.postgresql.org/git/postgresql
 brew 'sops'                                             ## https://github.com/mozilla/sops
 brew 'tgswitch'                                         ## https://github.com/warrensbox/tgswitch
-{{ end }}
-{{ end -}}
+{{- end }}
 
-## ================================================================================================================== ##
-##                                                      Software                                                      ##
-## ================================================================================================================== ##
-cask 'font-caskaydia-cove-nerd-font'                    ## https://github.com/ryanoasis/nerd-fonts
-
-{{ if eq .chezmoi.os "darwin" -}}
 cask 'codex'                                            ## https://github.com/openai/codex
 cask 'codex-app'                                        ## https://github.com/openai/codex
 cask 'firefox'                                          ## https://www.mozilla.org/firefox
@@ -148,8 +159,7 @@ cask 'temurin@21'                                       ## https://github.com/ad
 cask 'visual-studio-code'                               ## https://code.visualstudio.com
 cask 'windows-app'                                      ## https://aka.ms/WindowsApp
 
-{{- if eq .machine.type "personal" }}
-cask 'copilot-cli'                                      ## https://github.com/github/copilot-cli
+{{ if eq .machine.type "personal" -}}                   ## Personal Profile Cask Installs
 cask 'plex'                                             ## https://www.plex.tv
 cask 'proton-drive'                                     ## https://proton.me/drive
 cask 'proton-mail'                                      ## https://proton.me/mail
@@ -157,32 +167,43 @@ cask 'proton-pass'                                      ## https://proton.me/pas
 cask 'protonvpn'                                        ## https://proton.me/vpn
 cask 'steam'                                            ## https://store.steampowered.com
 cask 'unity-hub'                                        ## https://unity3d.com/get-unity/download
-
-mas 'Collabora Office Desktop', id: 6754639856          ## https://apps.apple.com/us/app/collabora-office-desktop/id6754639856
-mas 'MacGoBluRayPlayer',        id: 1403952861          ## https://apps.apple.com/us/app/macgo-blu-ray-player/id1403952861?mt=12
-mas 'XCode',                    id: 497799835           ## https://apps.apple.com/us/app/xcode/id497799835?mt=12
-{{- else if eq .machine.type "work" }}
+{{ else if eq .machine.type "work" -}}                  ## Work Profile Cask Installs
 cask 'codeql'                                           ## https://github.com/github/codeql
+cask 'corretto@8'                                       ## https://github.com/corretto/corretto-8
 cask 'dotnet-sdk'                                       ## https://www.microsoft.com/net/core#macos
 cask 'gcloud-cli'                                       ## https://cloud.google.com/sdk
 cask 'temurin@17'                                       ## https://github.com/adoptium/temurin17-binaries
+{{- end }}
 
-{{- if eq .chezmoi.arch "arm64" }}
-cask 'corretto@8'                                       ## https://github.com/corretto/corretto-8
-{{- else }}
-cask 'temurin@8'                                        ## https://github.com/adoptium/temurin8-binaries
+{{ if eq .machine.type "personal" -}}                   ## Personal Profile MAS Installs
+mas 'Collabora Office Desktop', id: 6754639856          ## https://apps.apple.com/us/app/collabora-office-desktop/id6754639856
+mas 'MacGoBluRayPlayer',        id: 1403952861          ## https://apps.apple.com/us/app/macgo-blu-ray-player/id1403952861?mt=12
+mas 'XCode',                    id: 497799835           ## https://apps.apple.com/us/app/xcode/id497799835?mt=12
+{{ else if eq .machine.type "work" -}}                  ## Work Profile MAS Installs
 {{- end }}
 {{- end }}
-{{- else if eq .chezmoi.os "linux" -}}
+
+
+
+{{- if eq .chezmoi.os "linux" -}}
+## ================================================================================================================== ##
+##                                                  _ _                                                               ##
+##                                                 | |_|___ _ _ _ _                                                   ##
+##                                                 | | |   | | |_'_|                                                  ##
+##                                                 |_|_|_|_|___|_,_|                                                  ##
+##                                                                                                                    ##
+## ================================================================================================================== ##
 flatpak 'com.collaboraoffice.Office'
 flatpak 'com.visualstudio.code'
 flatpak 'io.kinvolk.Headlamp'
+flatpak 'it.mijorus.gearlever'
 flatpak 'md.obsidian.Obsidian'
 flatpak 'org.gnome.Meld'
-flatpak 'tv.plex.PlexDesktop'
-
-## Packages with no Mac equivalents
-flatpak 'io.github.Faugus.faugus-launcher'
-flatpak 'it.mijorus.gearlever'
 flatpak 'org.tigervnc.vncviewer'
+
+{{ if eq .machine.type "personal" -}}                   ## Personal Profile Installs
+flatpak 'io.github.Faugus.faugus-launcher'
+flatpak 'tv.plex.PlexDesktop'
+{{ else if eq .machine.type "work" -}}                  ## Work Profile Installs
+{{- end }}
 {{- end }}
