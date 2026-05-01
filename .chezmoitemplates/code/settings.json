@@ -4,7 +4,7 @@
 		"editor.insertSpaces": false,
 		"editor.tabSize": 4
 	},
-	"[go]": {},
+	"[go]": { },
 	"[hcl]": {
 		"editor.tabSize": 2
 	},
@@ -40,6 +40,7 @@
 	"chat.disableAIFeatures": true,
 	"chat.viewSessions.orientation": "stacked",
 	"chatgpt.commentCodeLensEnabled": false,
+	"claudeCode.preferredLocation": "panel",
 	"css.format.newlineBetweenRules": false,
 	"debug.console.wordWrap": false,
 	"diffEditor.wordWrap": "off",
@@ -49,7 +50,7 @@
 	"editor.formatOnSave": true,
 	"editor.indentSize": "tabSize",
 	"editor.inlineSuggest.enabled": true,
-	"editor.language.colorizedBracketPairs": [],
+	"editor.language.colorizedBracketPairs": [ ],
 	"editor.renderWhitespace": "all",
 	"editor.rulers": [
 		80,
@@ -91,7 +92,8 @@
 	"githubPullRequests.pullBranch": "never",
 	"githubPullRequests.terminalLinksHandler": "github",
 	"hclformat.levant_support": false,
-	"json.schemas": [],
+	"json.format.keepLines": true,
+	"json.schemas": [ ],
 	"terminal.external.osxExec": "Tabby.app",
 	"terminal.integrated.defaultProfile.linux": "zsh",
 	"terminal.integrated.defaultProfile.osx": "zsh",
@@ -105,7 +107,7 @@
 	"workbench.editor.wrapTabs": true,
 	"workbench.editor.enablePreview": true,
 	"workbench.colorTheme": "Dark+",
-	"yaml.schemas": {},
+	"yaml.schemas": { },
 	"cSpell.enabledLanguageIds": [
 		"asciidoc",
 		"c",
