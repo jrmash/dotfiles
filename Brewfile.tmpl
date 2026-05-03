@@ -193,16 +193,16 @@ mas 'XCode',                    id: 497799835           ## https://apps.apple.co
 ##                                                 |_|_|_|_|___|_,_|                                                  ##
 ##                                                                                                                    ##
 ## ================================================================================================================== ##
-flatpak 'com.collaboraoffice.Office'
 flatpak 'com.visualstudio.code'
 flatpak 'io.kinvolk.Headlamp'
-flatpak 'it.mijorus.gearlever'
 flatpak 'md.obsidian.Obsidian'
 flatpak 'org.gnome.Meld'
 flatpak 'org.tigervnc.vncviewer'
 
 {{ if eq .machine.type "personal" -}}                   ## Personal Profile Installs
+flatpak 'com.collaboraoffice.Office'
 flatpak 'io.github.Faugus.faugus-launcher'
+flatpak 'it.mijorus.gearlever'
 flatpak 'tv.plex.PlexDesktop'
 {{ else if eq .machine.type "work" -}}                  ## Work Profile Installs
 {{- end }}
