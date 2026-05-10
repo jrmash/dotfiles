@@ -1,6 +1,7 @@
 tap 'warrensbox/tap'                                    ## https://github.com/warrensbox/homebrew-tap
 
 {{ if eq .machine.type "personal" -}}                   ## Personal Profile Taps
+tap 'protonpass/tap'                                    ## https://github.com/protonpass/homebrew-tap
 {{ else if eq .machine.type "work" -}}                  ## Work Profile Taps
 tap 'hashicorp/tap'                                     ## https://github.com/hashicorp/homebrew-tap
 {{ end }}
@@ -97,6 +98,7 @@ brew 'yq'                                               ## https://github.com/mi
 brew 'zenith'                                           ## https://github.com/bvaisvil/zenith/
 
 {{ if eq .machine.type "personal" -}}                   ## Personal Profile Bottle Installs
+brew 'pass-cli'                                         ## https://github.com/protonpass/pass-cli
 {{ else if eq .machine.type "work" -}}                  ## Work Profile Bottle Installs
 {{- end }}
 
