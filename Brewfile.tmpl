@@ -1,6 +1,7 @@
 tap 'warrensbox/tap'                                    ## https://github.com/warrensbox/homebrew-tap
 
-{{- if eq .machine.type "work" }}
+{{ if eq .machine.type "personal" -}}                   ## Personal Profile Taps
+{{ else if eq .machine.type "work" -}}                  ## Work Profile Taps
 tap 'hashicorp/tap'                                     ## https://github.com/hashicorp/homebrew-tap
 {{ end }}
 
@@ -95,13 +96,20 @@ brew 'yarn'                                             ## https://github.com/ya
 brew 'yq'                                               ## https://github.com/mikefarah/yq
 brew 'zenith'                                           ## https://github.com/bvaisvil/zenith/
 
-cask 'font-caskaydia-cove-nerd-font'                    ## https://github.com/ryanoasis/nerd-fonts
-
-{{ if eq .machine.type "personal" -}}                   ## Personal Profile Installs
-cask 'copilot-cli'                                      ## https://github.com/github/copilot-cli
-{{ else if eq .machine.type "work" -}}                 ## Work Profile Installs
+{{ if eq .machine.type "personal" -}}                   ## Personal Profile Bottle Installs
+{{ else if eq .machine.type "work" -}}                  ## Work Profile Bottle Installs
 {{- end }}
 
+cask 'font-caskaydia-cove-nerd-font'                    ## https://github.com/ryanoasis/nerd-fonts
+
+{{ if eq .machine.type "personal" -}}                   ## Personal Profile Cask Installs
+cask 'copilot-cli'                                      ## https://github.com/github/copilot-cli
+{{ else if eq .machine.type "work" -}}                  ## Work Profile Cask Installs
+{{- end }}
+
+{{ if eq .machine.type "personal" -}}                   ## Personal Profile MAS Installs
+{{ else if eq .machine.type "work" -}}                  ## Work Profile MAS Installs
+{{- end }}
 
 
 {{ if eq .chezmoi.os "darwin" -}}
@@ -199,11 +207,11 @@ flatpak 'md.obsidian.Obsidian'
 flatpak 'org.gnome.Meld'
 flatpak 'org.tigervnc.vncviewer'
 
-{{ if eq .machine.type "personal" -}}                   ## Personal Profile Installs
+{{ if eq .machine.type "personal" -}}                   ## Personal Profile Flatpak Installs
 flatpak 'com.collaboraoffice.Office'
 flatpak 'io.github.Faugus.faugus-launcher'
 flatpak 'it.mijorus.gearlever'
 flatpak 'tv.plex.PlexDesktop'
-{{ else if eq .machine.type "work" -}}                  ## Work Profile Installs
+{{ else if eq .machine.type "work" -}}                  ## Work Profile Flatpak Installs
 {{- end }}
 {{- end }}
