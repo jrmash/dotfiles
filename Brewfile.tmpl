@@ -102,6 +102,7 @@ brew 'protonpass/tap/pass-cli'                          ## https://github.com/pr
 {{ else if eq .machine.type "work" -}}                  ## Work Profile Bottle Installs
 {{- end }}
 
+cask 'codex'                                            ## https://github.com/openai/codex
 cask 'font-caskaydia-cove-nerd-font'                    ## https://github.com/ryanoasis/nerd-fonts
 
 {{ if eq .machine.type "personal" -}}                   ## Personal Profile Cask Installs
@@ -150,7 +151,6 @@ brew 'sops'                                             ## https://github.com/mo
 brew 'tgswitch'                                         ## https://github.com/warrensbox/tgswitch
 {{- end }}
 
-cask 'codex'                                            ## https://github.com/openai/codex
 cask 'codex-app'                                        ## https://github.com/openai/codex
 cask 'firefox'                                          ## https://www.mozilla.org/firefox
 cask 'gpg-suite'                                        ## https://gpgtools.org
