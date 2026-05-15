@@ -88,7 +88,6 @@ brew 'stern'                                            ## https://github.com/st
 brew 'terraform-docs', args:["ignore-dependencies"]     ## https://github.com/terraform-docs/terraform-docs
 brew 'terramate', args:["ignore-dependencies"]          ## https://github.com/terramate-io/terramate
 brew 'tflint'                                           ## https://github.com/terraform-linters/tflint
-brew 'tfswitch'                                         ## https://github.com/warrensbox/terraform-switcher
 brew 'tree'                                             ## https://github.com/Old-Man-Programmer/tree (MIRROR)
 brew 'watch'                                            ## https://gitlab.com/procps-ng/procps
 brew 'wget'                                             ## https://git.savannah.gnu.org/cgit/wget.git
@@ -103,6 +102,7 @@ brew 'protonpass/tap/pass-cli'                          ## https://github.com/pr
 {{- end }}
 
 cask 'codex'                                            ## https://github.com/openai/codex
+cask 'tfswitch'                                         ## https://github.com/warrensbox/terraform-switcher
 cask 'font-caskaydia-cove-nerd-font'                    ## https://github.com/ryanoasis/nerd-fonts
 
 {{ if eq .machine.type "personal" -}}                   ## Personal Profile Cask Installs
