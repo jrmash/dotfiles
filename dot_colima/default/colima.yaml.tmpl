@@ -205,11 +205,10 @@ nestedVirtualization: false
 # NOTE: value cannot be changed after virtual machine is created.
 # Default: virtiofs (for vz), sshfs (for qemu)
 {{- if eq .chezmoi.os "darwin" }}
-mountType: sshfs
-{{- else }}
 mountType: virtiofs
+{{- else }}
+mountType: sshfs
 {{- end }}
-
 
 # Propagate inotify file events to the VM.
 # NOTE: this is experimental.
