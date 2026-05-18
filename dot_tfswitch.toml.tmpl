@@ -1,3 +1,5 @@
-{{- if eq .chezmoi.arch "arm64" -}}
+{{ if eq .chezmoi.os "darwin" -}}
 bin = "/opt/homebrew/bin/terraform"
+{{- else if eq .chezmoi.os "linux" -}}
+bin = "/home/linuxbrew/.linuxbrew/bin/terraform"
 {{- end }}
