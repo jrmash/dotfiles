@@ -178,6 +178,7 @@ cask 'protonvpn'                                        ## https://proton.me/vpn
 cask 'steam'                                            ## https://store.steampowered.com
 cask 'unity-hub'                                        ## https://unity3d.com/get-unity/download
 {{ else if eq .machine.type "work" -}}                  ## Work Profile Cask Installs
+cask `1password`                                        ## https://1password.com/
 cask 'codeql'                                           ## https://github.com/github/codeql
 cask 'corretto@8'                                       ## https://github.com/corretto/corretto-8
 cask 'dotnet-sdk'                                       ## https://www.microsoft.com/net/core#macos
