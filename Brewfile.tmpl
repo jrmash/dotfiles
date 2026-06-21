@@ -107,7 +107,6 @@ cask 'tfswitch'                                         ## https://github.com/wa
 cask 'font-caskaydia-cove-nerd-font'                    ## https://github.com/ryanoasis/nerd-fonts
 
 {{ if eq .machine.type "personal" -}}                   ## Personal Profile Cask Installs
-cask 'copilot-cli'                                      ## https://github.com/github/copilot-cli
 {{ else if eq .machine.type "work" -}}                  ## Work Profile Cask Installs
 {{- end }}
 
