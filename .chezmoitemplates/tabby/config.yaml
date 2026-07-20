@@ -172,6 +172,7 @@ hotkeys:
     - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}-E
   command-selector:
     - {{ if eq .chezmoi.os "darwin" }}⌘{{ else }}Ctrl{{ end }}-Shift-P
+  open-sftp: []
 terminal:
   searchOptions: {}
   colorScheme:

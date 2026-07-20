@@ -1,7 +1,10 @@
 [core]
   excludesFile = {{ .chezmoi.homeDir }}/.gitignore
   pager = diff-so-fancy | less --tabs=2 -RX
-{{- if eq .machine.type "codespace" }}
+{{- if eq .chezmoi.os "darwin" }}
+[credential]
+	helper = osxkeychain
+{{- else if eq .machine.type "codespace" -}}
 [credential]
   helper = /.codespaces/bin/gitcredential_github.sh
 [gpg]
