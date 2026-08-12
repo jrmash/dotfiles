@@ -1,7 +1,6 @@
 tap 'warrensbox/tap', trusted: true                     ## https://github.com/warrensbox/homebrew-tap
 
 {{ if eq .machine.type "personal" -}}                   ## Personal Profile Taps
-tap 'protonpass/tap', trusted: true                     ## https://github.com/protonpass/homebrew-tap
 {{ else if eq .machine.type "work" -}}                  ## Work Profile Taps
 tap 'hashicorp/tap', trusted: true                      ## https://github.com/hashicorp/homebrew-tap
 {{ end }}
