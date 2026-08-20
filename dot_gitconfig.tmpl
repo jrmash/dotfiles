@@ -1,6 +1,6 @@
 [core]
   excludesFile = {{ .chezmoi.homeDir }}/.gitignore
-  pager = diff-so-fancy | less --tabs=2 -RX
+  pager = delta
 {{- if eq .chezmoi.os "darwin" }}
 [credential]
 	helper = osxkeychain
@@ -13,7 +13,9 @@
 [init]
   defaultBranch = main
 [interactive]
-  diffFilter = diff-so-fancy --patch
+  diffFilter = delta --color-only
+[merge]
+  conflictStyle = zdiff3
 [user]
   name = {{ .git.name }}
   email = {{ .git.email }}
@@ -25,10 +27,13 @@
   sort = committerdate
 [commit]
   gpgSign = true
-[diff]
-  colorMoved = zebra
-[diff-so-fancy]
-  markEmptyLines = false
+[delta]
+  minus-emph-style = brightred bold 124
+  minus-style = brightred bold
+  navigate = true
+  paging = always
+  plus-emph-style = brightgreen bold 28
+  plus-style = brightgreen bold
 [fetch]
   prune = true
 [push]
@@ -52,20 +57,4 @@
 
   ## Silliness
   dad = !curl https://icanhazdadjoke.com/ && git add
-
-## Work around upstream issue while waiting for a fix to be released
-[color]
-       ui = true
-[color "diff"]
-       meta = 11
-       frag = magenta bold
-       func = 146 bold
-       commit = yellow bold
-       old = red bold
-       new = green bold
-       whitespace = red reverse
-[color "diff-highlight"]
-       oldNormal = red bold
-       oldHighlight = red bold 52
-       newNormal = green bold
-       newHighlight = green bold 22
+  
