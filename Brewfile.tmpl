@@ -100,7 +100,7 @@ brew 'yq'                                               ## https://github.com/mi
 brew 'zenith'                                           ## https://github.com/bvaisvil/zenith/
 
 {{ if eq .machine.type "personal" -}}                   ## Personal Profile Bottle Installs
-brew 'protonpass/tap/pass-cli'                          ## https://github.com/protonpass/pass-cli
+brew 'proton-pass-cli'                           		## https://github.com/protonpass/pass-cli
 {{ else if eq .machine.type "work" -}}                  ## Work Profile Bottle Installs
 {{- end }}
 
@@ -117,6 +117,7 @@ cask 'google-chrome'                                    ## https://www.google.co
 {{ if eq .machine.type "personal" -}}                   ## Personal Profile MAS Installs
 {{ else if eq .machine.type "work" -}}                  ## Work Profile MAS Installs
 {{- end }}
+
 
 
 {{ if eq .chezmoi.os "darwin" -}}
