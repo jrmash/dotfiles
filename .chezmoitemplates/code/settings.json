@@ -95,11 +95,18 @@
 	"json.format.keepLines": true,
 	"json.schemas": [ ],
 	"terminal.external.osxExec": "Tabby.app",
-	"terminal.integrated.defaultProfile.linux": "zsh",
+	"terminal.integrated.defaultProfile.linux": "Host zsh",
 	"terminal.integrated.defaultProfile.osx": "zsh",
-	"terminal.integrated.inheritEnv": false,
 	"terminal.integrated.env.osx": {
 		"PATH": ""
+	},
+	"terminal.integrated.inheritEnv": false,
+	"terminal.integrated.profiles.linux": {
+		"Host zsh": {
+			"path": "/app/bin/host-spawn",
+			"args": [ "/home/linuxbrew/.linuxbrew/bin/zsh", "-l" ],
+			"overrideName": true
+		}
 	},
 	"terminal.integrated.scrollback": 1000000,
 	"terminal.integrated.shellIntegration.enabled": false,
