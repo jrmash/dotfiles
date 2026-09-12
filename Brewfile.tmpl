@@ -105,13 +105,13 @@ brew 'proton-pass-cli'                           		## https://github.com/protonp
 {{ else if eq .machine.type "work" -}}                  ## Work Profile Bottle Installs
 {{- end }}
 
+cask 'chatgpt'                                          ## https://chatgpt.com/download/ (renamed from `codex-app`)
 cask 'codex'                                            ## https://github.com/openai/codex
 cask 'tfswitch'                                         ## https://github.com/warrensbox/terraform-switcher
 cask 'font-caskaydia-cove-nerd-font'                    ## https://github.com/ryanoasis/nerd-fonts
 
 {{ if eq .machine.type "personal" -}}                   ## Personal Profile Cask Installs
 {{ else if eq .machine.type "work" -}}                  ## Work Profile Cask Installs
-cask 'chatgpt'                                          ## https://chatgpt.com/download/ (renamed from `codex-app`)
 cask 'google-chrome'                                    ## https://www.google.com/chrome/
 {{- end }}
 
