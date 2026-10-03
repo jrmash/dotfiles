@@ -110,6 +110,7 @@ cask 'tfswitch'                                         ## https://github.com/wa
 cask 'font-caskaydia-cove-nerd-font'                    ## https://github.com/ryanoasis/nerd-fonts
 
 {{ if eq .machine.type "personal" -}}                   ## Personal Profile Cask Installs
+cask 'lm-studio'										## https://lmstudio.ai/
 {{ else if eq .machine.type "work" -}}                  ## Work Profile Cask Installs
 cask 'google-chrome'                                    ## https://www.google.com/chrome/
 {{- end }}
