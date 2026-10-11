@@ -108,9 +108,11 @@ cask 'chatgpt'                                          ## https://chatgpt.com/d
 cask 'codex'                                            ## https://github.com/openai/codex
 cask 'tfswitch'                                         ## https://github.com/warrensbox/terraform-switcher
 cask 'font-caskaydia-cove-nerd-font'                    ## https://github.com/ryanoasis/nerd-fonts
+cask 'font-symbols-only-nerd-font'                      ## https://github.com/ryanoasis/nerd-fonts
 
 {{ if eq .machine.type "personal" -}}                   ## Personal Profile Cask Installs
 cask 'lm-studio'										## https://lmstudio.ai/
+cask 'zed'                                              ## https://github.com/zed-industries/zed
 {{ else if eq .machine.type "work" -}}                  ## Work Profile Cask Installs
 cask 'google-chrome'                                    ## https://www.google.com/chrome/
 {{- end }}
