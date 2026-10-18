@@ -1,0 +1,7 @@
+HISTSIZE=1000000000
+HISTFILESIZE=${HISTSIZE}
+HISTCONTROL=ignorespace:erasedups   ## Control what gets stored in the history file
+HISTTIMEFORMAT='%F %T '             ## Display executed timestamp in the history file
+
+shopt -s histappend                 ## Append history lines so multiple terminals don't overwrite
+shopt -s histverify                 ## Load history substitutions instead of executing immediately
