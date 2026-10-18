@@ -7,5 +7,5 @@ fi
 {{- end }}
 
 while IFS= read -r -d ''; do
-	source ${REPLY}
+	source "${REPLY}"
 done < <( find ~/.bashrc.d -type f -exec printf '%s\0' {} + )
