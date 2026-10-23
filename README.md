@@ -23,7 +23,9 @@ softwareupdate --install-rosetta --agree-to-license
 
 brew bundle
 
-## Setup Tools
+## Setup Tools (Personal Profile)
 tfswitch --latest
+
+## Setup Tools (Work Profile)
 tgswitch --latest
 ```

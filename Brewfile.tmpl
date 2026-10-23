@@ -104,7 +104,6 @@ brew 'proton-pass-cli'                           		## https://github.com/protonp
 {{ else if eq .machine.type "work" -}}                  ## Work Profile Bottle Installs
 {{- end }}
 
-cask 'chatgpt'                                          ## https://chatgpt.com/download/ (renamed from `codex-app`)
 cask 'codex'                                            ## https://github.com/openai/codex
 cask 'tfswitch'                                         ## https://github.com/warrensbox/terraform-switcher
 cask 'font-caskaydia-cove-nerd-font'                    ## https://github.com/ryanoasis/nerd-fonts
@@ -114,7 +113,6 @@ cask 'font-symbols-only-nerd-font'                      ## https://github.com/ry
 cask 'lm-studio'										## https://lmstudio.ai/
 cask 'zed'                                              ## https://github.com/zed-industries/zed
 {{ else if eq .machine.type "work" -}}                  ## Work Profile Cask Installs
-cask 'google-chrome'                                    ## https://www.google.com/chrome/
 {{- end }}
 
 {{ if eq .machine.type "personal" -}}                   ## Personal Profile MAS Installs
@@ -159,6 +157,7 @@ brew 'sops'                                             ## https://github.com/ge
 brew 'tgswitch'                                         ## https://github.com/warrensbox/tgswitch
 {{- end }}
 
+cask 'chatgpt'                                          ## https://chatgpt.com/download/ (renamed from `codex-app`)
 cask 'claude'                                           ## https://claude.com
 cask 'claude-code'                                      ## https://claude.com
 cask 'firefox'                                          ## https://www.mozilla.org/firefox
@@ -192,6 +191,7 @@ cask '1password-cli'                                    ## https://1password.com
 cask 'corretto@8'                                       ## https://github.com/corretto/corretto-8
 cask 'dotnet-sdk'                                       ## https://www.microsoft.com/net/core#macos
 cask 'gcloud-cli'                                       ## https://cloud.google.com/sdk
+cask 'google-chrome'                                    ## https://www.google.com/chrome/
 cask 'temurin@17'                                       ## https://github.com/adoptium/temurin17-binaries
 cask 'temurin@21'                                       ## https://github.com/adoptium/temurin21-binaries
 {{- end }}
