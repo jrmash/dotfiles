@@ -108,10 +108,10 @@ cask 'codex'                                            ## https://github.com/op
 cask 'tfswitch'                                         ## https://github.com/warrensbox/terraform-switcher
 cask 'font-caskaydia-cove-nerd-font'                    ## https://github.com/ryanoasis/nerd-fonts
 cask 'font-symbols-only-nerd-font'                      ## https://github.com/ryanoasis/nerd-fonts
+cask 'zed'                                              ## https://github.com/zed-industries/zed
 
 {{ if eq .machine.type "personal" -}}                   ## Personal Profile Cask Installs
 cask 'lm-studio'										## https://lmstudio.ai/
-cask 'zed'                                              ## https://github.com/zed-industries/zed
 {{ else if eq .machine.type "work" -}}                  ## Work Profile Cask Installs
 {{- end }}
 
