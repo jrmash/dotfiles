@@ -26,6 +26,17 @@
       "position": "right"
     },
   },
+  "agent_servers": {
+    "codex-acp": {
+      "default_config_options": {
+        "fast-mode": false,
+        "mode": "workspace-write",
+        "model": "gpt-6.1-sol",
+        "reasoning_effort": "max",
+      },
+      "type": "registry"
+    }
+  },
   "debugger": {
     "button": false,
   },
