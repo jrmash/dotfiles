@@ -34,6 +34,11 @@
         "model": "gpt-6.1-sol",
         "reasoning_effort": "max",
       },
+      "env": {
+        // Work around Zed bug causing agent sessions to revert to
+        // the 'agent' or 'Auto review' mode.
+        "INITIAL_AGENT_MODE": "workspace-write"
+      },
       "type": "registry"
     }
   },
