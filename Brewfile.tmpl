@@ -2,6 +2,7 @@ tap 'warrensbox/tap', trusted: true                     ## https://github.com/wa
 
 {{ if eq .machine.type "personal" -}}                   ## Personal Profile Taps
 {{ else if eq .machine.type "work" -}}                  ## Work Profile Taps
+tap 'atlassian-labs/acli', trusted: true                ## https://github.com/atlassian/homebrew-acli
 tap 'hashicorp/tap', trusted: true                      ## https://github.com/hashicorp/homebrew-tap
 {{ end }}
 
@@ -104,6 +105,7 @@ brew 'zenith'                                           ## https://github.com/bv
 {{ if eq .machine.type "personal" -}}                   ## Personal Profile Bottle Installs
 brew 'proton-pass-cli'                           		## https://github.com/protonpass/pass-cli
 {{ else if eq .machine.type "work" -}}                  ## Work Profile Bottle Installs
+brew 'atlassian/acli/acli'                              ## https://github.com/atlassian/homebrew-acli
 {{- end }}
 
 cask 'codex'                                            ## https://github.com/openai/codex
