@@ -7,28 +7,30 @@
   // custom settings, run `zed: open default settings` from the
   // command palette (cmd-shift-p / ctrl-shift-p)
   "auto_update": false,
-  "buffer_font_fallbacks": [ "Symbols Nerd Font" ],
+  "buffer_font_fallbacks": ["Symbols Nerd Font"],
   "cli_default_open_behavior": "new_window",
-  "ui_font_fallbacks": [ "Symbols Nerd Font" ],
-  "wrap_guides": [ 80, 100, 120, 160, 200 ],
+  "format_on_save": "on",
+  "ui_font_fallbacks": ["Symbols Nerd Font"],
+  "wrap_guides": [80, 100, 120, 160, 200],
 
   "agent": {
     "dock": "right",
     "expand_edit_card": true,
     "expand_terminal_card": false,
-    "favorite_models": [ ],
+    "favorite_models": [],
     "limit_content_width": false,
     "max_content_width": 1200.0,
     "max_idle_retained_threads": 20,
-    "model_parameters": [ ],
+    "model_parameters": [],
     "thinking_display": "auto",
     "threads_sidebar": {
-      "position": "right"
+      "position": "right",
     },
   },
   "agent_servers": {
     "codex-acp": {
       "default_config_options": {
+        "collaboration_mode": "plan",
         "fast-mode": false,
         "mode": "workspace-write",
         "model": "gpt-6.1-sol",
@@ -37,10 +39,10 @@
       "env": {
         // Work around Zed bug causing agent sessions to revert to
         // the 'agent' or 'Auto review' mode.
-        "INITIAL_AGENT_MODE": "workspace-write"
+        "INITIAL_AGENT_MODE": "workspace-write",
       },
-      "type": "registry"
-    }
+      "type": "registry",
+    },
   },
   "debugger": {
     "button": false,
@@ -49,10 +51,10 @@
     "button": false,
   },
   "edit_predictions": {
-    "allow_data_collection": "no"
+    "allow_data_collection": "no",
   },
   "markdown_preview": {
-    "max_width": 1200.0
+    "max_width": 1200.0,
   },
   "project_panel": {
     "dock": "left",
@@ -78,6 +80,7 @@
     "anthropic_retention": false,
   },
   "terminal": {
+    "max_scroll_history_lines": 100000,
     "starts_open": true,
   },
   "theme": {
